@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>react项目结合braft-editor实现精致的富文本组件 | xiaofei的博客</title>
+    <meta name="description" content="用于记录问题（技术），解决问题，分享问题（技术）的一个web前端的博客">
+    <link rel="icon" href="/blog/favicon.ico">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.d7573a55.css" as="style"><link rel="preload" href="/blog/assets/js/app.98e6950e.js" as="script"><link rel="preload" href="/blog/assets/js/2.e0515975.js" as="script"><link rel="preload" href="/blog/assets/js/21.591cc08e.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.0229ffc5.js"><link rel="prefetch" href="/blog/assets/js/11.c9339192.js"><link rel="prefetch" href="/blog/assets/js/12.05782cd8.js"><link rel="prefetch" href="/blog/assets/js/13.a879dfb0.js"><link rel="prefetch" href="/blog/assets/js/14.5b3cdcea.js"><link rel="prefetch" href="/blog/assets/js/15.31360310.js"><link rel="prefetch" href="/blog/assets/js/16.0d96a0be.js"><link rel="prefetch" href="/blog/assets/js/17.b5599f4d.js"><link rel="prefetch" href="/blog/assets/js/18.7d66777e.js"><link rel="prefetch" href="/blog/assets/js/19.e8afe9a9.js"><link rel="prefetch" href="/blog/assets/js/20.69ddf888.js"><link rel="prefetch" href="/blog/assets/js/22.12781e93.js"><link rel="prefetch" href="/blog/assets/js/23.111ebba7.js"><link rel="prefetch" href="/blog/assets/js/24.fbd4e7a7.js"><link rel="prefetch" href="/blog/assets/js/25.9b0d41d8.js"><link rel="prefetch" href="/blog/assets/js/26.a55c41ee.js"><link rel="prefetch" href="/blog/assets/js/27.7ca8c66e.js"><link rel="prefetch" href="/blog/assets/js/28.519b825d.js"><link rel="prefetch" href="/blog/assets/js/29.870cb080.js"><link rel="prefetch" href="/blog/assets/js/3.2d8883c4.js"><link rel="prefetch" href="/blog/assets/js/30.bbeafcae.js"><link rel="prefetch" href="/blog/assets/js/31.ed5e7333.js"><link rel="prefetch" href="/blog/assets/js/32.d2a29906.js"><link rel="prefetch" href="/blog/assets/js/33.9a1f9382.js"><link rel="prefetch" href="/blog/assets/js/34.df94c0e8.js"><link rel="prefetch" href="/blog/assets/js/35.162294fe.js"><link rel="prefetch" href="/blog/assets/js/36.0d333210.js"><link rel="prefetch" href="/blog/assets/js/37.25121a2e.js"><link rel="prefetch" href="/blog/assets/js/38.fe1759b0.js"><link rel="prefetch" href="/blog/assets/js/39.836c371b.js"><link rel="prefetch" href="/blog/assets/js/4.c31be931.js"><link rel="prefetch" href="/blog/assets/js/40.195191b5.js"><link rel="prefetch" href="/blog/assets/js/41.4092cbeb.js"><link rel="prefetch" href="/blog/assets/js/42.3c4ce1b5.js"><link rel="prefetch" href="/blog/assets/js/43.47993eeb.js"><link rel="prefetch" href="/blog/assets/js/5.5647142b.js"><link rel="prefetch" href="/blog/assets/js/6.638d4674.js"><link rel="prefetch" href="/blog/assets/js/7.c6c6c7d1.js"><link rel="prefetch" href="/blog/assets/js/8.77803aaa.js"><link rel="prefetch" href="/blog/assets/js/9.7e954666.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.d7573a55.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">xiaofei的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">首页</a></div><div class="nav-item"><a href="https://blog.csdn.net/qq_39953537" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  我的csdn
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/l-x-f" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">首页</a></div><div class="nav-item"><a href="https://blog.csdn.net/qq_39953537" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  我的csdn
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/l-x-f" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/home/" class="sidebar-link">欢迎页</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>vue</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/vue/function-api.html" class="sidebar-link">尝鲜 vue3.0 新特性 Vue Function API 实现 todo list</a></li><li><a href="/blog/vue/git hooks.html" class="sidebar-link">vue 项目中添加 git hooks ，Stylelint， eslint </a></li><li><a href="/blog/vue/vuepress.html" class="sidebar-link">vuepress结合GitHub pages打造自己的博客网站</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>vue-components</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/vue-components/table.html" class="sidebar-link">表格组件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/vue-components/upload.html" class="sidebar-link">上传图片组件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/vue-components/cropper.html" class="sidebar-link">图片裁剪组件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/vue-components/upload-video.html" class="sidebar-link">vue结合vod-js-sdk-v6上传视频到腾讯云点播组件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/vue-components/multiple-upload.html" class="sidebar-link">vue结合element实现多图上传组件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/vue-components/tinymce.html" class="sidebar-link">vue后台管理系统富文本组件（一）Tinymce</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/vue-components/kindeditor.html" class="sidebar-link">vue后台管理系统富文本组件（二）kindeditor</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/vue-components/quill.html" class="sidebar-link">vue后台管理系统富文本组件（三）quill</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/vue-components/videojs.html" class="sidebar-link">vue结合videojs实现视频播放组件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/vue/amap.html" class="sidebar-link">vue 结合element-ui实现pc端高德地图组件</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>vue-cli</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/vue-cli/use-productionGzip.html" class="sidebar-link">vue-cli 3.0 配置productionGzip</a></li><li><a href="/blog/vue-cli/use-development-build.html" class="sidebar-link">vue cli3.x development模式打包app.js包太大</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>react</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/react/create-react-app-build.html" class="sidebar-link">create-react-app  开发环境编译太慢的解决方案</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/react/use-svg.html" class="sidebar-link">react （create-react-app）项目中如何优雅的使用 svg组件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/react/select-city.html" class="sidebar-link">react结合antd的Cascader组件实现pc端选择城市控件</a></li><li><a href="/blog/react/braft-editor.html" class="active sidebar-link">react项目结合braft-editor实现精致的富文本组件</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>mpvue</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/mpvue/font-awesome.html" class="sidebar-link">mpvue 如何使用 font-awesome? （不需要编码 base64）</a></li><li><a href="/blog/mpvue/use-tencent-video.html" class="sidebar-link">mpvue 如何使用腾讯视频插件？</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>vscode</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/vscode/reset.html" class="sidebar-link">visual studio code 重置所有设置（还原默认设置）</a></li><li><a href="/blog/vscode/plugin.html" class="sidebar-link">vscode 常用插件集锦</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>javascript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/js/debounce-throttle.html" class="sidebar-link">什么是防抖和节流？有什么区别？如何实现？</a></li><li><a href="/blog/js/new.html" class="sidebar-link">实现一个new</a></li><li><a href="/blog/js/parseInt.html" class="sidebar-link">[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;].map(parseInt) 输出什么？为什么？</a></li><li><a href="/blog/js/array-flat-sort-set.html" class="sidebar-link">数组的扁平化，去重，排序</a></li><li><a href="/blog/js/sort.html" class="sidebar-link">js交换变量之重写冒泡排序</a></li><li><a href="/blog/js/variables.html" class="sidebar-link">Javascript如何与Sass,Less,Css之间共享变量？</a></li><li><a href="/blog/js/set-css-variables.html" class="sidebar-link">js取到css样式变量，修改后让它自动运用到css里面去</a></li><li><a href="/blog/js/reg.html" class="sidebar-link">-10到10的正则</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>git</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/git/note.html" class="sidebar-link">git 常用命令笔记</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>linux</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/linux/note.html" class="sidebar-link">linux学习笔记之文件操作</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>nginx</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/nginx/note.html" class="sidebar-link">nginx常用配置笔记</a></li><li><a href="/blog/nginx/cmd.html" class="sidebar-link">常用的nginx操作(启动,停止,重启,重载)</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="react项目结合braft-editor实现精致的富文本组件"><a href="#react项目结合braft-editor实现精致的富文本组件" aria-hidden="true" class="header-anchor">#</a> react项目结合braft-editor实现精致的富文本组件</h1> <p>简介： 基于react的富文本组件本来就不多，braft-editor是react里人气相当高的富文本，这里基于他打造一个精致的富文本。</p> <p>项目主要依赖：（先安装，步骤略）</p> <p>create-react-app：3.0.0</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code>
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;react&quot;</span><span class="token operator">:</span><span class="token string">&quot;16.8.6&quot;</span> <span class="token punctuation">,</span>
+    <span class="token property">&quot;react-router-dom&quot;</span><span class="token operator">:</span><span class="token string">&quot;5.0.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;antd&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^3.19.2&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;axios&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^0.19.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;braft-editor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.3.6&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;braft-polyfill&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^0.0.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;prop-types&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^15.7.2&quot;</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>1.组件</p> <p>文件目录</p> <p><img src="https://img-blog.csdnimg.cn/20190824115125822.jpg" alt="在这里插入图片描述"></p> <p>src/components/AppEditor/index.jsx</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">// 添加ie10支持</span>
+<span class="token keyword">import</span> <span class="token string">&quot;braft-polyfill&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> BraftEditor <span class="token keyword">from</span> <span class="token string">&quot;braft-editor&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&quot;braft-editor/dist/index.css&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PropTypes <span class="token keyword">from</span> <span class="token string">&quot;prop-types&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">&quot;axios&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> message <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;antd&quot;</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">import</span> <span class="token string">&quot;./style.less&quot;</span><span class="token punctuation">;</span> <span class="token comment">// 见下文</span>
+<span class="token keyword">import</span> config <span class="token keyword">from</span> <span class="token string">&quot;./config&quot;</span><span class="token punctuation">;</span> <span class="token comment">// 见下文</span>
+<span class="token keyword">import</span> mediaBaseconfig <span class="token keyword">from</span> <span class="token string">&quot;./media&quot;</span><span class="token punctuation">;</span> <span class="token comment">// 见下文</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  uploadHtml<span class="token punctuation">,</span>
+  uploadImage<span class="token punctuation">,</span>
+  maxFileSize<span class="token punctuation">,</span>
+  isImageFile
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@/utils/upload&quot;</span><span class="token punctuation">;</span> <span class="token comment">// 见下文 uploadHtml和uploadImage是定义的上传文件到后端的接口，根据自己的项目更换</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">AppEditor</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 创建一个空的editorState作为初始值</span>
+    editorState<span class="token punctuation">:</span> BraftEditor<span class="token punctuation">.</span><span class="token function">createEditorState</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">static</span> propTypes <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 富文本初始内容</span>
+    html<span class="token punctuation">:</span> PropTypes<span class="token punctuation">.</span>string<span class="token punctuation">,</span>
+    <span class="token comment">//  限制图片文件大小</span>
+    fileMaxSize<span class="token punctuation">:</span> PropTypes<span class="token punctuation">.</span>number
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 默认的props</span>
+  <span class="token keyword">static</span> defaultProps <span class="token operator">=</span> <span class="token punctuation">{</span>
+    fileMaxSize<span class="token punctuation">:</span> <span class="token number">2</span> <span class="token comment">// 单位默认是Mb,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">componentWillUnmount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">setState</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 初始化编辑器内容</span>
+  <span class="token keyword">async</span> <span class="token function">componentWillReceiveProps</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> html <span class="token punctuation">}</span> <span class="token operator">=</span> props<span class="token punctuation">;</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> data <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        editorState<span class="token punctuation">:</span> BraftEditor<span class="token punctuation">.</span><span class="token function">createEditorState</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> data<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 子组件上传方法（供父组件调用）</span>
+  <span class="token function-variable function">handleSubmitContent</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> htmlContent <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>editorState<span class="token punctuation">.</span><span class="token function">toHTML</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">uploadHtml</span><span class="token punctuation">(</span>htmlContent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> url<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 监听编辑器内容变化同步内容到state</span>
+  <span class="token function-variable function">handleEditorChange</span> <span class="token operator">=</span> <span class="token parameter">editorState</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> editorState <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 媒体上传校验</span>
+  <span class="token function-variable function">mediaValidate</span> <span class="token operator">=</span> <span class="token parameter">file</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> fileMaxSize <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+
+    <span class="token comment">// 类型限制</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isImageFile</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 大小限制</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>fileMaxSize <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token function">maxFileSize</span><span class="token punctuation">(</span>file<span class="token punctuation">,</span> fileMaxSize<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 媒体上传</span>
+  <span class="token function-variable function">mediaUpload</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> file<span class="token punctuation">,</span> success<span class="token punctuation">,</span> error <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    message<span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">uploadImage</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">success</span><span class="token punctuation">(</span><span class="token punctuation">{</span> url <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      message<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">&quot;上传成功&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">error</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>err<span class="token punctuation">.</span>message <span class="token operator">||</span> <span class="token string">&quot;上传失败&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> editorState <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+
+    <span class="token comment">// 媒体配置</span>
+    <span class="token keyword">const</span> media <span class="token operator">=</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 上传校验</span>
+      validateFn<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>mediaValidate<span class="token punctuation">,</span>
+      <span class="token comment">// 上传</span>
+      uploadFn<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>mediaUpload<span class="token punctuation">,</span>
+      <span class="token comment">// 基本配置</span>
+      <span class="token operator">...</span>mediaBaseconfig
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div
+        className<span class="token operator">=</span><span class="token string">&quot;custom-editor&quot;</span>
+        style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> marginTop<span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token operator">...</span>this<span class="token punctuation">.</span>props<span class="token punctuation">.</span>style <span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>BraftEditor
+          style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> height<span class="token punctuation">:</span> <span class="token number">600</span><span class="token punctuation">,</span> overflow<span class="token punctuation">:</span> <span class="token string">&quot;hidden&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token punctuation">{</span><span class="token operator">...</span>config<span class="token punctuation">}</span>
+          media<span class="token operator">=</span><span class="token punctuation">{</span>media<span class="token punctuation">}</span>
+          value<span class="token operator">=</span><span class="token punctuation">{</span>editorState<span class="token punctuation">}</span>
+          onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>handleEditorChange<span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> AppEditor<span class="token punctuation">;</span>
+
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br></div></div><p>src/components/AppEditor/config.js</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  placeholder<span class="token punctuation">:</span> <span class="token string">&quot;请输入内容&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 编辑器工具栏的控件列表</span>
+  controls<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;headings&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;font-size&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;letter-spacing&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;separator&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 分割线</span>
+
+    <span class="token string">&quot;text-color&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;bold&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;italic&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;underline&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;strike-through&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;remove-styles&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;separator&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;text-align&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;separator&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;emoji&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;media&quot;</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  
+  <span class="token comment">// 字号配置</span>
+  fontSizes<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">24</span><span class="token punctuation">,</span> <span class="token number">28</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">36</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 图片工具栏的可用控件</span>
+  imageControls<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;float-left&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 设置图片左浮动</span>
+    <span class="token string">&quot;float-right&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 设置图片右浮动</span>
+    <span class="token string">&quot;align-left&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 设置图片居左</span>
+    <span class="token string">&quot;align-center&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 设置图片居中</span>
+    <span class="token string">&quot;align-right&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 设置图片居右</span>
+    <span class="token string">&quot;link&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 设置图片超链接</span>
+    <span class="token string">&quot;size&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 设置图片尺寸</span>
+    <span class="token string">&quot;remove&quot;</span> <span class="token comment">// 删除图片</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> config<span class="token punctuation">;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><p>src/components/AppEditor/media.js</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> mediaBaseconfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 文件限制</span>
+  accepts<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    image<span class="token punctuation">:</span> <span class="token string">&quot;image/png,image/jpeg,image/gif,image/webp,image/apng,image/svg&quot;</span><span class="token punctuation">,</span>
+    video<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    audio<span class="token punctuation">:</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">//   允许插入的外部媒体的类型</span>
+  externals<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 是否允许插入外部图片，</span>
+    image<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token comment">//    是否允许插入外部视频，</span>
+    video<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token comment">//    是否允许插入外部视频，</span>
+    audio<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token comment">//    是否允许插入嵌入式媒体，例如embed和iframe标签等，</span>
+    embed<span class="token punctuation">:</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> mediaBaseconfig<span class="token punctuation">;</span>
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>src/components/AppEditor/style.less</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">:global(.custom-editor .bf-controlbar)</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">:global(.custom-editor .bf-container)</span> <span class="token punctuation">{</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #c5c5c5<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">:global(.custom-editor .bf-content)</span> <span class="token punctuation">{</span>
+  <span class="token property">min-height</span><span class="token punctuation">:</span> 600px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>src/utils/upload.js</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> message <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;antd&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ *
+ * @param {file} file 源文件
+ * @desc 限制为图片文件
+ * @retutn 是图片文件返回true否则返回false
+ */</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">isImageFile</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">file<span class="token punctuation">,</span> fileTypes</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> types <span class="token operator">=</span> fileTypes <span class="token operator">||</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;image/png&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;image/gif&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;image/jpeg&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;image/jpg&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;image/bmp&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;image/x-icon&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;image/webp&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;image/apng&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;image/svg&quot;</span>
+  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> isImage <span class="token operator">=</span> types<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>file<span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isImage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;上传文件非图片格式!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ *
+ * @param {file} file 源文件
+ * @param {number} fileMaxSize  图片限制大小单位（MB）
+ * @desc 限制为文件上传大小
+ * @retutn 在限制内返回true否则返回false
+ */</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">maxFileSize</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">file<span class="token punctuation">,</span> fileMaxSize <span class="token operator">=</span> <span class="token number">2</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> isMaxSize <span class="token operator">=</span> file<span class="token punctuation">.</span>size <span class="token operator">/</span> <span class="token number">1024</span> <span class="token operator">/</span> <span class="token number">1024</span> <span class="token operator">&lt;</span> fileMaxSize<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isMaxSize<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;上传头像图片大小不能超过 &quot;</span> <span class="token operator">+</span> fileMaxSize <span class="token operator">+</span> <span class="token string">&quot;MB!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ *
+ * @param {file} file 源文件
+ * @desc 读取图片文件为base64文件格式
+ * @retutn 返回base64文件
+ */</span>
+<span class="token comment">// 读取文件</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">readFile</span> <span class="token operator">=</span> <span class="token parameter">file</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> reader <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileReader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    reader<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> data <span class="token operator">=</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>result<span class="token punctuation">;</span>
+      <span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    reader<span class="token punctuation">.</span><span class="token function-variable function">onerror</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> err <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;读取图片失败&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    reader<span class="token punctuation">.</span><span class="token function">readAsDataURL</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ *
+ * @param {string} src  图片地址
+ * @desc 加载真实图片
+ * @return 读取成功返回图片真实宽高对象 ag: {width:100,height:100}
+ */</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">loadImage</span> <span class="token operator">=</span> <span class="token parameter">src</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> image <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    image<span class="token punctuation">.</span>src <span class="token operator">=</span> src<span class="token punctuation">;</span>
+    image<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>
+        width<span class="token punctuation">:</span> image<span class="token punctuation">.</span>width<span class="token punctuation">,</span>
+        height<span class="token punctuation">:</span> image<span class="token punctuation">.</span>height
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      <span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    image<span class="token punctuation">.</span><span class="token function-variable function">onerror</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> err <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;加载图片失败&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ *
+ * @param {file} file 源文件
+ * @param {object} props   文件分辨率的宽和高   ag: props={width:100, height :100}
+ * @desc  判断图片文件的分辨率是否在限定范围之内
+ * @throw  分辨率不在限定范围之内则抛出异常
+ *
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">isAppropriateResolution</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">file<span class="token punctuation">,</span> props</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> width<span class="token punctuation">,</span> height <span class="token punctuation">}</span> <span class="token operator">=</span> props<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> base64 <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">readFile</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> image <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">loadImage</span><span class="token punctuation">(</span>base64<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>image<span class="token punctuation">.</span>width <span class="token operator">!==</span> width <span class="token operator">||</span> image<span class="token punctuation">.</span>height <span class="token operator">!==</span> height<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;上传图片的分辨率必须为&quot;</span> <span class="token operator">+</span> width <span class="token operator">+</span> <span class="token string">&quot;*&quot;</span> <span class="token operator">+</span> height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> error<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 上传图片 根据自己项目更换</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">uploadImage</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">file</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+   
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 上传html  根据自己项目更换</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">uploadHtml</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">editorContent</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+ <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+   
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br></div></div><p>2.使用</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> AppEditor <span class="token keyword">from</span> <span class="token string">&quot;@/components/AppEditor&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">HotelSetting</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    html<span class="token punctuation">:</span> <span class="token string">''</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>html<span class="token punctuation">:</span><span class="token string">'https://hotel-1259479103.cos.ap-chengdu.myqcloud.com/admin/html/r2yyo8dyjrla71bn8qm5g-2019-07-11-10-34-19.html'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function-variable function">handleSubmit</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>editor<span class="token punctuation">.</span><span class="token function">handleSubmitContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> html <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>AppEditor
+            html<span class="token operator">=</span><span class="token punctuation">{</span>html<span class="token punctuation">}</span>
+            style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> marginLeft<span class="token punctuation">:</span> <span class="token number">100</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+            ref<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>editor <span class="token operator">=</span> e<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><p>3.使用效果</p> <p><img src="https://img-blog.csdnimg.cn/20190824115148404.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5OTUzNTM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p> <p><img src="https://img-blog.csdnimg.cn/20190824115158797.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5OTUzNTM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">2019-8-24 12:04:46</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/blog/react/select-city.html" class="prev">
+          react结合antd的Cascader组件实现pc端选择城市控件
+        </a></span> <span class="next"><a href="/blog/mpvue/font-awesome.html">
+          mpvue 如何使用 font-awesome? （不需要编码 base64）
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.98e6950e.js" defer></script><script src="/blog/assets/js/2.e0515975.js" defer></script><script src="/blog/assets/js/21.591cc08e.js" defer></script>
+  </body>
+</html>
