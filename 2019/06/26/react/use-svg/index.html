@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+    <meta name="description" content="xiaofei的个人博客">
+    
+
+    <!--Author-->
+    
+    <meta name="author" content="xiaofei">
+    
+
+    <!--Open Graph Title-->
+    
+    <meta property="og:title" content="react 项目中如何优雅的使用 svg" />
+    
+
+    <!--Open Graph Description-->
+    
+    <meta property="og:description" content="xiaofei的个人博客" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="xiaofei的个人博客" />
+
+    <!--Type page-->
+    
+    <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>react 项目中如何优雅的使用 svg - xiaofei的个人博客</title>
+
+    <!-- Tachyons Core CSS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css"> -->
+    <link href="https://cdn.bootcss.com/tachyons/4.11.1/tachyons.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css>" -->
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- add favicon.ico -->
+    <link rel="icon" href="/images/logo.png">
+
+    <link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+    <script src="/js/hm.js"></script>
+    <script src="/js/top.js"></script>
+    <script>
+
+        window.onload = function () {
+            new Top()
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="https://l-x-f.github.io" title="xiaofei的个人博客">
+            <span src="/images/my.jpeg" class="dib h3 avatar" alt="xiaofei的个人博客">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="首页">
+                    首页
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="博客">
+                    博客
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="标签">
+                    标签
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about" 
+                    title="关于">
+                    关于
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="https://blog.csdn.net/qq_39953537" 
+                    title="我的csdn">
+                    我的csdn
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="https://l_x_f.gitee.io" 
+                    title="中文站点(gitee)">
+                    中文站点(gitee)
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">react 项目中如何优雅的使用 svg</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2019-06-26 18:22</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/react/">#react</a> <a class="fw3 ph1 dib" href="/tags/antd/">#antd</a> <a class="fw3 ph1 dib" href="/tags/svg/">#svg</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="react-项目中如何优雅的使用-svg"><a href="#react-项目中如何优雅的使用-svg" class="headerlink" title="react 项目中如何优雅的使用 svg"></a>react 项目中如何优雅的使用 svg</h1><p><font  size="5"><a href="https://github.com/l-x-f/react-use-svg-demo" target="_blank" rel="noopener">github demo 地址</a></font></p>
+<p>背景： 以前 vue 项目中使用 svg-sprite-loader 来处理 svg 文件使用非常方便，加载 svg 文件，配置完定义全局组件就好了，最近在写 react 项目，如法炮制，把 vue 中使用 svg 的思路带到 react 中来，实现的效果同样是只要把 svg 文件放到指定文件夹下使用文件名称结合 react 组件就可以使用。</p>
+<p>项目环境：create-react-app：3.0.0 react：16.8.6 react-router-dom：5.0.0<br>项目目录<br><img src="https://img-blog.csdnimg.cn/20190626181406998.jpg" alt="在这里插入图片描述"></p>
+<h3 id="使用步骤如下："><a href="#使用步骤如下：" class="headerlink" title="使用步骤如下："></a>使用步骤如下：</h3><p>1.安装 svg-sprite-loader</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">yarn add svg-sprite-loader --dev</span></pre></td></tr></table></figure>
+
+<p>or</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">npm i svg-sprite-loader -D</span></pre></td></tr></table></figure>
+
+<p>2.配置 /config/webpack.config.js （yarn eject 后的配置 ）</p>
+<p><font color="#f00" size="5">注意：新添加的 loader 一定要放到 file-loader 之前</font></p>
+<p>原因：webpack 的 loader 执行是从后往前执行的</p>
+<p>loader 里添加如下配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">     test: <span class="regexp">/\.(eot|woff2?|ttf|svg)$/</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">     exclude: path.resolve(__dirname, <span class="string">"../src/icons"</span>), <span class="comment">//不处理指定svg的文件(所有使用的svg文件放到该文件夹下)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">     use: [</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">       &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">         loader: <span class="string">"url-loader"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">         options: &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">           name: <span class="string">"[name]-[hash:5].min.[ext]"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">           limit: <span class="number">5000</span>, <span class="comment">// fonts file size &lt;= 5KB, use 'base64'; else, output svg file</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">           outputPath: <span class="string">"font"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">           publicPath: <span class="string">"font"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">         &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">       &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">     ]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">   &#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">   &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">     test: <span class="regexp">/\.svg$/</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">     loader: <span class="string">"svg-sprite-loader"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">     include: path.resolve(__dirname, <span class="string">"../src/icons"</span>), <span class="comment">//只处理指定svg的文件(所有使用的svg文件放到该文件夹下)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">     options: &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">       symbolId: <span class="string">"icon-[name]"</span> <span class="comment">//symbolId和use使用的名称对应      &lt;use xlinkHref=&#123;"#icon-" + iconClass&#125; /&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">     &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">   &#125;,</span></pre></td></tr></table></figure>
+
+<p>3.src 文件夹下新建一个 icons 文件夹</p>
+<p>icons 文件夹下新建 svg 文件夹放 svg 文件</p>
+<p>目录</p>
+<p><img src="https://img-blog.csdnimg.cn/20190626181602905.jpg" alt="在这里插入图片描述"></p>
+<p>index.js 加载所有 svg 文件夹下 svg 文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> requireAll = <span class="function"><span class="params">requireContext</span> =&gt;</span> requireContext.keys().map(requireContext);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> svgs = <span class="built_in">require</span>.context(<span class="string">"./svg"</span>, <span class="literal">false</span>, /\.svg$/);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">requireAll(svgs);</span></pre></td></tr></table></figure>
+
+<p><font color="#f00" size="5">然后一定要在 react 入口文件 src/index.js 中导入 src/icons/index.js</font></p>
+<p>代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">import &quot;.&#x2F;icons&quot;;</span></pre></td></tr></table></figure>
+
+<p>4.SvgIcon 组件</p>
+<p>src/components 文件夹下建一个 SvgIcon 文件夹 添加 index.jsx 文件</p>
+<p>目录</p>
+<p><img src="https://img-blog.csdnimg.cn/20190626181710593.jpg" alt="在这里插入图片描述"></p>
+<p>index.jsx 组件内容如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">"react"</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">"prop-types"</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> styles <span class="keyword">from</span> <span class="string">"./style.less"</span>; <span class="comment">//已启用 CSS Modules</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> SvgIcon = <span class="function"><span class="params">props</span> =&gt;</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">const</span> &#123; iconClass, fill &#125; = props;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">return</span> (</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    &lt;i aria-hidden=<span class="string">"true"</span> className=<span class="string">"anticon"</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">      &lt;svg className=&#123;styles[<span class="string">"svg-class"</span>]&#125;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        &lt;use xlinkHref=&#123;<span class="string">"#icon-"</span> + iconClass&#125; fill=&#123;fill&#125; /&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">      &lt;<span class="regexp">/svg&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"><span class="regexp">    &lt;/i</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">  );</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">&#125;;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">SvgIcon.propTypes = &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">// svg名字</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">  iconClass: PropTypes.string.isRequired,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">// 填充颜色</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">  fill: PropTypes.string</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">&#125;;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">SvgIcon.defaultProps = &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">  fill: <span class="string">"currentColor"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">&#125;;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> SvgIcon;</span></pre></td></tr></table></figure>
+
+<p>style.less</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.svg-class</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">display</span>: inline-block;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">overflow</span>: hidden;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">min-width</span>: <span class="number">14px</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">width</span>: <span class="number">1em</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">height</span>: <span class="number">1em</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p>5.使用<br>把要使用的的 svg 文件放到 src/icons/svg 目录下，使用的时候把 svg 名称给 iconClass 即可</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">"react"</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> SvgIcon <span class="keyword">from</span> <span class="string">"@/components/SvgIcon"</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Demo = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">const</span> svgName = <span class="string">"content"</span>; <span class="comment">// content.svg  已经放到 /src/icons/svg/  目录下</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">SvgIcon</span> <span class="attr">iconClass</span>=<span class="string">&#123;svgName&#125;</span> /&gt;</span>;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="xml">&#125;;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"><span class="xml">export default Demo;</span></span></pre></td></tr></table></figure>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/react/">#react</a> <a class="fw3 ph1 dib" href="/tags/antd/">#antd</a> <a class="fw3 ph1 dib" href="/tags/svg/">#svg</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/images/my.jpeg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="xiaofei">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            你好，我的名字叫xiaofei，这是我的博客。<br> 我是一名前端开发者 + linux 爱好者。热衷于前端开发技术， 熟悉 Vue，React，微信小程序，webpack，babel，node，linux，nginx 等。<br> 我目前在西安生活和工作，如果你需要和我交流，请联系我（网站下面有联系方式）。
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p>
+            <a href="/2020/10/24/node/env/">vue,react 项目.env 环境变量原理解析</a>
+        </p>
+    
+        <p>
+            <a href="/2020/09/18/node/webpack.require.context/">用 node 实现类似 webpack 的 require.context()功能</a>
+        </p>
+    
+        <p>
+            <a href="/2020/08/04/vue/vue-h5-create/">Vue 搭建移动端h5项目步骤</a>
+        </p>
+    
+        <p>
+            <a href="/2020/08/02/interview/tencent/">西安腾讯云面试总结（已拿offer）</a>
+        </p>
+    
+        <p>
+            <a href="/2020/07/22/webpack/umi-assetDir/">umi增加支持放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputD</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/l-x-f/l-x-f.github.io" title="github" target="_blank" >
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="mailto:1446628111@qq.com" title="qq" target="_blank" >
+                            <i class="fa fa-qq"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="mailto:1446628111@qq.com" title="email" target="_blank" >
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://xiaofei.netlify.com" title="netlify" target="_blank" >
+                            <i class="fa fa iconfont iconnetlify"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://blog.csdn.net/qq_39953537" title="csdn" target="_blank" >
+                            <i class="fa fa iconfont iconcsdn"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://l_x_f.gitee.io" title="gitee" target="_blank" >
+                            <i class="fa fa iconfont iconmayun1"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                MIT Licensed | Copyright © 2016-present xiaofei
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
