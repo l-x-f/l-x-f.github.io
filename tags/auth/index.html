@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-    <meta property="og:title" content="webpack-dev-server/client/clients/BaseClient.js 报错" />
+    <meta property="og:title" content="xiaofei的个人博客" />
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="website" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>webpack-dev-server/client/clients/BaseClient.js 报错 - xiaofei的个人博客</title>
+    <title>auth - xiaofei的个人博客</title>
 
     <!-- Tachyons Core CSS -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css"> -->
@@ -89,6 +89,8 @@
 <body>
 
 <!-- Main Content -->
+
+
 <!-- Banner -->
 <!-- Banner -->
 <div class="w-100 bg-1 ph5-ns ph3 text-light">
@@ -141,109 +143,37 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">webpack-dev-server/client/clients/BaseClient.js 报错</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2019-09-09 11:06</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns"># auth</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns"></p>
         </div>
     </div>
 
     <!-- Icon -->
     <div class="relative w-100 mw8 center white dn dn-m db-ns">
-        <i class="header-icon fa fa-file-text-o"></i>
+        <i class="header-icon fa fa-folder-open"></i>
     </div>
 </div>
 
-<!-- Content -->
 <div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
     <div class="content">
         <div class="mw8 center">
-            <div class="cf">
-                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
-                    <!-- Tags Vertical -->
-                    
-                        <div class="tags-container-vertical">
-                            <div class="tags-sub-container">
-                                <a class="fw3 ph1 dib" href="/tags/webpack/">#webpack</a> <a class="fw3 ph1 dib" href="/tags/webpack-dev-server/">#webpack-dev-server</a> <a class="fw3 ph1 dib" href="/tags/BaseClient-js/">#BaseClient.js</a>
-                            </div>
-                        </div>
-                    
-
-                    <!-- Main Post Content -->
-                    <p>拿到别人的一个项目，启动报下面的错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Cannot assign to read only property &#39;exports&#39; of object &#39;#&lt;Object&gt;&#39;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">webpack-dev-server&#x2F;client&#x2F;clients&#x2F;BaseClient.js</span></pre></td></tr></table></figure>
-
-<p>第一行报错是不能混用 import 以及 module.exports 导致的</p>
-<p>第二行是报错位置，来自 webpack-dev-server 这是底层代码报错，也不能改呀</p>
-<p>查看 package.json</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&quot;webpack&quot;: &quot;4.16.5&quot;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"> &quot;webpack-bundle-analyzer&quot;: &quot;2.13.1&quot;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"> &quot;webpack-cli&quot;: &quot;3.1.0&quot;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"> &quot;webpack-dev-server&quot;: &quot;^3.2.1&quot;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"> &quot;webpack-merge&quot;: &quot;4.1.4&quot;</span></pre></td></tr></table></figure>
-
-<p>发现 webpack-dev-serve 和 webpack 主版本差异较大<br>升级 webpack-dev-server 到 3.4.1<br>问题解决。</p>
-
-                    
-                    <!-- Tags Bottom -->
-                    
-                        <div class="tags-container-bottom">
-                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/webpack/">#webpack</a> <a class="fw3 ph1 dib" href="/tags/webpack-dev-server/">#webpack-dev-server</a> <a class="fw3 ph1 dib" href="/tags/BaseClient-js/">#BaseClient.js</a>
-                        </div>
-                    
-
-                    <!-- Comments -->
-                    
-
-
-
-                </div>
-                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
-                    
-                    <hr class="dn-l mw4 black-50 mt5" />
-                    
-                    <!-- Widget 1: About -->
-                    <div class="mt5 mt0-l">
-    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
-        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
-            <img src="/images/my.jpeg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="xiaofei">
+            
+                <a href="/2020/10/24/vue/nuxt-auth/">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv3">
+        <div class="dtc v-mid w-20 black-50">
+            
+                <span class="f4 fw3 lh-copy">2020-10-24</span> 
+            
         </div>
-        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
-            你好，我的名字叫xiaofei，这是我的博客。<br> 我是一名前端开发者 + linux 爱好者。热衷于前端开发技术， 熟悉 Vue，React，微信小程序，webpack，babel，node，linux，nginx 等。<br> 我目前在西安生活和工作，如果你需要和我交流，请联系我（网站下面有联系方式）。
+        <div class="dtc v-mid w-80 black-70">
+            <span class="f4 fw3 lh-copy">nuxt 自定义 auth 中间件实现令牌的持久化<span>
         </div>
-    </article>
-</div>
-
-                    <hr class="dn-l mw4 black-50 mt5" />
-                    
-                    <!-- Widget 2: Categories -->
-                    
-
-                    <!-- Widget 3: Recent Posts -->
-                    <div class="mt5 tc tl-l">
-    <h3>近期文章</h3>
-    
-        <p>
-            <a href="/2020/10/24/vue/nuxt-auth/">nuxt 自定义 auth 中间件实现令牌的持久化</a>
-        </p>
-    
-        <p>
-            <a href="/2020/10/24/node/env/">vue,react 项目.env 环境变量原理解析</a>
-        </p>
-    
-        <p>
-            <a href="/2020/09/18/node/webpack.require.context/">用 node 实现类似 webpack 的 require.context()功能</a>
-        </p>
-    
-        <p>
-            <a href="/2020/08/04/vue/vue-h5-create/">Vue 搭建移动端h5项目步骤</a>
-        </p>
-    
-        <p>
-            <a href="/2020/08/02/interview/tencent/">西安腾讯云面试总结（已拿offer）</a>
-        </p>
-    
-</div>
-                </div>
-            </div>
+    </div>
+</a>
+            
         </div>
     </div>
 </div>
-
 
 <!-- Footer -->
 <div class="bg-1 ph2 ph5-ns pv5">
