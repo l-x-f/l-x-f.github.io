@@ -372,3 +372,38 @@ pre {
   border-radius: 50%;
   padding: 10px;
 }
+.tencent-ad {
+  position: relative;
+  width: 100%;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  display: flex;
+  justify-content: center;
+}
+.tencent-ad .img-warp {
+  width: 100%;
+  max-width: 64rem;
+}
+.tencent-ad .img-warp::after {
+  position: absolute;
+  text-align: center;
+  width: 40px;
+  height: 20px;
+  line-height: 20px;
+  right: 70px;
+  bottom: 10px;
+  content: '广告';
+  color: #999;
+  font-size: 12px;
+  border: 1px solid #d7dae2;
+}
+.tencent-ad img {
+  display: block;
+  width: 100%;
+  max-width: 64rem;
+  min-height: 90px;
+  object-fit: cover;
+  font-size: 0;
+  line-height: 0;
+}
