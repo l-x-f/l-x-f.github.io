@@ -153,14 +153,6 @@
         我的csdn
       </a>
       
-      <a
-        class="link dim f6 f5-l dib mr3 mr4-l white"
-        target="_blank" rel="noopener" href="https://l-x-f.gitee.io"
-        title="中文站点(gitee)"
-      >
-        中文站点(gitee)
-      </a>
-      
     </div>
   </nav>
 
@@ -210,144 +202,144 @@
 
                     <!-- Main Post Content -->
                     <h1 id="git-常用命令笔记"><a href="#git-常用命令笔记" class="headerlink" title="git 常用命令笔记"></a>git 常用命令笔记</h1><h3 id="一-安装配置"><a href="#一-安装配置" class="headerlink" title="一.安装配置"></a>一.安装配置</h3><p>1.配置个人的用户名称和电子邮件地址：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;your name&quot;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;your email&quot;</span></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;your name&quot;</span><br><span class="line">git config --global user.email &quot;your email&quot;</span><br></pre></td></tr></table></figure>
 
 <p>2.查看配置信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git config --list</span></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
 
 <p>3.生成 SSH Key （一路回车就行）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br></pre></td></tr></table></figure>
 
-<h3 id="二-创建仓库"><a href="#二-创建仓库" class="headerlink" title="二.创建仓库"></a>二.创建仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git init</span></pre></td></tr></table></figure>
+<h3 id="二-创建仓库"><a href="#二-创建仓库" class="headerlink" title="二.创建仓库"></a>二.创建仓库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git clone &lt;repo&gt; &lt;directory&gt;</span></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;repo&gt; &lt;directory&gt;</span><br></pre></td></tr></table></figure>
 
 <p>参数说明：</p>
 <p><code>repo</code> : Git 仓库。</p>
 <p><code>directory</code> : 本地目录。</p>
 <h3 id="三-基本操作"><a href="#三-基本操作" class="headerlink" title="三.基本操作"></a>三.基本操作</h3><p>1.文件添加到缓存区</p>
 <p>缓存所有</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git add .</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
 
 <p>缓存指定文件</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git add  [filename]</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add  [filename]</span><br></pre></td></tr></table></figure>
 
 <p>2.文件修改后未执行 <code>git add</code> 操作想恢复原样</p>
 <p>恢复所有</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git checkout   .</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout   .</span><br></pre></td></tr></table></figure>
 
 <p>恢复指定文件</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git checkout  [filename]</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout  [filename]</span><br></pre></td></tr></table></figure>
 
 <p>3.文件修改后执行了 <code>git add</code> 操作想恢复原样 即 取消之前的 <code>git add</code> 添加</p>
 <p>恢复所有</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git reset .</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset .</span><br></pre></td></tr></table></figure>
 
 <p>恢复指定文件</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git reset [filename]</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset [filename]</span><br></pre></td></tr></table></figure>
 
 <p>4.查看修改状态</p>
 <p>查看上次提交之后是否有修改。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git status   or   git status -s  <span class="comment"># 简短的结果输出</span></span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status   or   git status -s  <span class="comment"># 简短的结果输出</span></span><br></pre></td></tr></table></figure>
 
 <p>查看执行 <code>git status</code> 的结果的详细信息。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git diff</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure>
 
 <p>尚未缓存的改动：<code>git diff</code></p>
 <p>查看已缓存的改动： <code>git diff --cached</code></p>
 <p>查看已缓存的与未缓存的所有改动：<code>git diff HEAD</code></p>
 <p>显示摘要而非整个 diff：<code>git diff --stat</code></p>
 <p>5.将缓存区内容添加到仓库中</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git commit -m  [message]</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m  [message]</span><br></pre></td></tr></table></figure>
 
 <p>跳过 git add 提交缓存的流程</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git commit -a  <span class="comment"># 然后进入vim编辑器写信息</span></span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -a  <span class="comment"># 然后进入vim编辑器写信息</span></span><br></pre></td></tr></table></figure>
 
 <p>6.执行 git commit 后修改提交信息</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git commit --amend <span class="comment"># 然后进入vim编辑器修改</span></span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend <span class="comment"># 然后进入vim编辑器修改</span></span><br></pre></td></tr></table></figure>
 
 <p>7.版本回退</p>
 <p>回退到上一个版本</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git  reset --hard HEAD^</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git  reset --hard HEAD^</span><br></pre></td></tr></table></figure>
 
 <p>回退到任意版本（git log –oneline 或者 git reflog 查看版本号）</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git  reset --hard HEAD~100  <span class="comment"># HEAD~100 :版本号</span></span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git  reset --hard HEAD~100  <span class="comment"># HEAD~100 :版本号</span></span><br></pre></td></tr></table></figure>
 
 <p>8.代码提交</p>
 <p>添加远程仓库</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git remote add [shortname] [url]  <span class="comment"># 常用 git remote add origin  [url]</span></span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add [shortname] [url]  <span class="comment"># 常用 git remote add origin  [url]</span></span><br></pre></td></tr></table></figure>
 
 <p>查看远程仓库</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git remote -v</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
 
 <p>远程仓库的重命名 （origin 改成 new_origin）</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git remote rename origin new_origin</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote rename origin new_origin</span><br></pre></td></tr></table></figure>
 
 <p>远端仓库 origin 的移除</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git remote rm origin</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote <span class="built_in">rm</span> origin</span><br></pre></td></tr></table></figure>
 
 <p>提交代码并关联仓库和分支</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git push -u origin master <span class="comment"># 以后执行 git push 就可以了</span></span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master <span class="comment"># 以后执行 git push 就可以了</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="四-分支操作"><a href="#四-分支操作" class="headerlink" title="四.分支操作"></a>四.分支操作</h3><p>1.新建</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git branch [branchname]</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch [branchname]</span><br></pre></td></tr></table></figure>
 
 <p>2.切换</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git checkout [branchname]    <span class="comment">#切换并新建   git  checkout -b  [branchname]</span></span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout [branchname]    <span class="comment">#切换并新建   git  checkout -b  [branchname]</span></span><br></pre></td></tr></table></figure>
 
 <p>3.查看所有分支</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git branch -a</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
 
 <p>4.删除分支</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除本地分支</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">git branch -d [branchname]</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除本地分支</span></span><br><span class="line">git branch -d [branchname]</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除远程分支</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">git push origin --delete [branchname]</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除远程分支</span></span><br><span class="line">git push origin --delete [branchname]</span><br></pre></td></tr></table></figure>
 
 <p>5.其他分支合并到当前分支</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git merge [otherbranchname]</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge [otherbranchname]   <span class="comment">#取消合并  git merge  --abort</span></span><br></pre></td></tr></table></figure>
 
 <p>6.其他分支合并到当前分支（变基）</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git rebase [otherbranchname]</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase [otherbranchname]    <span class="comment">#撤销rebase   git reset --hard [版本号]</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="五-标签操作"><a href="#五-标签操作" class="headerlink" title="五.标签操作"></a>五.标签操作</h3><p>1.给当前版本打标签</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git tag -a [tagname]  <span class="comment"># 标签名  -m  "备注"</span></span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag -a [tagname]  <span class="comment"># 标签名  -m  &quot;备注&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>2.给某个版本打标签（特定版本）</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git tag -a  HEAD~  <span class="comment"># 版本号 git log --oneline 或者 git reflog 查看版本号）</span></span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag -a  HEAD~  <span class="comment"># 版本号 git log --oneline 或者 git reflog 查看版本号）</span></span><br></pre></td></tr></table></figure>
 
 <p>3.同步到远程</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git push origin [tagname]  <span class="comment">#将tagname标签提交到服务器</span></span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin [tagname]  <span class="comment">#将tagname标签提交到服务器</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git push origin -tags <span class="comment">#将本地标签一次性提交到服务器</span></span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin -tags <span class="comment">#将本地标签一次性提交到服务器</span></span><br></pre></td></tr></table></figure>
 
 <p>3.删除标签</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git tag -d <span class="string">"tagname"</span>   or   git tag -d HEAD~</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag -d <span class="string">&quot;tagname&quot;</span>   or   git tag -d HEAD~</span><br></pre></td></tr></table></figure>
 
 <p>同步到远程</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">#远程仓库删除,注意这里的空格</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">git push origin :[tagname]</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#远程仓库删除,注意这里的空格</span></span><br><span class="line">git push origin :[tagname]</span><br></pre></td></tr></table></figure>
 
 <p>4.查看标签</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git tag</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag</span><br></pre></td></tr></table></figure>
 
 <h3 id="六-保存和恢复工作进度-stash-git-add-之前操作"><a href="#六-保存和恢复工作进度-stash-git-add-之前操作" class="headerlink" title="六. 保存和恢复工作进度(stash) (git add . 之前操作)"></a>六. 保存和恢复工作进度(stash) (git add . 之前操作)</h3><p>1.执行存储，添加备注。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git stash save <span class="string">"message"</span>    <span class="comment"># git stash 也可以，但查找时不方便识别。</span></span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash save <span class="string">&quot;message&quot;</span>    <span class="comment"># git stash 也可以，但查找时不方便识别。</span></span><br></pre></td></tr></table></figure>
 
 <p>2.查看 stash 存储列表</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git stash list</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash list</span><br></pre></td></tr></table></figure>
 
 <p>3.显示做了哪些改动</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git stash show  <span class="comment"># 显示做了哪些改动，默认 show 第一个存储,如果要显示其他存贮，后面加 stash@&#123;\$num&#125;，比如第二个 git stash show stash@&#123;1&#125;</span></span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash show  <span class="comment"># 显示做了哪些改动，默认 show 第一个存储,如果要显示其他存贮，后面加 stash@&#123;\$num&#125;，比如第二个 git stash show stash@&#123;1&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>4.恢复存储</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git stash apply  <span class="comment"># 应用某个存储,但不会把存储从存储列表中删除，默认使用第一个存储,即 stash@&#123;0&#125;，如果要使用其他个，git stash apply stash@&#123;\$num&#125; ， 比如第二个：git stash apply stash@&#123;1&#125;</span></span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash apply  <span class="comment"># 应用某个存储,但不会把存储从存储列表中删除，默认使用第一个存储,即 stash@&#123;0&#125;，如果要使用其他个，git stash apply stash@&#123;\$num&#125; ， 比如第二个：git stash apply stash@&#123;1&#125;</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git stash pop  <span class="comment"># 命令恢复之前缓存的工作目录，将缓存堆栈中的对应 stash 删除，并将对应修改应用到当前的工作目录下,默认为第一个 stash,即 stash@&#123;0&#125;，如果要应用并删除其他 stash，命令：git stash pop stash@&#123;\$num&#125; ，比如应用并删除第二个：git stash pop stash@&#123;1&#125;</span></span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash pop  <span class="comment"># 命令恢复之前缓存的工作目录，将缓存堆栈中的对应 stash 删除，并将对应修改应用到当前的工作目录下,默认为第一个 stash,即 stash@&#123;0&#125;，如果要应用并删除其他 stash，命令：git stash pop stash@&#123;\$num&#125; ，比如应用并删除第二个：git stash pop stash@&#123;1&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>5.丢弃存储，从列表中删除这个存储</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git stash drop stash@&#123;<span class="variable">$num</span>&#125;</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash drop stash@&#123;<span class="variable">$num</span>&#125;</span><br></pre></td></tr></table></figure>
 
 <p>6.删除所有缓存的 stash</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git stash clear</span></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash clear</span><br></pre></td></tr></table></figure>
 
                     
                     <!-- Tags Bottom -->
@@ -435,7 +427,7 @@
       <div class="dib mh3">
         <a
           class="f3 f2-ns white dim"
-          href="https://github.com/l-x-f/l-x-f.github.io"
+          href="https://github.com/l-x-f"
           title="github"
           target="_blank"
         >
@@ -462,17 +454,6 @@
           target="_blank"
         >
           <i class="fa fa-envelope"></i>
-        </a>
-      </div>
-      
-      <div class="dib mh3">
-        <a
-          class="f3 f2-ns white dim"
-          href="https://xiaofei.netlify.com"
-          title="netlify"
-          target="_blank"
-        >
-          <i class="fa fa iconfont iconnetlify"></i>
         </a>
       </div>
       

@@ -1,6 +1,7 @@
 body {
   -webkit-backface-visibility: hidden;
-  font-family: Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 .vh-40 {
   height: 40vh;
@@ -21,7 +22,7 @@ body {
   text-align: justify;
 }
 .header-icon {
-  font-size: 30vh;
+  font-size: 26vh;
   opacity: 0.4;
   position: absolute;
   bottom: -3rem;
@@ -52,8 +53,8 @@ body {
   font-size: 16px;
 }
 
-.post-content>*:first-child {
-    margin-top: 0;
+.post-content > *:first-child {
+  margin-top: 0;
 }
 .content a,
 .content .fake-link {
@@ -102,7 +103,11 @@ body {
 .content hr {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0)
+  );
 }
 .content blockquote {
   background: #f9f9f9;
@@ -120,7 +125,7 @@ body {
   overflow: auto;
 }
 .content blockquote footer strong:before {
-  content: "-";
+  content: '-';
   padding-right: 10px;
 }
 .content blockquote footer cite {
@@ -220,7 +225,7 @@ body {
   opacity: 0.75;
 }
 .content figure.highlight figcaption:before {
-  content: "\f016";
+  content: '\f016';
   font-family: FontAwesome;
   margin: 0 10px 0 20px;
 }
@@ -237,7 +242,7 @@ body {
 .content pre,
 .content figure.highlight {
   background-color: #f7f7f7;
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   font-size: 85%;
   line-height: 1.45;
   overflow: auto;
