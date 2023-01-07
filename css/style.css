@@ -217,7 +217,7 @@ body {
 }
 .content figure.highlight figcaption {
   padding-top: 10px;
-  font-size: 85%;
+  font-size: 12px;
   opacity: 0.75;
 }
 .content figure.highlight figcaption:before {
@@ -238,10 +238,16 @@ body {
 .content pre,
 .content figure.highlight {
   background-color: #f7f7f7;
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 85%;
-  line-height: 1.25;
+  font-family: consolas, Courier, "MS Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.45;
   overflow: auto;
+}
+figure.highlight {
+  padding: 10px 0;
+}
+pre {
+  background-color: #272822 !important;
 }
 pre .comment,
 pre .template_comment,
@@ -334,6 +340,73 @@ pre .status,
 pre .nginx .title {
   color: #8959a8;
 }
+.language-javascript {
+  color: #f8f8f2;
+}
+.highlight {
+  background-color: #272822 !important;
+  color: #f8f8f2;
+}
+.highlight .code .highlight,
+.highlight .code .tag,
+.highlight .code .subst {
+  color: #c82829;
+}
+.highlight .code .strong,
+.highlight .code .emphasis {
+  color: #a8a8a2;
+}
+.highlight .code .bullet,
+.highlight .code .quote,
+.highlight .code .number,
+.highlight .code .regexp,
+.highlight .code .literal,
+.highlight .code .link {
+  color: #ae81ff;
+}
+.highlight .code .code,
+.highlight .code .title,
+.highlight .code .section,
+.highlight .code .selector-class {
+  color: #a6e22e;
+}
+.highlight .code .strong {
+  font-weight: bold;
+}
+.highlight .code .emphasis {
+  font-style: italic;
+}
+.highlight .code .keyword,
+.highlight .code .selector-tag,
+.highlight .code .name,
+.highlight .code .attr {
+  color: #f92672;
+}
+.highlight .code .symbol,
+.highlight .code .attribute {
+  color: #66d9ef;
+}
+.highlight .code .params,
+.highlight .code .class .title {
+  color: #f8f8f2;
+}
+.highlight .code .string,
+.highlight .code .type,
+.highlight .code .built_in,
+.highlight .code .builtin-name,
+.highlight .code .selector-id,
+.highlight .code .selector-attr,
+.highlight .code .selector-pseudo,
+.highlight .code .addition,
+.highlight .code .variable,
+.highlight .code .template-variable {
+  color: #e6db74;
+}
+.highlight .code .comment,
+.highlight .code .deletion,
+.highlight .code .meta {
+  color: #75715e;
+}
 .content table tr:not(:last-child) td {
   border-bottom: 0;
 }
@@ -344,7 +417,7 @@ pre .nginx .title {
   padding: 0;
 }
 pre {
-  margin: 6px 0;
+  margin: 1.4px 0;
 }
 .fake-link {
   cursor: pointer;
@@ -405,4 +478,7 @@ pre {
   object-fit: cover;
   font-size: 0;
   line-height: 0;
+}
+.recent-item {
+  margin: 5px 0;
 }
