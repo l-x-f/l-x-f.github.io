@@ -217,7 +217,7 @@ body {
 }
 .content figure.highlight figcaption {
   padding-top: 10px;
-  font-size: 12px;
+  font-size: 14px;
   opacity: 0.75;
 }
 .content figure.highlight figcaption:before {
@@ -239,7 +239,7 @@ body {
 .content figure.highlight {
   background-color: #f7f7f7;
   font-family: consolas, Courier, "MS Courier New", monospace;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.45;
   overflow: auto;
 }
