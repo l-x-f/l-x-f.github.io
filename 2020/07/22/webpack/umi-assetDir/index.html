@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <!-- Head tag -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="baidu_union_verify" content="a413507676ae2c1dae7063ec877d0674" />
+
+  <!--Description-->
+  
+  <meta name="description" content="xiaofei的个人博客" />
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="xiaofei" />
+  
+
+  <!--Open Graph Title-->
+  
+  <meta property="og:title" content="umi增加支持放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录，就比如vue-cli的assetDir" />
+  
+
+  <!--Open Graph Description-->
+  
+  <meta property="og:description" content="xiaofei的个人博客" />
+  
+
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="飞的日志" />
+
+  <!--Type page-->
+  
+  <meta property="og:type" content="article" />
+  
+
+  <!--Page Cover-->
+  
+
+  <meta name="twitter:card" content="summary" />
+  
+
+  <!-- Title -->
+  
+  <title>umi增加支持放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录，就比如vue-cli的assetDir - 飞的日志</title>
+
+  <!-- Tachyons Core CSS -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css"> -->
+  <link
+    href="https://cdn.bootcss.com/tachyons/4.11.1/tachyons.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Fonts -->
+  <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css>" -->
+  <link
+    href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Custom CSS -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  <!-- Google Analytics -->
+  
+
+
+  <!-- add favicon.ico -->
+  <link rel="icon" href="/images/logo.png" />
+
+  
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+
+  <script src="/js/hm.js"></script>
+  <script src="/js/top.js"></script>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5957060091098291"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    window.onload = function () {
+      new Top()
+    }
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+  <body>
+    <!-- Main Content -->
+    <!-- Banner -->
+<!-- Banner -->
+
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+  <nav class="db dt-l w-100 mw8 center border-box pv4">
+    <!-- <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="https://l-x-f.github.io" title="飞的日志">
+            <span src="/images/my.jpeg" class="dib h3 avatar" alt="飞的日志">
+        </a> -->
+    <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/"
+        title="首页"
+      >
+        首页
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/archives"
+        title="博客"
+      >
+        博客
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/tags"
+        title="标签"
+      >
+        标签
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/about"
+        title="关于"
+      >
+        关于
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="https://l-x-f.github.io/coding-standard/"
+        title="Web前端代码规范"
+      >
+        Web前端代码规范
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39953537"
+        title="关联的CSDN"
+      >
+        关联的CSDN
+      </a>
+      
+    </div>
+  </nav>
+
+  <!-- Title -->
+  <div class="w-100 mw8 center dt">
+    <div class="dtc v-mid white">
+      <h1 class="f1-l f2-m tc tc-m tl-ns">umi增加支持放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录，就比如vue-cli的assetDir</h1>
+      <p style="padding-bottom: 40px" class="f4 fw3 tc tc-m tl-ns">
+        2020-07-22 10:01
+      </p>
+    </div>
+  </div>
+
+  <!-- Icon -->
+  <div class="relative w-100 mw8 center white dn dn-m db-ns">
+    <i class="header-icon fa fa-file-text-o"></i>
+  </div>
+</div>
+
+<!-- TODO:AD -->
+<!-- 
+<a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/bdyBVja9"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/618.jpg" alt="" />
+  </div>
+</a> -->
+
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/antd/">#antd</a> <a class="fw3 ph1 dib" href="/tags/umi/">#umi</a> <a class="fw3 ph1 dib" href="/tags/assetDir/">#assetDir</a> <a class="fw3 ph1 dib" href="/tags/Ant-Design-Pro/">#Ant Design Pro</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="umi-项目增加支持放置生成的静态资源-js、css、img、fonts-的-相对于-outputDir-的-目录，就比如-vue-cli-的-assetDir"><a href="#umi-项目增加支持放置生成的静态资源-js、css、img、fonts-的-相对于-outputDir-的-目录，就比如-vue-cli-的-assetDir" class="headerlink" title="umi 项目增加支持放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录，就比如 vue-cli 的 assetDir"></a>umi 项目增加支持放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录，就比如 vue-cli 的 assetDir</h1><p><strong>简介：最近需要做一个后台系统，时间又比较充足，antd 和 Ant Design Pro 都已经升级到了 v4 ，于是就果断尝鲜了一波，遇到的问题也比较多，比较难解决的就是类似 vue-cli 的 assetDir 的问题，现把解决方案整理如下。</strong></p>
+<p><font color="#f00" size="5">提示： 不要配置 config.optimization.splitChunks ，会导致 umi 项目运行失败。</font></p>
+<h2 id="1-项目主要依赖"><a href="#1-项目主要依赖" class="headerlink" title="1.项目主要依赖"></a>1.项目主要依赖</h2><p><code>package.json</code></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;@ant-design/icons&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@ant-design/pro-layout&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^5.0.16&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@ant-design/pro-table&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2.3.4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;antd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;4.3.3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;axios&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.19.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;braft-editor&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.3.9&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;braft-polyfill&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.0.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;classnames&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.2.6&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cropperjs&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.5.7&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;font-awesome&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.7.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;js-cookie&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.2.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;js-md5&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.7.3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lodash&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.17.11&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;moment&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.25.3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;omit.js&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.0.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;path-to-regexp&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2.4.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;prop-types&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^15.7.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;qs&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^6.9.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;react&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^16.8.6&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;react-cropper&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.3.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;react-dom&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^16.8.6&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;react-helmet-async&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.0.4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;umi&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.1.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;umi-request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.0.8&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;use-merge-value&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.0.1&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-项目结构"><a href="#2-项目结构" class="headerlink" title="2.项目结构"></a>2.项目结构</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">├── config                 <span class="comment"># 配置文件，包含umi内置功能和插件的配置以及webpack和babel的配置。</span></span><br><span class="line">│   ├── config.dev.js      <span class="comment"># 开发环境变量</span></span><br><span class="line">│   ├── config.js          <span class="comment"># 配置文件</span></span><br><span class="line">│   ├── config.prod.js     <span class="comment"># 生产环境变量</span></span><br><span class="line">│   └── defaultSettings.js <span class="comment"># 网站和antd的配置</span></span><br><span class="line">├── public                 <span class="comment"># 静态文件，不变化的logo和icon等</span></span><br><span class="line">├── src                    <span class="comment"># 主代码文件</span></span><br><span class="line">    ├── assets             <span class="comment"># 静态文件，网站需要的图片，字体等</span></span><br><span class="line">    │</span><br><span class="line">    ├── components         <span class="comment"># jsx组件</span></span><br><span class="line">    ├── global.jsx         <span class="comment"># 全局js</span></span><br><span class="line">    ├── global.less        <span class="comment"># 全局样式</span></span><br><span class="line">    ├── icons              <span class="comment"># 自定义svg图标</span></span><br><span class="line">    ├── layouts            <span class="comment"># 网站基本布局，权限校验</span></span><br><span class="line">    ├── locales            <span class="comment"># 语言配置</span></span><br><span class="line">    ├── models             <span class="comment"># store数据仓库</span></span><br><span class="line">    ├── pages              <span class="comment"># 网站页面</span></span><br><span class="line">    ├── routes             <span class="comment"># 网站路由文件</span></span><br><span class="line">    │</span><br><span class="line">    ├── service-worker.js  <span class="comment"># pwa文件</span></span><br><span class="line">    ├── services           <span class="comment"># api接口</span></span><br><span class="line">    │</span><br><span class="line">    ├── styles             <span class="comment"># 全局样式</span></span><br><span class="line">    │</span><br><span class="line">    └── utils              <span class="comment"># 工具，包含请求库，本地存储等</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-主要修改-chainWebpack-配置-（defaultSettings-和-routes-文件可以根据自己项目删除）"><a href="#3-主要修改-chainWebpack-配置-（defaultSettings-和-routes-文件可以根据自己项目删除）" class="headerlink" title="3.主要修改 chainWebpack 配置 （defaultSettings 和 routes 文件可以根据自己项目删除）"></a>3.主要修改 <code>chainWebpack</code> 配置 （defaultSettings 和 routes 文件可以根据自己项目删除）</h2><p><code>config/config.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// https://umijs.org/config/</span></span><br><span class="line"><span class="keyword">import</span> &#123; defineConfig &#125; <span class="keyword">from</span> <span class="string">&quot;umi&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> defaultSettings <span class="keyword">from</span> <span class="string">&quot;./defaultSettings&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> routes <span class="keyword">from</span> <span class="string">&quot;../src/routes&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">CompressionWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&quot;compression-webpack-plugin&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> isEnvProduction = process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&quot;production&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> isEnvDevelopment = process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&quot;development&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">resolve</span> = (<span class="params">dir</span>) =&gt; path.<span class="title function_">join</span>(__dirname, dir);</span><br><span class="line"><span class="keyword">const</span> assetDir = <span class="string">&quot;static&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> config = <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">history</span>: &#123; <span class="attr">type</span>: <span class="string">&quot;hash&quot;</span> &#125;,</span><br><span class="line">  <span class="attr">publicPath</span>: <span class="string">&quot;./&quot;</span>,</span><br><span class="line">  <span class="attr">hash</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">antd</span>: &#123;&#125;,</span><br><span class="line">  <span class="attr">dva</span>: &#123;</span><br><span class="line">    <span class="attr">hmr</span>: <span class="literal">true</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="title function_">chainWebpack</span>(<span class="params">config, &#123; env, webpack, createCSSRule &#125;</span>) &#123;</span><br><span class="line">    <span class="comment">// 修改js，js chunk文件输出目录</span></span><br><span class="line">    config.<span class="property">output</span></span><br><span class="line">      .<span class="title function_">filename</span>(assetDir + <span class="string">&#x27;/js/[name].[hash:8].js&#x27;</span>)</span><br><span class="line">      .<span class="title function_">chunkFilename</span>(assetDir + <span class="string">&#x27;/js/[name].[contenthash:8].chunk.js&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 修改css输出目录</span></span><br><span class="line">    config.<span class="title function_">plugin</span>(<span class="string">&quot;extract-css&quot;</span>).<span class="title function_">tap</span>(<span class="function">() =&gt;</span> [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">filename</span>: <span class="string">`<span class="subst">$&#123;assetDir&#125;</span>/css/[name].[contenthash:8].css`</span>,</span><br><span class="line">        <span class="attr">chunkFilename</span>: <span class="string">`<span class="subst">$&#123;assetDir&#125;</span>/css/[name].[contenthash:8].chunk.css`</span>,</span><br><span class="line">        <span class="attr">ignoreOrder</span>: <span class="literal">true</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 修改图片输出目录</span></span><br><span class="line">    config.<span class="property">module</span></span><br><span class="line">      .<span class="title function_">rule</span>(<span class="string">&quot;images&quot;</span>)</span><br><span class="line">      .<span class="title function_">test</span>(<span class="regexp">/\.(png|jpe?g|gif|webp|ico)(\?.*)?$/</span>)</span><br><span class="line">      .<span class="title function_">use</span>(<span class="string">&quot;url-loader&quot;</span>)</span><br><span class="line">      .<span class="title function_">loader</span>(<span class="built_in">require</span>.<span class="title function_">resolve</span>(<span class="string">&quot;url-loader&quot;</span>))</span><br><span class="line">      .<span class="title function_">tap</span>(<span class="function">(<span class="params">options</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> newOptions = &#123;</span><br><span class="line">          ...options,</span><br><span class="line">          <span class="attr">name</span>: assetDir + <span class="string">&quot;/img/[name].[hash:8].[ext]&quot;</span>,</span><br><span class="line">          <span class="attr">fallback</span>: &#123;</span><br><span class="line">            ...options.<span class="property">fallback</span>,</span><br><span class="line">            <span class="attr">options</span>: &#123;</span><br><span class="line">              <span class="attr">name</span>: assetDir + <span class="string">&quot;/img/[name].[hash:8].[ext]&quot;</span>,</span><br><span class="line">              <span class="attr">esModule</span>: <span class="literal">false</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="keyword">return</span> newOptions;</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 修改svg输出目录</span></span><br><span class="line">    config.<span class="property">module</span></span><br><span class="line">      .<span class="title function_">rule</span>(<span class="string">&quot;svg&quot;</span>)</span><br><span class="line">      .<span class="title function_">test</span>(<span class="regexp">/\.(svg)(\?.*)?$/</span>)</span><br><span class="line">      .<span class="title function_">use</span>(<span class="string">&quot;file-loader&quot;</span>)</span><br><span class="line">      .<span class="title function_">loader</span>(<span class="built_in">require</span>.<span class="title function_">resolve</span>(<span class="string">&quot;file-loader&quot;</span>))</span><br><span class="line">      .<span class="title function_">tap</span>(<span class="function">(<span class="params">options</span>) =&gt;</span> (&#123;</span><br><span class="line">        ...options,</span><br><span class="line">        <span class="attr">name</span>: assetDir + <span class="string">&quot;/img/[name].[hash:8].[ext]&quot;</span>,</span><br><span class="line">      &#125;));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 修改fonts输出目录</span></span><br><span class="line">    config.<span class="property">module</span></span><br><span class="line">      .<span class="title function_">rule</span>(<span class="string">&quot;fonts&quot;</span>)</span><br><span class="line">      .<span class="title function_">test</span>(<span class="regexp">/\.(eot|woff|woff2|ttf)(\?.*)?$/</span>)</span><br><span class="line">      .<span class="title function_">use</span>(<span class="string">&quot;file-loader&quot;</span>)</span><br><span class="line">      .<span class="title function_">loader</span>(<span class="built_in">require</span>.<span class="title function_">resolve</span>(<span class="string">&quot;file-loader&quot;</span>))</span><br><span class="line">      .<span class="title function_">tap</span>(<span class="function">(<span class="params">options</span>) =&gt;</span> (&#123;</span><br><span class="line">        ...options,</span><br><span class="line">        <span class="attr">name</span>: assetDir + <span class="string">&quot;/fonts/[name].[hash:8].[ext]&quot;</span>,</span><br><span class="line">        <span class="attr">fallback</span>: &#123;</span><br><span class="line">          ...options.<span class="property">fallback</span>,</span><br><span class="line">          <span class="attr">options</span>: &#123;</span><br><span class="line">            <span class="attr">name</span>: assetDir + <span class="string">&quot;/fonts/[name].[hash:8].[ext]&quot;</span>,</span><br><span class="line">            <span class="attr">esModule</span>: <span class="literal">false</span>,</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 添加gzip压缩</span></span><br><span class="line">    config.<span class="title function_">when</span>(isEnvProduction, <span class="function">(<span class="params">config</span>) =&gt;</span> &#123;</span><br><span class="line">      config</span><br><span class="line">        .<span class="title function_">plugin</span>(<span class="string">&quot;compression-webpack-plugin&quot;</span>)</span><br><span class="line">        .<span class="title function_">use</span>(<span class="title class_">CompressionWebpackPlugin</span>, [</span><br><span class="line">          &#123;</span><br><span class="line">            <span class="attr">filename</span>: <span class="string">&quot;[path].gz[query]&quot;</span>,</span><br><span class="line">            <span class="attr">algorithm</span>: <span class="string">&quot;gzip&quot;</span>,</span><br><span class="line">            <span class="attr">test</span>: <span class="keyword">new</span> <span class="title class_">RegExp</span>(<span class="string">&quot;\\.(js|css)$&quot;</span>),</span><br><span class="line">            <span class="attr">threshold</span>: <span class="number">10240</span>,</span><br><span class="line">            <span class="attr">minRatio</span>: <span class="number">0.8</span>,</span><br><span class="line">          &#125;,</span><br><span class="line">        ]);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 生产环境去除console日志打印</span></span><br><span class="line">  <span class="attr">terserOptions</span>: &#123;</span><br><span class="line">    <span class="attr">compress</span>: &#123;</span><br><span class="line">      <span class="attr">drop_console</span>: isEnvProduction,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">locale</span>: &#123;</span><br><span class="line">    <span class="comment">// default zh-CN</span></span><br><span class="line">    <span class="attr">default</span>: <span class="string">&quot;zh-CN&quot;</span>,</span><br><span class="line">    <span class="comment">// default true, when it is true, will use `navigator.language` overwrite default</span></span><br><span class="line">    <span class="attr">antd</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">baseNavigator</span>: <span class="literal">true</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">dynamicImport</span>: &#123;</span><br><span class="line">    <span class="attr">loading</span>: <span class="string">&quot;@/components/PageLoading/index&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">targets</span>: &#123;</span><br><span class="line">    <span class="attr">ie</span>: <span class="number">11</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// umi routes: https://umijs.org/docs/routing</span></span><br><span class="line">  routes,</span><br><span class="line">  <span class="comment">// Theme for antd: https://ant.design/docs/react/customize-theme-cn</span></span><br><span class="line">  <span class="attr">theme</span>: &#123;</span><br><span class="line">    <span class="comment">// ...darkTheme,</span></span><br><span class="line">    <span class="string">&quot;primary-color&quot;</span>: defaultSettings.<span class="property">primaryColor</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// @ts-ignore</span></span><br><span class="line">  <span class="attr">title</span>: defaultSettings.<span class="property">title</span>,</span><br><span class="line">  <span class="attr">ignoreMomentLocale</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">manifest</span>: &#123;</span><br><span class="line">    <span class="attr">basePath</span>: <span class="string">&quot;/&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">devServer</span>: &#123;</span><br><span class="line">    <span class="attr">open</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">port</span>: <span class="number">8367</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> config;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-打包后输出的-dist-目录"><a href="#4-打包后输出的-dist-目录" class="headerlink" title="4.打包后输出的 dist 目录"></a>4.打包后输出的 dist 目录</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">├── asset-manifest.json</span><br><span class="line">├── favicon.ico</span><br><span class="line">├── index.html</span><br><span class="line">└── static</span><br><span class="line">    ├── css</span><br><span class="line">    ├── fonts</span><br><span class="line">    ├── img</span><br><span class="line">    └── js</span><br></pre></td></tr></table></figure>
+
+<p><strong>参考链接</strong></p>
+<p>1.<a target="_blank" rel="noopener" href="https://github.com/umijs/umi/blob/master/packages/bundler-webpack/src/getConfig/getConfig.ts">https://github.com/umijs/umi/blob/master/packages/bundler-webpack/src/getConfig/getConfig.ts</a></p>
+<p><strong>问题来源</strong></p>
+<p>1.<a target="_blank" rel="noopener" href="https://github.com/umijs/umi/issues/4490">https://github.com/umijs/umi/issues/4490</a></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/antd/">#antd</a> <a class="fw3 ph1 dib" href="/tags/umi/">#umi</a> <a class="fw3 ph1 dib" href="/tags/assetDir/">#assetDir</a> <a class="fw3 ph1 dib" href="/tags/Ant-Design-Pro/">#Ant Design Pro</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+  <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+    <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+      <img src="/images/my.jpeg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="xiaofei">
+    </div>
+    <div class="dtc db-l v-mid lh-copy measure center f6 black-80 tj">
+      你好，我的名字叫xiaofei，这是我的博客。<br> 我是一名前端开发者 + linux 爱好者。热衷于前端开发技术，熟悉ES6+，typescript，css3，vue2/3，react，uni-app，weapp，webpack，vite，babel，node，linux，nginx 等。<br> 我目前在西安生活和工作，如果你需要和我交流，请联系我（网站下面有联系方式）。
+    </div>
+  </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p class="recent-item">
+            <a href="/2024/10/16/threejs/lattice/">threejs 晶格实现</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/05/31/js/monorepo/">Monorepo 自动release的思考</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/03/20/gis/icon/">openlayers 绘制图标并定位到图标</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/01/28/canvas/post/">使用 auto-drawing 绘制商城分销海报</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2022/12/27/canvas/room/">使用 auto-drawing 画一个户型图</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- TODO:AD -->
+<!-- <a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/cD2mxeH7"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/全球购_1040 100.jpg" alt="" />
+  </div>
+</a> -->
+
+<div class="bg-1 ph2 ph5-ns pv5">
+  <div class="mv8">
+    <div class="center tc">
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://github.com/l-x-f"
+          title="github"
+          target="_blank"
+        >
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="qq"
+          target="_blank"
+        >
+          <i class="fa fa-qq"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="email"
+          target="_blank"
+        >
+          <i class="fa fa-envelope"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://blog.csdn.net/qq_39953537"
+          title="csdn"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconcsdn"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://l-x-f.gitee.io"
+          title="gitee"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconmayun1"></i>
+        </a>
+      </div>
+      
+    </div>
+    <div class="f6 f5-ns center tc white pt5 fw3">
+      MIT Licensed | Copyright © 2016-present xiaofei <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn" class="fake-link black-70 ph1"> 陕ICP备2021003270号</a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- After Footer -->
+    <!-- Disqus Comments -->
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

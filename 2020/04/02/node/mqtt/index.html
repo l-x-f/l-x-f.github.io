@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <!-- Head tag -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="baidu_union_verify" content="a413507676ae2c1dae7063ec877d0674" />
+
+  <!--Description-->
+  
+  <meta name="description" content="xiaofei的个人博客" />
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="xiaofei" />
+  
+
+  <!--Open Graph Title-->
+  
+  <meta property="og:title" content="前端调用mqtt，适用于vue,react等webpack项目" />
+  
+
+  <!--Open Graph Description-->
+  
+  <meta property="og:description" content="xiaofei的个人博客" />
+  
+
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="飞的日志" />
+
+  <!--Type page-->
+  
+  <meta property="og:type" content="article" />
+  
+
+  <!--Page Cover-->
+  
+
+  <meta name="twitter:card" content="summary" />
+  
+
+  <!-- Title -->
+  
+  <title>前端调用mqtt，适用于vue,react等webpack项目 - 飞的日志</title>
+
+  <!-- Tachyons Core CSS -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css"> -->
+  <link
+    href="https://cdn.bootcss.com/tachyons/4.11.1/tachyons.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Fonts -->
+  <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css>" -->
+  <link
+    href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Custom CSS -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  <!-- Google Analytics -->
+  
+
+
+  <!-- add favicon.ico -->
+  <link rel="icon" href="/images/logo.png" />
+
+  
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+
+  <script src="/js/hm.js"></script>
+  <script src="/js/top.js"></script>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5957060091098291"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    window.onload = function () {
+      new Top()
+    }
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+  <body>
+    <!-- Main Content -->
+    <!-- Banner -->
+<!-- Banner -->
+
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+  <nav class="db dt-l w-100 mw8 center border-box pv4">
+    <!-- <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="https://l-x-f.github.io" title="飞的日志">
+            <span src="/images/my.jpeg" class="dib h3 avatar" alt="飞的日志">
+        </a> -->
+    <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/"
+        title="首页"
+      >
+        首页
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/archives"
+        title="博客"
+      >
+        博客
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/tags"
+        title="标签"
+      >
+        标签
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/about"
+        title="关于"
+      >
+        关于
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="https://l-x-f.github.io/coding-standard/"
+        title="Web前端代码规范"
+      >
+        Web前端代码规范
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39953537"
+        title="关联的CSDN"
+      >
+        关联的CSDN
+      </a>
+      
+    </div>
+  </nav>
+
+  <!-- Title -->
+  <div class="w-100 mw8 center dt">
+    <div class="dtc v-mid white">
+      <h1 class="f1-l f2-m tc tc-m tl-ns">前端调用mqtt，适用于vue,react等webpack项目</h1>
+      <p style="padding-bottom: 40px" class="f4 fw3 tc tc-m tl-ns">
+        2020-04-02 11:20
+      </p>
+    </div>
+  </div>
+
+  <!-- Icon -->
+  <div class="relative w-100 mw8 center white dn dn-m db-ns">
+    <i class="header-icon fa fa-file-text-o"></i>
+  </div>
+</div>
+
+<!-- TODO:AD -->
+<!-- 
+<a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/bdyBVja9"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/618.jpg" alt="" />
+  </div>
+</a> -->
+
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/mqtt/">#mqtt</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="前端调用-mqtt，适用于-vue，react-等-webpack-项目"><a href="#前端调用-mqtt，适用于-vue，react-等-webpack-项目" class="headerlink" title="前端调用 mqtt，适用于 vue，react 等 webpack 项目"></a>前端调用 mqtt，适用于 vue，react 等 webpack 项目</h1><p>简介：MQTT (Message Queue Telemetry Transport)：遥测传输协议，其主要提供了订阅&#x2F;发布两种消息模式，更为简约、轻量，易于使用，特别适合于受限环境（带宽低、网络延迟高、网络通信不稳定）的消息分发，属于物联网（Internet of Thing）的一个标准传输协议。因公司开发智能人脸识别项目用到，以下实践是公司项目的一个简版。</p>
+<p>本文<a target="_blank" rel="noopener" href="https://github.com/l-x-f/mqtt-dev.git">github 源码地址</a></p>
+<p><strong>下面是实现步骤</strong></p>
+<p>1.项目依赖：（先安装，步骤略）<br>package.json</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;mqtt-project&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="string">&quot;main.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;dev&quot;</span><span class="punctuation">:</span> <span class="string">&quot;webpack-dev-server --watch&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="string">&quot;webpack --config webpack.config.js&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;keywords&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;author&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;license&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ISC&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;html-webpack-plugin&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.0.3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;mosca&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.8.3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;mqtt&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;msgpack-lite&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.1.26&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;webpack&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.42.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;webpack-cli&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.3.11&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;webpack-dev-server&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.10.3&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>2.项目目录结构<br><img src="https://img-blog.csdnimg.cn/20200402123400317.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5OTUzNTM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>3.node 实现服务端和客户端</p>
+<p>服务端 <code>server/index.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mosca = <span class="built_in">require</span>(<span class="string">&#x27;mosca&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ascoltatore = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> settings = &#123;</span><br><span class="line">  <span class="attr">port</span>: <span class="number">1888</span>,</span><br><span class="line">  <span class="attr">backend</span>: ascoltatore</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = <span class="keyword">new</span> mosca.<span class="title class_">Server</span>(settings)</span><br><span class="line"></span><br><span class="line">server.<span class="title function_">on</span>(<span class="string">&#x27;clientConnected&#x27;</span>, <span class="keyword">function</span>(<span class="params">client</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;client connected&#x27;</span>, client.<span class="property">id</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// fired when a message is received</span></span><br><span class="line">server.<span class="title function_">on</span>(<span class="string">&#x27;published&#x27;</span>, <span class="keyword">function</span>(<span class="params">packet, client</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Published&#x27;</span>, packet.<span class="property">payload</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">server.<span class="title function_">on</span>(<span class="string">&#x27;ready&#x27;</span>, setup)</span><br><span class="line"></span><br><span class="line"><span class="comment">// fired when the mqtt server is ready</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Mosca server is up and running&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>客户端 <code>client/index.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mqtt = <span class="built_in">require</span>(<span class="string">&#x27;mqtt&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> client = mqtt.<span class="title function_">connect</span>(<span class="string">&#x27;mqtt://127.0.0.1:1888&#x27;</span>)</span><br><span class="line"></span><br><span class="line">client.<span class="title function_">on</span>(<span class="string">&#x27;connect&#x27;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="comment">// 订阅消息</span></span><br><span class="line">  client.<span class="title function_">subscribe</span>(<span class="string">&#x27;presence&#x27;</span>)</span><br><span class="line">  <span class="comment">// 发布消息</span></span><br><span class="line">  client.<span class="title function_">publish</span>(<span class="string">&#x27;presence&#x27;</span>, <span class="string">&#x27;Hello mqtt&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">client.<span class="title function_">on</span>(<span class="string">&#x27;message&#x27;</span>, <span class="keyword">function</span>(<span class="params">topic, message</span>) &#123;</span><br><span class="line">  <span class="comment">// message is Buffer</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(message.<span class="title function_">toString</span>())</span><br><span class="line">  client.<span class="title function_">end</span>()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>然后在控制台运行服务端</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node ./server/index.js</span><br></pre></td></tr></table></figure>
+
+<p>输出 <code>Mosca server is up and running</code> 表示服务端运行成功</p>
+<p>然后在控制台运行客户端</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node ./client/index.js</span><br></pre></td></tr></table></figure>
+
+<p>输出 <code>Hello mqtt</code> 表示客户端和服务端连接成功</p>
+<p>此时在看运行 server&#x2F;index.js 的控制台会有以下输出，表示服务端接受到了客户端的连接<br><img src="https://img-blog.csdnimg.cn/20200402123421343.png" alt="在这里插入图片描述"></p>
+<p>4.node 实现服务端和和利用 webpack 实现前端客户端</p>
+<p>服务端 <code>server/web.js</code></p>
+<p>和<code>server/index.js</code>主要区别是 settings 的配置不一样</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mosca = <span class="built_in">require</span>(<span class="string">&#x27;mosca&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ascoltatore = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> settings = &#123;</span><br><span class="line">  <span class="attr">http</span>: &#123;</span><br><span class="line">    <span class="attr">port</span>: <span class="number">1888</span>,</span><br><span class="line">    <span class="attr">bundle</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">static</span>: <span class="string">&#x27;./&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">backend</span>: ascoltatore</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = <span class="keyword">new</span> mosca.<span class="title class_">Server</span>(settings)</span><br><span class="line"></span><br><span class="line">server.<span class="title function_">on</span>(<span class="string">&#x27;clientConnected&#x27;</span>, <span class="keyword">function</span>(<span class="params">client</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;客户端已连接&#x27;</span>, client.<span class="property">id</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// fired when a message is received</span></span><br><span class="line">server.<span class="title function_">on</span>(<span class="string">&#x27;published&#x27;</span>, <span class="keyword">function</span>(<span class="params">packet, client</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Published&#x27;</span>, packet.<span class="property">payload</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">server.<span class="title function_">on</span>(<span class="string">&#x27;ready&#x27;</span>, setup)</span><br><span class="line"></span><br><span class="line"><span class="comment">// fired when the mqtt server is ready</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Mosca server is up and running&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>web端 <code>main.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> mqtt <span class="keyword">from</span> <span class="string">&#x27;mqtt&#x27;</span></span><br><span class="line"><span class="keyword">import</span> msgpack <span class="keyword">from</span> <span class="string">&#x27;msgpack-lite&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> client = mqtt.<span class="title function_">connect</span>(<span class="string">&#x27;mqtt://127.0.0.1:1888&#x27;</span>)</span><br><span class="line"></span><br><span class="line">client.<span class="title function_">on</span>(<span class="string">&#x27;connect&#x27;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  client.<span class="title function_">subscribe</span>(<span class="string">&#x27;getInfo&#x27;</span>)</span><br><span class="line">  client.<span class="title function_">publish</span>(</span><br><span class="line">    <span class="string">&#x27;getInfo&#x27;</span>,</span><br><span class="line">    msgpack.<span class="title function_">encode</span>(&#123; <span class="attr">name</span>: <span class="string">&#x27;你好&#x27;</span>, <span class="attr">list</span>: [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>] &#125;)</span><br><span class="line">  )</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">client.<span class="title function_">on</span>(<span class="string">&#x27;message&#x27;</span>, <span class="keyword">function</span>(<span class="params">topic, message</span>) &#123;</span><br><span class="line">  <span class="comment">// message is Buffer</span></span><br><span class="line">  <span class="keyword">const</span> msg = msgpack.<span class="title function_">decode</span>(message) <span class="comment">// decode from MessagePack (Buffer) to JS Object</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(msg)</span><br><span class="line">  client.<span class="title function_">end</span>()</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>然后在控制台运行服务端</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node ./server/web.js</span><br></pre></td></tr></table></figure>
+
+<p>输出 <code>Mosca server is up and running</code> 表示服务端运行成功</p>
+<p>然后在控制台运行客户端 </p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<p>在浏览器控制台会有以下输出表示客户端和服务端连接成功<br><img src="https://img-blog.csdnimg.cn/20200402123452318.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5OTUzNTM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>此时在看运行 server&#x2F;web.js 的控制台会有以下输出，表示服务端接受到了客户端的连接</p>
+<p><img src="https://img-blog.csdnimg.cn/20200402123509209.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5OTUzNTM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>参考链接</p>
+<p>1.<a target="_blank" rel="noopener" href="https://github.com/mqttjs/MQTT.js">https://github.com/mqttjs/MQTT.js</a></p>
+<p>2.<a target="_blank" rel="noopener" href="https://github.com/moscajs/mosca">https://github.com/moscajs/mosca</a></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/mqtt/">#mqtt</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+  <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+    <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+      <img src="/images/my.jpeg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="xiaofei">
+    </div>
+    <div class="dtc db-l v-mid lh-copy measure center f6 black-80 tj">
+      你好，我的名字叫xiaofei，这是我的博客。<br> 我是一名前端开发者 + linux 爱好者。热衷于前端开发技术，熟悉ES6+，typescript，css3，vue2/3，react，uni-app，weapp，webpack，vite，babel，node，linux，nginx 等。<br> 我目前在西安生活和工作，如果你需要和我交流，请联系我（网站下面有联系方式）。
+    </div>
+  </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p class="recent-item">
+            <a href="/2024/10/16/threejs/lattice/">threejs 晶格实现</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/05/31/js/monorepo/">Monorepo 自动release的思考</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/03/20/gis/icon/">openlayers 绘制图标并定位到图标</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/01/28/canvas/post/">使用 auto-drawing 绘制商城分销海报</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2022/12/27/canvas/room/">使用 auto-drawing 画一个户型图</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- TODO:AD -->
+<!-- <a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/cD2mxeH7"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/全球购_1040 100.jpg" alt="" />
+  </div>
+</a> -->
+
+<div class="bg-1 ph2 ph5-ns pv5">
+  <div class="mv8">
+    <div class="center tc">
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://github.com/l-x-f"
+          title="github"
+          target="_blank"
+        >
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="qq"
+          target="_blank"
+        >
+          <i class="fa fa-qq"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="email"
+          target="_blank"
+        >
+          <i class="fa fa-envelope"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://blog.csdn.net/qq_39953537"
+          title="csdn"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconcsdn"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://l-x-f.gitee.io"
+          title="gitee"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconmayun1"></i>
+        </a>
+      </div>
+      
+    </div>
+    <div class="f6 f5-ns center tc white pt5 fw3">
+      MIT Licensed | Copyright © 2016-present xiaofei <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn" class="fake-link black-70 ph1"> 陕ICP备2021003270号</a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- After Footer -->
+    <!-- Disqus Comments -->
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

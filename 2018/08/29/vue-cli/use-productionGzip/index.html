@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <!-- Head tag -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="baidu_union_verify" content="a413507676ae2c1dae7063ec877d0674" />
+
+  <!--Description-->
+  
+  <meta name="description" content="xiaofei的个人博客" />
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="xiaofei" />
+  
+
+  <!--Open Graph Title-->
+  
+  <meta property="og:title" content="vue-cli 3.0 配置productionGzip" />
+  
+
+  <!--Open Graph Description-->
+  
+  <meta property="og:description" content="xiaofei的个人博客" />
+  
+
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="飞的日志" />
+
+  <!--Type page-->
+  
+  <meta property="og:type" content="article" />
+  
+
+  <!--Page Cover-->
+  
+
+  <meta name="twitter:card" content="summary" />
+  
+
+  <!-- Title -->
+  
+  <title>vue-cli 3.0 配置productionGzip - 飞的日志</title>
+
+  <!-- Tachyons Core CSS -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css"> -->
+  <link
+    href="https://cdn.bootcss.com/tachyons/4.11.1/tachyons.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Fonts -->
+  <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css>" -->
+  <link
+    href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Custom CSS -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  <!-- Google Analytics -->
+  
+
+
+  <!-- add favicon.ico -->
+  <link rel="icon" href="/images/logo.png" />
+
+  
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+
+  <script src="/js/hm.js"></script>
+  <script src="/js/top.js"></script>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5957060091098291"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    window.onload = function () {
+      new Top()
+    }
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+  <body>
+    <!-- Main Content -->
+    <!-- Banner -->
+<!-- Banner -->
+
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+  <nav class="db dt-l w-100 mw8 center border-box pv4">
+    <!-- <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="https://l-x-f.github.io" title="飞的日志">
+            <span src="/images/my.jpeg" class="dib h3 avatar" alt="飞的日志">
+        </a> -->
+    <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/"
+        title="首页"
+      >
+        首页
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/archives"
+        title="博客"
+      >
+        博客
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/tags"
+        title="标签"
+      >
+        标签
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/about"
+        title="关于"
+      >
+        关于
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="https://l-x-f.github.io/coding-standard/"
+        title="Web前端代码规范"
+      >
+        Web前端代码规范
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39953537"
+        title="关联的CSDN"
+      >
+        关联的CSDN
+      </a>
+      
+    </div>
+  </nav>
+
+  <!-- Title -->
+  <div class="w-100 mw8 center dt">
+    <div class="dtc v-mid white">
+      <h1 class="f1-l f2-m tc tc-m tl-ns">vue-cli 3.0 配置productionGzip</h1>
+      <p style="padding-bottom: 40px" class="f4 fw3 tc tc-m tl-ns">
+        2018-08-29 17:20
+      </p>
+    </div>
+  </div>
+
+  <!-- Icon -->
+  <div class="relative w-100 mw8 center white dn dn-m db-ns">
+    <i class="header-icon fa fa-file-text-o"></i>
+  </div>
+</div>
+
+<!-- TODO:AD -->
+<!-- 
+<a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/bdyBVja9"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/618.jpg" alt="" />
+  </div>
+</a> -->
+
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/vue/">#vue</a> <a class="fw3 ph1 dib" href="/tags/vue-cli/">#vue-cli</a> <a class="fw3 ph1 dib" href="/tags/vue-cli-3/">#vue-cli 3</a> <a class="fw3 ph1 dib" href="/tags/productionGzip/">#productionGzip</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <p>最近没事升级项目到 vue-cli3.0， 发现没有了 productionGzip 配置，于是查了一下午资料， 解决方案如下：</p>
+<p>1.安装如下插件</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D compression-webpack-plugin</span><br></pre></td></tr></table></figure>
+
+<p>2.在文件 vue.config.js 里导入 compression-webpack-plugin，并添加压缩文件类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">CompressionWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&quot;compression-webpack-plugin&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> productionGzipExtensions = [<span class="string">&quot;js&quot;</span>, <span class="string">&quot;css&quot;</span>];</span><br></pre></td></tr></table></figure>
+
+<p>3.在 configureWebpack 里配置如下代码<br>a.简单方式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">configureWebpack</span>: &#123;</span><br><span class="line">     <span class="attr">plugins</span>: [</span><br><span class="line">         <span class="keyword">new</span> <span class="title class_">CompressionWebpackPlugin</span>(&#123;</span><br><span class="line">             <span class="attr">asset</span>: <span class="string">&#x27;[path].gz[query]&#x27;</span>,</span><br><span class="line">             <span class="attr">algorithm</span>: <span class="string">&#x27;gzip&#x27;</span>,</span><br><span class="line">             <span class="attr">test</span>: <span class="keyword">new</span> <span class="title class_">RegExp</span>(<span class="string">&#x27;\\.(&#x27;</span> + productionGzipExtensions.<span class="title function_">join</span>(<span class="string">&#x27;|&#x27;</span>) + <span class="string">&#x27;)$&#x27;</span>),</span><br><span class="line">             <span class="attr">threshold</span>: <span class="number">10240</span>,</span><br><span class="line">             <span class="attr">minRatio</span>: <span class="number">0.8</span></span><br><span class="line">         &#125;)</span><br><span class="line">     ]</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>b.高级方式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">configureWebpack</span>: <span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&#x27;production&#x27;</span>) &#123;</span><br><span class="line">        <span class="comment">// 生产环境</span></span><br><span class="line">        config.<span class="property">plugins</span>.<span class="title function_">push</span>(</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">CompressionWebpackPlugin</span>(&#123;</span><br><span class="line">                <span class="attr">asset</span>: <span class="string">&#x27;[path].gz[query]&#x27;</span>,</span><br><span class="line">                <span class="attr">algorithm</span>: <span class="string">&#x27;gzip&#x27;</span>,</span><br><span class="line">                <span class="attr">test</span>: <span class="keyword">new</span> <span class="title class_">RegExp</span>(<span class="string">&#x27;\\.(&#x27;</span> + productionGzipExtensions.<span class="title function_">join</span>(<span class="string">&#x27;|&#x27;</span>) + <span class="string">&#x27;)$&#x27;</span>),</span><br><span class="line">                <span class="attr">threshold</span>: <span class="number">10240</span>,</span><br><span class="line">                <span class="attr">minRatio</span>: <span class="number">0.8</span></span><br><span class="line">            &#125;)</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 开发环境</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>&#x2F;&#x2F;配置参数详解</p>
+<p>asset： 目标资源名称。 [file] 会被替换成原始资源。[path] 会被替换成原始资源的路径， [query] 会被替换成查询字符串。默认值是 “[path].gz[query]”。</p>
+<p>algorithm： 可以是 function(buf, callback) 或者字符串。对于字符串来说依照 zlib 的算法(或者 zopfli 的算法)。默认值是 “gzip”。</p>
+<p>test： 所有匹配该正则的资源都会被处理。默认值是全部资源。</p>
+<p>threshold： 只有大小大于该值的资源会被处理。单位是 bytes。默认值是 0。</p>
+<p>minRatio： 只有压缩率小于这个值的资源才会被处理。默认值是 0.8。</p>
+<p>4.然后运行 npm run build 完成</p>
+<p>5.附完整 vue.config.js 配置代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">resolve</span>(<span class="params">dir</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> path.<span class="title function_">join</span>(__dirname, dir);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 导入compression-webpack-plugin</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">CompressionWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&quot;compression-webpack-plugin&quot;</span>);</span><br><span class="line"><span class="comment">// 定义压缩文件类型</span></span><br><span class="line"><span class="keyword">const</span> productionGzipExtensions = [<span class="string">&quot;js&quot;</span>, <span class="string">&quot;css&quot;</span>];</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">baseUrl</span>: <span class="string">&quot;/&quot;</span>,</span><br><span class="line">  <span class="comment">// 输出目录</span></span><br><span class="line">  <span class="attr">outputDir</span>: <span class="string">&quot;dist&quot;</span>,</span><br><span class="line">  <span class="attr">lintOnSave</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 是否为生产环境构建生成 source map？</span></span><br><span class="line">  <span class="attr">productionSourceMap</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="comment">// alias 配置</span></span><br><span class="line">  <span class="attr">chainWebpack</span>: <span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line">    config.<span class="property">resolve</span>.<span class="property">alias</span>.<span class="title function_">set</span>(<span class="string">&quot;@&quot;</span>, <span class="title function_">resolve</span>(<span class="string">&quot;src&quot;</span>));</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 简单的方式</span></span><br><span class="line">  <span class="comment">// configureWebpack: &#123;</span></span><br><span class="line">  <span class="comment">//     plugins: [</span></span><br><span class="line">  <span class="comment">//         new CompressionWebpackPlugin(&#123;</span></span><br><span class="line">  <span class="comment">//             asset: &#x27;[path].gz[query]&#x27;,</span></span><br><span class="line">  <span class="comment">//             algorithm: &#x27;gzip&#x27;,</span></span><br><span class="line">  <span class="comment">//             test: new RegExp(&#x27;\\.(&#x27; + productionGzipExtensions.join(&#x27;|&#x27;) + &#x27;)$&#x27;),</span></span><br><span class="line">  <span class="comment">//             threshold: 10240,</span></span><br><span class="line">  <span class="comment">//             minRatio: 0.8</span></span><br><span class="line">  <span class="comment">//         &#125;)</span></span><br><span class="line">  <span class="comment">//     ]</span></span><br><span class="line">  <span class="comment">// &#125;,</span></span><br><span class="line">  <span class="comment">// 高级的方式</span></span><br><span class="line">  <span class="attr">configureWebpack</span>: <span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&quot;production&quot;</span>) &#123;</span><br><span class="line">      <span class="comment">// 生产环境</span></span><br><span class="line">      config.<span class="property">plugins</span>.<span class="title function_">push</span>(</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">CompressionWebpackPlugin</span>(&#123;</span><br><span class="line">          <span class="attr">asset</span>: <span class="string">&quot;[path].gz[query]&quot;</span>,</span><br><span class="line">          <span class="attr">algorithm</span>: <span class="string">&quot;gzip&quot;</span>,</span><br><span class="line">          <span class="attr">test</span>: <span class="keyword">new</span> <span class="title class_">RegExp</span>(<span class="string">&quot;\\.(&quot;</span> + productionGzipExtensions.<span class="title function_">join</span>(<span class="string">&quot;|&quot;</span>) + <span class="string">&quot;)$&quot;</span>),</span><br><span class="line">          <span class="attr">threshold</span>: <span class="number">10240</span>,</span><br><span class="line">          <span class="attr">minRatio</span>: <span class="number">0.8</span></span><br><span class="line">        &#125;)</span><br><span class="line">      );</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// 开发环境</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// CSS 相关选项</span></span><br><span class="line">  <span class="attr">css</span>: &#123;</span><br><span class="line">    <span class="attr">extract</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="comment">// 是否开启 CSS source map？</span></span><br><span class="line">    <span class="attr">sourceMap</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="comment">// 为预处理器的 loader 传递自定义选项。比如传递给</span></span><br><span class="line">    <span class="comment">// sass-loader 时，使用 `&#123; sass: &#123; ... &#125; &#125;`。</span></span><br><span class="line">    <span class="attr">loaderOptions</span>: &#123;&#125;, <span class="comment">// 为所有的 CSS 及其预处理文件开启 CSS Modules。</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">modules</span>: <span class="literal">false</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 在多核机器下会默认开启。</span></span><br><span class="line">  <span class="attr">parallel</span>: <span class="built_in">require</span>(<span class="string">&quot;os&quot;</span>).<span class="title function_">cpus</span>().<span class="property">length</span> &gt; <span class="number">1</span>,</span><br><span class="line">  <span class="comment">// PWA 插件的选项。</span></span><br><span class="line">  <span class="attr">pwa</span>: &#123;&#125;,</span><br><span class="line">  <span class="comment">// 配置 webpack-dev-server 行为。</span></span><br><span class="line">  <span class="attr">devServer</span>: &#123;</span><br><span class="line">    <span class="attr">open</span>: process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&quot;development&quot;</span>,</span><br><span class="line">    <span class="attr">host</span>: <span class="string">&quot;localhost&quot;</span>,</span><br><span class="line">    <span class="attr">port</span>: <span class="number">8888</span>,</span><br><span class="line">    <span class="attr">https</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">hotOnly</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">open</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">proxy</span>: <span class="string">&quot;&quot;</span>, <span class="comment">// string | Object</span></span><br><span class="line">    <span class="attr">before</span>: <span class="function"><span class="params">app</span> =&gt;</span> &#123;&#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 第三方插件的选项</span></span><br><span class="line">  <span class="attr">pluginOptions</span>: &#123;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/vue/">#vue</a> <a class="fw3 ph1 dib" href="/tags/vue-cli/">#vue-cli</a> <a class="fw3 ph1 dib" href="/tags/vue-cli-3/">#vue-cli 3</a> <a class="fw3 ph1 dib" href="/tags/productionGzip/">#productionGzip</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+  <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+    <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+      <img src="/images/my.jpeg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="xiaofei">
+    </div>
+    <div class="dtc db-l v-mid lh-copy measure center f6 black-80 tj">
+      你好，我的名字叫xiaofei，这是我的博客。<br> 我是一名前端开发者 + linux 爱好者。热衷于前端开发技术，熟悉ES6+，typescript，css3，vue2/3，react，uni-app，weapp，webpack，vite，babel，node，linux，nginx 等。<br> 我目前在西安生活和工作，如果你需要和我交流，请联系我（网站下面有联系方式）。
+    </div>
+  </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p class="recent-item">
+            <a href="/2024/10/16/threejs/lattice/">threejs 晶格实现</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/05/31/js/monorepo/">Monorepo 自动release的思考</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/03/20/gis/icon/">openlayers 绘制图标并定位到图标</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/01/28/canvas/post/">使用 auto-drawing 绘制商城分销海报</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2022/12/27/canvas/room/">使用 auto-drawing 画一个户型图</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- TODO:AD -->
+<!-- <a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/cD2mxeH7"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/全球购_1040 100.jpg" alt="" />
+  </div>
+</a> -->
+
+<div class="bg-1 ph2 ph5-ns pv5">
+  <div class="mv8">
+    <div class="center tc">
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://github.com/l-x-f"
+          title="github"
+          target="_blank"
+        >
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="qq"
+          target="_blank"
+        >
+          <i class="fa fa-qq"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="email"
+          target="_blank"
+        >
+          <i class="fa fa-envelope"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://blog.csdn.net/qq_39953537"
+          title="csdn"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconcsdn"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://l-x-f.gitee.io"
+          title="gitee"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconmayun1"></i>
+        </a>
+      </div>
+      
+    </div>
+    <div class="f6 f5-ns center tc white pt5 fw3">
+      MIT Licensed | Copyright © 2016-present xiaofei <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn" class="fake-link black-70 ph1"> 陕ICP备2021003270号</a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- After Footer -->
+    <!-- Disqus Comments -->
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

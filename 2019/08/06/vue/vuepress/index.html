@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <!-- Head tag -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="baidu_union_verify" content="a413507676ae2c1dae7063ec877d0674" />
+
+  <!--Description-->
+  
+  <meta name="description" content="xiaofei的个人博客" />
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="xiaofei" />
+  
+
+  <!--Open Graph Title-->
+  
+  <meta property="og:title" content="vuepress 结合 GitHub pages 打造自己的博客网站" />
+  
+
+  <!--Open Graph Description-->
+  
+  <meta property="og:description" content="xiaofei的个人博客" />
+  
+
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="飞的日志" />
+
+  <!--Type page-->
+  
+  <meta property="og:type" content="article" />
+  
+
+  <!--Page Cover-->
+  
+
+  <meta name="twitter:card" content="summary" />
+  
+
+  <!-- Title -->
+  
+  <title>vuepress 结合 GitHub pages 打造自己的博客网站 - 飞的日志</title>
+
+  <!-- Tachyons Core CSS -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css"> -->
+  <link
+    href="https://cdn.bootcss.com/tachyons/4.11.1/tachyons.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Fonts -->
+  <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css>" -->
+  <link
+    href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Custom CSS -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  <!-- Google Analytics -->
+  
+
+
+  <!-- add favicon.ico -->
+  <link rel="icon" href="/images/logo.png" />
+
+  
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+
+  <script src="/js/hm.js"></script>
+  <script src="/js/top.js"></script>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5957060091098291"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    window.onload = function () {
+      new Top()
+    }
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+  <body>
+    <!-- Main Content -->
+    <!-- Banner -->
+<!-- Banner -->
+
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+  <nav class="db dt-l w-100 mw8 center border-box pv4">
+    <!-- <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="https://l-x-f.github.io" title="飞的日志">
+            <span src="/images/my.jpeg" class="dib h3 avatar" alt="飞的日志">
+        </a> -->
+    <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/"
+        title="首页"
+      >
+        首页
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/archives"
+        title="博客"
+      >
+        博客
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/tags"
+        title="标签"
+      >
+        标签
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/about"
+        title="关于"
+      >
+        关于
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="https://l-x-f.github.io/coding-standard/"
+        title="Web前端代码规范"
+      >
+        Web前端代码规范
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39953537"
+        title="关联的CSDN"
+      >
+        关联的CSDN
+      </a>
+      
+    </div>
+  </nav>
+
+  <!-- Title -->
+  <div class="w-100 mw8 center dt">
+    <div class="dtc v-mid white">
+      <h1 class="f1-l f2-m tc tc-m tl-ns">vuepress 结合 GitHub pages 打造自己的博客网站</h1>
+      <p style="padding-bottom: 40px" class="f4 fw3 tc tc-m tl-ns">
+        2019-08-06 19:32
+      </p>
+    </div>
+  </div>
+
+  <!-- Icon -->
+  <div class="relative w-100 mw8 center white dn dn-m db-ns">
+    <i class="header-icon fa fa-file-text-o"></i>
+  </div>
+</div>
+
+<!-- TODO:AD -->
+<!-- 
+<a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/bdyBVja9"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/618.jpg" alt="" />
+  </div>
+</a> -->
+
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/vue/">#vue</a> <a class="fw3 ph1 dib" href="/tags/vuepress/">#vuepress</a> <a class="fw3 ph1 dib" href="/tags/GitHub-pages/">#GitHub pages</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="vuepress-结合-GitHub-pages-打造自己的博客网站"><a href="#vuepress-结合-GitHub-pages-打造自己的博客网站" class="headerlink" title="vuepress 结合 GitHub pages 打造自己的博客网站"></a>vuepress 结合 GitHub pages 打造自己的博客网站</h1><p>参考链接<a target="_blank" rel="noopener" href="https://vuepress.vuejs.org/zh/">vuepress 中文官方文档</a>.</p>
+<h2 id="一-前期工作"><a href="#一-前期工作" class="headerlink" title="一.前期工作"></a>一.前期工作</h2><p>1.新建一个空的文件夹执行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+
+<p>2.安装依赖</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -D vuepress</span><br></pre></td></tr></table></figure>
+
+<p>3.配置 package.json</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;docs:dev&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vuepress dev docs&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;docs:build&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vuepress build docs&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>4.运行以下命令开始写作</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run docs:dev</span><br></pre></td></tr></table></figure>
+
+<h3 id="二-配置项目"><a href="#二-配置项目" class="headerlink" title="二.配置项目"></a>二.配置项目</h3><p><strong>项目目录</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20190806192825660.jpg" alt="在这里插入图片描述"></p>
+<p>1.项目根目录下新建 docs 文件夹</p>
+<p>2.docs 文件夹下新建文件 .vuepress 文件夹</p>
+<p>.vuepress 文件夹下新建 public 文件夹用来放静态资源</p>
+<p>public 文件夹下放两张图片下面配置会用到</p>
+<p>favicon.ico<br>home.png</p>
+<p>3..vuepress 文件夹下新建 config.js 用来配置网站</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="string">&#x27;网站标题&#x27;</span>,</span><br><span class="line">  <span class="comment">// base: 网站域名前缀对应自己的GitHub仓库名称</span></span><br><span class="line">  <span class="comment">// 一定要以/开头结尾，不然会出现资源找不到</span></span><br><span class="line">  <span class="attr">base</span>: <span class="string">&#x27;/blog/&#x27;</span>,</span><br><span class="line">  <span class="attr">port</span>: <span class="number">8888</span>, <span class="comment">//</span></span><br><span class="line">  <span class="attr">description</span>: <span class="string">&#x27;description&#x27;</span>,</span><br><span class="line">  <span class="attr">markdown</span>: &#123;</span><br><span class="line">    <span class="attr">lineNumbers</span>: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 默认语言</span></span><br><span class="line">  <span class="attr">locales</span>: &#123;</span><br><span class="line">    <span class="string">&#x27;/&#x27;</span>: &#123;</span><br><span class="line">      <span class="comment">// 将会被设置为 &lt;html&gt; 的 lang 属性 （博客文章底部更新时间也会修改为中文时间）</span></span><br><span class="line">      <span class="attr">lang</span>: <span class="string">&#x27;zh-CN&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">themeConfig</span>: &#123;</span><br><span class="line">    <span class="attr">lastUpdated</span>: <span class="string">&#x27;上次更新&#x27;</span>, <span class="comment">// 博客文章底部添加更新时间</span></span><br><span class="line">    <span class="attr">serviceWorker</span>: &#123;</span><br><span class="line">      <span class="attr">updatePopup</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">updatePopup</span>: &#123;</span><br><span class="line">        <span class="attr">message</span>: <span class="string">&#x27;有新的内容&#x27;</span>,</span><br><span class="line">        <span class="attr">buttonText</span>: <span class="string">&#x27;点击更新&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">sidebarDepth</span>: <span class="number">2</span>, <span class="comment">// 侧边栏深度</span></span><br><span class="line">    <span class="attr">displayAllHeaders</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="comment">// 导航栏</span></span><br><span class="line">    <span class="attr">nav</span>: [</span><br><span class="line">      &#123; <span class="attr">text</span>: <span class="string">&#x27;首页&#x27;</span>, <span class="attr">link</span>: <span class="string">&#x27;/&#x27;</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">text</span>: <span class="string">&#x27;我的csdn&#x27;</span>, <span class="attr">link</span>: <span class="string">&#x27;https://blog.csdn.net/qq_39953537&#x27;</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">text</span>: <span class="string">&#x27;github&#x27;</span>, <span class="attr">link</span>: <span class="string">&#x27;https://github.com/l-x-f&#x27;</span> &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">//  侧边栏</span></span><br><span class="line">    <span class="attr">sidebar</span>: [</span><br><span class="line">      <span class="comment">// 数组配置第一个参数是路径 /home/ 指的是 docs 文件夹下的home文件夹下的README.md</span></span><br><span class="line">      <span class="comment">// 第二个参数是侧边栏标题</span></span><br><span class="line">      [<span class="string">&#x27;/home/&#x27;</span>, <span class="string">&#x27;欢迎页&#x27;</span>],</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 对象配置： 是两级目录 title 是指侧边栏一级标题</span></span><br><span class="line">      <span class="comment">// collapsable: false会让这个二级侧边栏一直展开</span></span><br><span class="line">      <span class="comment">// children里的字段又是一个数组配置，参数含义如上</span></span><br><span class="line">        <span class="attr">title</span>: <span class="string">&#x27;vue&#x27;</span>,</span><br><span class="line">        <span class="attr">collapsable</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">children</span>: [</span><br><span class="line">        <span class="comment">//  路径  /vue/function-api  指的是 docs 文件夹下的vue文件夹下的function-api.md</span></span><br><span class="line">          [<span class="string">&#x27;/vue/function-api&#x27;</span>, <span class="string">&#x27; vue Function API&#x27;</span>],</span><br><span class="line">          [<span class="string">&#x27;/vue/amap&#x27;</span>, <span class="string">&#x27;vue amap&#x27;</span>]</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">dest</span>: <span class="string">&#x27;./dist&#x27;</span>,  <span class="comment">// 打包文件夹</span></span><br><span class="line">  <span class="attr">head</span>: [</span><br><span class="line">    [</span><br><span class="line">      <span class="string">&#x27;link&#x27;</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">rel</span>: <span class="string">&#x27;icon&#x27;</span>,</span><br><span class="line">        <span class="attr">href</span>: <span class="string">&#x27;/favicon.ico&#x27;</span> <span class="comment">// 网站的icon 已经放到public文件夹下</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>上面其他未注释配置项的含义见官网</p>
+<p><a target="_blank" rel="noopener" href="https://vuepress.vuejs.org/zh/config/#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE">vuepress 基本配置官网链接</a></p>
+<p>3.docs 文件夹下新建文件 README.md 用来配置网站首页</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">home: true              &lt;!--home: true 表示这是首页 --&gt;</span><br><span class="line">heroImage: /home.png    &lt;!--heroImage:表示图片地址  上文提到已放到public文件夹下--&gt;</span><br><span class="line">actionText: 快速上手 →   &lt;!--actionText:按钮文字 --&gt;</span><br><span class="line">actionLink: /home/      &lt;!--按钮跳转链接 --&gt;</span><br><span class="line">features:</span><br><span class="line"><span class="bullet">  -</span> title: 简洁至上</span><br><span class="line"><span class="code">    details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。</span></span><br><span class="line"><span class="code">  - title: Vue 驱动</span></span><br><span class="line"><span class="code">    details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。</span></span><br><span class="line"><span class="code">  - title: 高性能</span></span><br><span class="line"><span class="code">    details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。</span></span><br><span class="line"><span class="code">    footer: MIT Licensed | Copyright © 2018-present Evan You</span></span><br><span class="line"><span class="code">---</span></span><br></pre></td></tr></table></figure>
+
+<p>效果如图</p>
+<p><img src="https://img-blog.csdnimg.cn/20190806192902294.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5OTUzNTM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="三-部署"><a href="#三-部署" class="headerlink" title="三.部署"></a>三.部署</h3><p><font color="#f00" size="5">提示：以下仓库地址根据自己建的仓库更换</font></p>
+<p>1.配置自己的 GitHub pages</p>
+<p>新建一个仓库如 blog （仓库地址：<a target="_blank" rel="noopener" href="https://github.com/l-x-f/blog%EF%BC%89">https://github.com/l-x-f/blog）</a></p>
+<p>如图</p>
+<p><img src="https://img-blog.csdnimg.cn/20190806192927942.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5OTUzNTM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>点击设置 settings 找到如图</p>
+<p><img src="https://img-blog.csdnimg.cn/20190806192951658.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5OTUzNTM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>如图选择 master branch</p>
+<p><img src="https://img-blog.csdnimg.cn/20190806193002584.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5OTUzNTM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>2.项目根目录下新建 deploy.sh</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env sh</span></span><br><span class="line"></span><br><span class="line">success=<span class="string">&quot;更新成功&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 确保脚本抛出遇到的错误</span></span><br><span class="line"><span class="built_in">set</span> -e</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成静态文件</span></span><br><span class="line">npm run docs:build</span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入生成的文件夹</span></span><br><span class="line"><span class="built_in">cd</span> ./dist</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">git init</span><br><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">&#x27;deploy&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 自己的仓库地址，blog这个仓库名称和config.js里的base:/blog/保持一致</span></span><br><span class="line">git push -f https://github.com/l-x-f/blog.git master</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$success</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 回到之前的文件目录</span></span><br><span class="line"><span class="built_in">cd</span> -</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>3.打包上线<br>项目根目录下运行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./deploy.sh</span><br></pre></td></tr></table></figure>
+
+<p>4.然后在<a href="https://l-x-f.github.io/blog/">https://l-x-f.github.io/blog/</a>这个地址就可以看到自己的网站了</p>
+<p>5.如果想要把网站建在你的 github pages 的根目录下 <a href="https://l-x-f.github.io/">https://l-x-f.github.io</a>，你的仓库名称必须是<code>l-x-f.github.io</code>这样的 ，<code>.github.io</code>前面是你的 git 账户名称，vuePress 的配置文件 config.js 里的 base 改为 <code>base：&#39;/&#39;</code>即可。</p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/vue/">#vue</a> <a class="fw3 ph1 dib" href="/tags/vuepress/">#vuepress</a> <a class="fw3 ph1 dib" href="/tags/GitHub-pages/">#GitHub pages</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+  <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+    <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+      <img src="/images/my.jpeg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="xiaofei">
+    </div>
+    <div class="dtc db-l v-mid lh-copy measure center f6 black-80 tj">
+      你好，我的名字叫xiaofei，这是我的博客。<br> 我是一名前端开发者 + linux 爱好者。热衷于前端开发技术，熟悉ES6+，typescript，css3，vue2/3，react，uni-app，weapp，webpack，vite，babel，node，linux，nginx 等。<br> 我目前在西安生活和工作，如果你需要和我交流，请联系我（网站下面有联系方式）。
+    </div>
+  </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p class="recent-item">
+            <a href="/2024/10/16/threejs/lattice/">threejs 晶格实现</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/05/31/js/monorepo/">Monorepo 自动release的思考</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/03/20/gis/icon/">openlayers 绘制图标并定位到图标</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/01/28/canvas/post/">使用 auto-drawing 绘制商城分销海报</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2022/12/27/canvas/room/">使用 auto-drawing 画一个户型图</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- TODO:AD -->
+<!-- <a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/cD2mxeH7"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/全球购_1040 100.jpg" alt="" />
+  </div>
+</a> -->
+
+<div class="bg-1 ph2 ph5-ns pv5">
+  <div class="mv8">
+    <div class="center tc">
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://github.com/l-x-f"
+          title="github"
+          target="_blank"
+        >
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="qq"
+          target="_blank"
+        >
+          <i class="fa fa-qq"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="email"
+          target="_blank"
+        >
+          <i class="fa fa-envelope"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://blog.csdn.net/qq_39953537"
+          title="csdn"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconcsdn"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://l-x-f.gitee.io"
+          title="gitee"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconmayun1"></i>
+        </a>
+      </div>
+      
+    </div>
+    <div class="f6 f5-ns center tc white pt5 fw3">
+      MIT Licensed | Copyright © 2016-present xiaofei <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn" class="fake-link black-70 ph1"> 陕ICP备2021003270号</a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- After Footer -->
+    <!-- Disqus Comments -->
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

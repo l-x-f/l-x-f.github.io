@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <!-- Head tag -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="baidu_union_verify" content="a413507676ae2c1dae7063ec877d0674" />
+
+  <!--Description-->
+  
+  <meta name="description" content="xiaofei的个人博客" />
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="xiaofei" />
+  
+
+  <!--Open Graph Title-->
+  
+  <meta property="og:title" content="vue cli 3 升级到 vue cli 4 方法步骤及升级点总结" />
+  
+
+  <!--Open Graph Description-->
+  
+  <meta property="og:description" content="xiaofei的个人博客" />
+  
+
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="飞的日志" />
+
+  <!--Type page-->
+  
+  <meta property="og:type" content="article" />
+  
+
+  <!--Page Cover-->
+  
+
+  <meta name="twitter:card" content="summary" />
+  
+
+  <!-- Title -->
+  
+  <title>vue cli 3 升级到 vue cli 4 方法步骤及升级点总结 - 飞的日志</title>
+
+  <!-- Tachyons Core CSS -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css"> -->
+  <link
+    href="https://cdn.bootcss.com/tachyons/4.11.1/tachyons.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Fonts -->
+  <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css>" -->
+  <link
+    href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Custom CSS -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  <!-- Google Analytics -->
+  
+
+
+  <!-- add favicon.ico -->
+  <link rel="icon" href="/images/logo.png" />
+
+  
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+
+  <script src="/js/hm.js"></script>
+  <script src="/js/top.js"></script>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5957060091098291"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    window.onload = function () {
+      new Top()
+    }
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+  <body>
+    <!-- Main Content -->
+    <!-- Banner -->
+<!-- Banner -->
+
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+  <nav class="db dt-l w-100 mw8 center border-box pv4">
+    <!-- <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="https://l-x-f.github.io" title="飞的日志">
+            <span src="/images/my.jpeg" class="dib h3 avatar" alt="飞的日志">
+        </a> -->
+    <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/"
+        title="首页"
+      >
+        首页
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/archives"
+        title="博客"
+      >
+        博客
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/tags"
+        title="标签"
+      >
+        标签
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/about"
+        title="关于"
+      >
+        关于
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="https://l-x-f.github.io/coding-standard/"
+        title="Web前端代码规范"
+      >
+        Web前端代码规范
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39953537"
+        title="关联的CSDN"
+      >
+        关联的CSDN
+      </a>
+      
+    </div>
+  </nav>
+
+  <!-- Title -->
+  <div class="w-100 mw8 center dt">
+    <div class="dtc v-mid white">
+      <h1 class="f1-l f2-m tc tc-m tl-ns">vue cli 3 升级到 vue cli 4 方法步骤及升级点总结</h1>
+      <p style="padding-bottom: 40px" class="f4 fw3 tc tc-m tl-ns">
+        2019-10-26 18:45
+      </p>
+    </div>
+  </div>
+
+  <!-- Icon -->
+  <div class="relative w-100 mw8 center white dn dn-m db-ns">
+    <i class="header-icon fa fa-file-text-o"></i>
+  </div>
+</div>
+
+<!-- TODO:AD -->
+<!-- 
+<a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/bdyBVja9"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/618.jpg" alt="" />
+  </div>
+</a> -->
+
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/vue/">#vue</a> <a class="fw3 ph1 dib" href="/tags/vue-cli/">#vue-cli</a> <a class="fw3 ph1 dib" href="/tags/vue-cli-3/">#vue-cli 3</a> <a class="fw3 ph1 dib" href="/tags/vue-cli-4/">#vue-cli 4</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="vue-cli-3-升级到-vue-cli-4-方法步骤及升级点总结"><a href="#vue-cli-3-升级到-vue-cli-4-方法步骤及升级点总结" class="headerlink" title="vue cli 3 升级到 vue cli 4 方法步骤及升级点总结"></a>vue cli 3 升级到 vue cli 4 方法步骤及升级点总结</h1><p>官方升级<a target="_blank" rel="noopener" href="https://cli.vuejs.org/migrating-from-v3/#upgrade-all-plugins-at-once">英文文档</a>，<a target="_blank" rel="noopener" href="https://cli.vuejs.org/zh/">中文文档</a>相对滞后。</p>
+<p><strong>简介：vue cli 4 官方已经更新有一段时间了，现在是<code>4.0.5</code> 版本，看了官方文档大概有二十几点的更新，还是干货满满呀，值得升级一下，下面是升级步骤。</strong></p>
+<p>一.<strong>首先，在全局安装最新的 Vue CLI：</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br><span class="line"><span class="comment"># OR</span></span><br><span class="line">yarn global add @vue/cli</span><br></pre></td></tr></table></figure>
+
+<p>检查安装的版本</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue -V  <span class="comment"># 输出:@vue/cli 4.x.x  说明@vue/cli 4安装成功( vue cli 3的版本会输出 3.x.x )</span></span><br></pre></td></tr></table></figure>
+
+<p>踩坑记录</p>
+<p><code>npm install -g @vue/cli</code> 执行成功，但是执行 <code>vue -V</code> 输出的还是<code>3.5.6</code>(我以前安装的版本)，</p>
+<p>于是又重新执行 <code>npm install -g @vue/cli</code>，显示成功，执行 <code>vue -V</code> 输出的还是<code>3.5.6</code>，</p>
+<p>一脸懵逼 🙄，然后重启电脑，再执行<code>vue -V</code> 输出 <code>@vue/cli 4.0.5</code>，解决 😃</p>
+<p>二.<strong>在项目根目录下执行</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue upgrade</span><br></pre></td></tr></table></figure>
+
+<p>然后出现<br><img src="https://img-blog.csdnimg.cn/20191026184414364.png" alt="在这里插入图片描述"></p>
+<p>提示 <code>继续升级这些插件吗？</code> 输入 <code>Y</code> 即可.</p>
+<p>三.<strong>等步骤二 执行完会发现主要有 2 个文件被修改</strong></p>
+<p>1.文件 babel.config.js</p>
+<p>主要是 babel 的预设由<code>@vue/app</code> 改成了<code>@vue/cli-plugin-babel/preset</code></p>
+<p>原来的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">presets</span>: [</span><br><span class="line">    <span class="string">&quot;@vue/app&quot;</span>, <span class="comment">//  这行</span></span><br><span class="line">    [</span><br><span class="line">      <span class="string">&quot;@babel/preset-env&quot;</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">useBuiltIns</span>: <span class="string">&quot;entry&quot;</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>升级后的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">presets</span>: [</span><br><span class="line">    <span class="string">&quot;@vue/cli-plugin-babel/preset&quot;</span>, <span class="comment">//  这行</span></span><br><span class="line">    [</span><br><span class="line">      <span class="string">&quot;@babel/preset-env&quot;</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">useBuiltIns</span>: <span class="string">&quot;entry&quot;</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>2.文件 package.json （package-lock.json 也会更改）</p>
+<p>主要是依赖升级</p>
+<p>原来的</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;@vue/cli-plugin-babel&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.11.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;@vue/cli-plugin-eslint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.11.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;@vue/cli-service&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.11.0&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>升级后的</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;@vue/cli-plugin-babel&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.0.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;@vue/cli-plugin-eslint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.0.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;@vue/cli-service&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.0.5&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>四.<strong>然后启动项目</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run serve</span><br></pre></td></tr></table></figure>
+
+<p>然后报下面的错</p>
+<p><img src="https://img-blog.csdnimg.cn/20191026184353496.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5OTUzNTM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>1.第一个错（警告）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WARN  A new version of sass-loader is available. Please upgrade for best experience.</span><br></pre></td></tr></table></figure>
+
+<p>这行是 <code>vue cli 4</code> 升级了自己的依赖 <code>sass-loader</code> 导致的</p>
+<p>它把 <code>sass-loader</code>由 <code>^7.x.x</code> 的版本升级到了 <code>^8.0.0</code>,而我项目中使用的是<code>^7.1.0</code></p>
+<p>所以升级一下自己项目的 <code>sass-loader</code> 就好了</p>
+<p>执行下面命令即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i sass-loader@8.0.0 -D</span><br></pre></td></tr></table></figure>
+
+<p>2.然后第二个错说没有安装<code>core-js</code></p>
+<p><code>vue cli 4</code>把 <code>core-js</code>由 <code>^2.x.x</code> 的版本升级到了 <code>^3.x.x</code></p>
+<p>于是安装一下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i core-js</span><br></pre></td></tr></table></figure>
+
+<p>然后重启项目还是不行，看了下官方文档和 babel 有关</p>
+<p>main.js 代码中</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&quot;@babel/polyfill&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>隐藏这个代码</p>
+<p>重启好了</p>
+<p>然后把 <code>@babel/polyfill</code> 换成 <code>babel-polyfill</code> 即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i babel-polyfill</span><br></pre></td></tr></table></figure>
+
+<p>main.js 代码中 改为</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&quot;babel-polyfill&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>五.<strong>vue cli 4 主要升级点总结</strong></p>
+<p>1.<code>&quot;@vue/cli-plugin-babel&quot;, &quot;@vue/cli-plugin-eslint&quot;, &quot;@vue/cli-service&quot;</code>由 <code>v3</code> 的版本升级到了 <code>v4</code></p>
+<p>2.<code>sass-loader</code>由 <code>v7</code> 的版本升级到了 <code>v8</code></p>
+<p>3.<code>core-js</code>由 <code>v2</code> 的版本升级到了 <code>v3</code></p>
+<p>4.<code>webpack-chain</code>由 <code>v4</code> 的版本升级到了 <code>v6</code></p>
+<p>5.<code>css-loader</code>由 <code>v1</code> 的版本升级到了 <code>v3</code></p>
+<p>6.<code>url-loader</code>由 <code>v1</code> 的版本升级到了 <code>v2</code></p>
+<p>7.<code>file-loader</code>由 <code>v3</code> 的版本升级到了 <code>v4</code></p>
+<p>8.<code>copy-webpack-plugin</code>由 <code>v4</code> 的版本升级到了 <code>v5</code></p>
+<p>9.<code>terser-webpack-plugin</code>由 <code>v1</code> 的版本升级到了 <code>v2</code></p>
+<p>10.<code>@vue/cli-plugin-pwa</code>由 <code>v3</code> 的版本升级到了 <code>v4</code></p>
+<p>11.新增插件 <code>vue add vuex</code> <code>vue add router</code></p>
+<p>12.<code>pug-plain</code>已重命名为<code>pug-plain-loader</code></p>
+<p>13.默认目录结构已更改</p>
+<p><code>src/store.js</code> 改为 <code>src/store/index.js</code></p>
+<p><code>src/router.js</code> 改为 <code>src/router/index.js</code></p>
+<p>14.由于兼容性原因，仍支持 <code>router＆routerHistoryMode</code> 选项 <code>preset.json</code></p>
+<p>但是现在建议使用它来 <code>plugins: &#123; &#39;@vue/cli-plugin-router&#39;: &#123; historyMode: true &#125; &#125;</code></p>
+<p>获得更好的一致性</p>
+<p>15.<code>api.hasPlugin(&#39;vue-router&#39;)</code>不再受支持，现在 <code>api.hasPlugin(&#39;router&#39;)</code></p>
+<p>16.<code>lintOnSave</code> 选项的默认值（未指定时）从 <code>true</code> 更改为 <code>default</code></p>
+<p>17.废弃<code>vue-cli-service test:e2e</code></p>
+<p>18.<code>@vue/cli-plugin-e2e-nightwatch</code> <code>Nightwatch.js</code>已从<code>0.9</code>升级到<code>1.x</code></p>
+<p>19.<code>@vue/cli-plugin-unit-mocha</code> 升级到<code>Mocha 6</code></p>
+<p>20.<code>@vue/cli-plugin-unit-jest</code> <code>jest</code>由 <code>v23</code> 升级到<code>v24</code></p>
+<p>21.<code>@vue/cli-plugin-typescript</code> 更好的<code>ts(x)</code>支持 ，胜过<code>js(x)</code></p>
+<p>参考链接</p>
+<p><a target="_blank" rel="noopener" href="https://cli.vuejs.org/migrating-from-v3/#vue-cli-plugin-unit-jest">vue cli 4 官方英文升级文档</a></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/vue/">#vue</a> <a class="fw3 ph1 dib" href="/tags/vue-cli/">#vue-cli</a> <a class="fw3 ph1 dib" href="/tags/vue-cli-3/">#vue-cli 3</a> <a class="fw3 ph1 dib" href="/tags/vue-cli-4/">#vue-cli 4</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+  <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+    <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+      <img src="/images/my.jpeg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="xiaofei">
+    </div>
+    <div class="dtc db-l v-mid lh-copy measure center f6 black-80 tj">
+      你好，我的名字叫xiaofei，这是我的博客。<br> 我是一名前端开发者 + linux 爱好者。热衷于前端开发技术，熟悉ES6+，typescript，css3，vue2/3，react，uni-app，weapp，webpack，vite，babel，node，linux，nginx 等。<br> 我目前在西安生活和工作，如果你需要和我交流，请联系我（网站下面有联系方式）。
+    </div>
+  </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p class="recent-item">
+            <a href="/2024/10/16/threejs/lattice/">threejs 晶格实现</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/05/31/js/monorepo/">Monorepo 自动release的思考</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/03/20/gis/icon/">openlayers 绘制图标并定位到图标</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/01/28/canvas/post/">使用 auto-drawing 绘制商城分销海报</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2022/12/27/canvas/room/">使用 auto-drawing 画一个户型图</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- TODO:AD -->
+<!-- <a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/cD2mxeH7"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/全球购_1040 100.jpg" alt="" />
+  </div>
+</a> -->
+
+<div class="bg-1 ph2 ph5-ns pv5">
+  <div class="mv8">
+    <div class="center tc">
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://github.com/l-x-f"
+          title="github"
+          target="_blank"
+        >
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="qq"
+          target="_blank"
+        >
+          <i class="fa fa-qq"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="email"
+          target="_blank"
+        >
+          <i class="fa fa-envelope"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://blog.csdn.net/qq_39953537"
+          title="csdn"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconcsdn"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://l-x-f.gitee.io"
+          title="gitee"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconmayun1"></i>
+        </a>
+      </div>
+      
+    </div>
+    <div class="f6 f5-ns center tc white pt5 fw3">
+      MIT Licensed | Copyright © 2016-present xiaofei <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn" class="fake-link black-70 ph1"> 陕ICP备2021003270号</a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- After Footer -->
+    <!-- Disqus Comments -->
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

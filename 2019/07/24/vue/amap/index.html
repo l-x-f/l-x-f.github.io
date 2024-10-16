@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <!-- Head tag -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="baidu_union_verify" content="a413507676ae2c1dae7063ec877d0674" />
+
+  <!--Description-->
+  
+  <meta name="description" content="xiaofei的个人博客" />
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="xiaofei" />
+  
+
+  <!--Open Graph Title-->
+  
+  <meta property="og:title" content="vue 结合 element-ui 实现 pc 端高德地图组件" />
+  
+
+  <!--Open Graph Description-->
+  
+  <meta property="og:description" content="xiaofei的个人博客" />
+  
+
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="飞的日志" />
+
+  <!--Type page-->
+  
+  <meta property="og:type" content="article" />
+  
+
+  <!--Page Cover-->
+  
+
+  <meta name="twitter:card" content="summary" />
+  
+
+  <!-- Title -->
+  
+  <title>vue 结合 element-ui 实现 pc 端高德地图组件 - 飞的日志</title>
+
+  <!-- Tachyons Core CSS -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css"> -->
+  <link
+    href="https://cdn.bootcss.com/tachyons/4.11.1/tachyons.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Fonts -->
+  <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css>" -->
+  <link
+    href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Custom CSS -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  <!-- Google Analytics -->
+  
+
+
+  <!-- add favicon.ico -->
+  <link rel="icon" href="/images/logo.png" />
+
+  
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+
+  <script src="/js/hm.js"></script>
+  <script src="/js/top.js"></script>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5957060091098291"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    window.onload = function () {
+      new Top()
+    }
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+  <body>
+    <!-- Main Content -->
+    <!-- Banner -->
+<!-- Banner -->
+
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+  <nav class="db dt-l w-100 mw8 center border-box pv4">
+    <!-- <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="https://l-x-f.github.io" title="飞的日志">
+            <span src="/images/my.jpeg" class="dib h3 avatar" alt="飞的日志">
+        </a> -->
+    <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/"
+        title="首页"
+      >
+        首页
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/archives"
+        title="博客"
+      >
+        博客
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/tags"
+        title="标签"
+      >
+        标签
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/about"
+        title="关于"
+      >
+        关于
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="https://l-x-f.github.io/coding-standard/"
+        title="Web前端代码规范"
+      >
+        Web前端代码规范
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39953537"
+        title="关联的CSDN"
+      >
+        关联的CSDN
+      </a>
+      
+    </div>
+  </nav>
+
+  <!-- Title -->
+  <div class="w-100 mw8 center dt">
+    <div class="dtc v-mid white">
+      <h1 class="f1-l f2-m tc tc-m tl-ns">vue 结合 element-ui 实现 pc 端高德地图组件</h1>
+      <p style="padding-bottom: 40px" class="f4 fw3 tc tc-m tl-ns">
+        2019-07-24 10:04
+      </p>
+    </div>
+  </div>
+
+  <!-- Icon -->
+  <div class="relative w-100 mw8 center white dn dn-m db-ns">
+    <i class="header-icon fa fa-file-text-o"></i>
+  </div>
+</div>
+
+<!-- TODO:AD -->
+<!-- 
+<a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/bdyBVja9"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/618.jpg" alt="" />
+  </div>
+</a> -->
+
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/vue/">#vue</a> <a class="fw3 ph1 dib" href="/tags/element-ui/">#element-ui</a> <a class="fw3 ph1 dib" href="/tags/amap/">#amap</a> <a class="fw3 ph1 dib" href="/tags/高德地图组件/">#高德地图组件</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="vue-结合-element-ui-实现-pc-端高德地图组件"><a href="#vue-结合-element-ui-实现-pc-端高德地图组件" class="headerlink" title="vue 结合 element-ui 实现 pc 端高德地图组件"></a>vue 结合 element-ui 实现 pc 端高德地图组件</h1><p>背景：去年由于业务需求写了一个高德地图组件，前段时间重构了下。</p>
+<p>实现的功能有：自动定位，检索地址提示，点击地图获取地址，添加工具栏，拿到的数据有经纬度，地址，名称等</p>
+<p>项目依赖：vue-cli：3.5.3 vue：2.6.10 element-ui: ^2.7.0 等</p>
+<p><strong>使用步骤</strong></p>
+<p>1.&#x2F;public&#x2F;index.html 文件中导入高德地图 js</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;https://webapi.amap.com/maps?v=1.4.4&amp;key=&lt;%=VUE_APP_AMAP_KEY%&gt;&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>2.环境变量中配置地图 key 值（也可以直接写在上面，就是不便于维护）</p>
+<p>.env.development 和.env.production 文件中加入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VUE_APP_AMAP_KEY=&#x27;&#x27;  #  你的高德地图key值</span><br></pre></td></tr></table></figure>
+
+<p>3.地图组件 &#x2F;components&#x2F;Amap&#x2F;index.vue</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;amap-container&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-input</span></span></span><br><span class="line"><span class="tag">      <span class="attr">id</span>=<span class="string">&quot;search-input&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">v-model</span>=<span class="string">&quot;searchValue&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">class</span>=<span class="string">&quot;input-with&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">placeholder</span>=<span class="string">&quot;请输入地址&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">clearable</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">clear</span>=<span class="string">&quot;handelclearInput&quot;</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">keyup.native.enter</span>=<span class="string">&quot;handelSearch&quot;</span></span></span><br><span class="line"><span class="tag">    &gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-button</span></span></span><br><span class="line"><span class="tag">        <span class="attr">slot</span>=<span class="string">&quot;append&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">size</span>=<span class="string">&quot;small&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">icon</span>=<span class="string">&quot;el-icon-search&quot;</span></span></span><br><span class="line"><span class="tag">        @<span class="attr">click</span>=<span class="string">&quot;handelSearch&quot;</span></span></span><br><span class="line"><span class="tag">        &gt;</span>搜索&lt;/el-button</span><br><span class="line">      &gt;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">el-input</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;searchResultPanel&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-row</span> <span class="attr">class</span>=<span class="string">&quot;margin-top-10 address&quot;</span>&gt;</span></span><br><span class="line">      当前地址是： &#123;&#123; formattedAddress &#125;&#125;</span><br><span class="line">      <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">size</span>=<span class="string">&quot;small&quot;</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;handelSave&quot;</span></span></span><br><span class="line"><span class="tag">        &gt;</span>使用该地址&lt;/el-button</span><br><span class="line">      &gt;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">el-row</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;custom-amap&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> <span class="title class_">AMap</span> = <span class="variable language_">window</span>.<span class="property">AMap</span>;</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">name</span>: <span class="string">&quot;AMap&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">props</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">defaultValue</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">type</span>: <span class="title class_">String</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">default</span>: <span class="string">&quot;&quot;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">data</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">defaultCity</span>: <span class="string">&quot;北京&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 地图对象</span></span></span><br><span class="line"><span class="language-javascript">        <span class="attr">map</span>: <span class="literal">null</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 定位默认地址 | 搜索后选择的地址</span></span></span><br><span class="line"><span class="language-javascript">        <span class="attr">formattedAddress</span>: <span class="literal">null</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 地址对应的经纬度信息</span></span></span><br><span class="line"><span class="language-javascript">        <span class="attr">position</span>: &#123;&#125;,</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 检索关键字</span></span></span><br><span class="line"><span class="language-javascript">        <span class="attr">searchValue</span>: <span class="string">&quot;&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 检索函数对象</span></span></span><br><span class="line"><span class="language-javascript">        <span class="attr">placeSearch</span>: <span class="literal">null</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 检索结果数据数据</span></span></span><br><span class="line"><span class="language-javascript">        <span class="attr">searchInfoList</span>: [],</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 地图标记</span></span></span><br><span class="line"><span class="language-javascript">        <span class="attr">marker</span>: <span class="string">&quot;&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 地址解析（正向）</span></span></span><br><span class="line"><span class="language-javascript">        <span class="attr">geocoder</span>: <span class="string">&quot;&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 地址名称</span></span></span><br><span class="line"><span class="language-javascript">        <span class="attr">name</span>: <span class="string">&quot;&quot;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;;</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">watch</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">defaultValue</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">searchValue</span> = <span class="variable language_">this</span>.<span class="property">defaultValue</span>;</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">mounted</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 初始化地图页面</span></span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">this</span>.<span class="title function_">initMap</span>();</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">beforeDestroy</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 销毁地图</span></span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">this</span>.<span class="property">map</span>.<span class="title function_">destroy</span>();</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">//   初始化地图页面</span></span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">initMap</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">map</span> = <span class="keyword">new</span> <span class="title class_">AMap</span>.<span class="title class_">Map</span>(<span class="string">&quot;custom-amap&quot;</span>, &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">resizeEnable</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">zoom</span>: <span class="number">50</span></span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 添加工具栏</span></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">map</span>.<span class="title function_">plugin</span>([<span class="string">&quot;AMap.ToolBar&quot;</span>, <span class="string">&quot;AMap.Scale&quot;</span>, <span class="string">&quot;AMap.OverView&quot;</span>], <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="comment">// 工具条</span></span></span><br><span class="line"><span class="language-javascript">          <span class="keyword">const</span> toolbar = <span class="keyword">new</span> <span class="title class_">AMap</span>.<span class="title class_">ToolBar</span>();</span></span><br><span class="line"><span class="language-javascript">          <span class="comment">// 比例尺</span></span></span><br><span class="line"><span class="language-javascript">          <span class="keyword">const</span> scale = <span class="keyword">new</span> <span class="title class_">AMap</span>.<span class="title class_">Scale</span>();</span></span><br><span class="line"><span class="language-javascript">          <span class="comment">// 显示鹰眼</span></span></span><br><span class="line"><span class="language-javascript">          <span class="keyword">const</span> overView = <span class="keyword">new</span> <span class="title class_">AMap</span>.<span class="title class_">OverView</span>();</span></span><br><span class="line"><span class="language-javascript">          <span class="variable language_">this</span>.<span class="property">map</span>.<span class="title function_">addControl</span>(toolbar);</span></span><br><span class="line"><span class="language-javascript">          <span class="variable language_">this</span>.<span class="property">map</span>.<span class="title function_">addControl</span>(scale);</span></span><br><span class="line"><span class="language-javascript">          <span class="variable language_">this</span>.<span class="property">map</span>.<span class="title function_">addControl</span>(overView);</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 添加maker</span></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="title function_">setMaker</span>();</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 添加鼠标点选地图选择地址</span></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="title function_">addAmapGeocoder</span>();</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 添加定位</span></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="title function_">addAMapGeolocation</span>();</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 添加检索提示</span></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="title function_">addAMapAutocompletePlaceSearch</span>();</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 添加maker</span></span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">setMaker</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">marker</span> = <span class="keyword">new</span> <span class="title class_">AMap</span>.<span class="title class_">Marker</span>();</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">map</span>.<span class="title function_">add</span>(<span class="variable language_">this</span>.<span class="property">marker</span>);</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 添加解析地理位置插件</span></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">map</span>.<span class="title function_">plugin</span>(<span class="string">&quot;AMap.Geocoder&quot;</span>, <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="comment">// 异步加载插件</span></span></span><br><span class="line"><span class="language-javascript">          <span class="variable language_">this</span>.<span class="property">geocoder</span> = <span class="keyword">new</span> <span class="title class_">AMap</span>.<span class="title class_">Geocoder</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">city</span>: <span class="variable language_">this</span>.<span class="property">defaultCity</span>, <span class="comment">// 默认：“全国”</span></span></span><br><span class="line"><span class="language-javascript">            <span class="attr">radius</span>: <span class="number">1000</span> <span class="comment">// 范围，默认：500</span></span></span><br><span class="line"><span class="language-javascript">          &#125;);</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 添加鼠标点选地图选择地址</span></span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">addAmapGeocoder</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 添加maker</span></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="title function_">setMaker</span>();</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 地图添加点击事件</span></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">map</span>.<span class="title function_">on</span>(<span class="string">&quot;click&quot;</span>, <span class="function"><span class="params">e</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="keyword">const</span> lnglat = [e.<span class="property">lnglat</span>.<span class="property">lng</span>, e.<span class="property">lnglat</span>.<span class="property">lat</span>];</span></span><br><span class="line"><span class="language-javascript">          <span class="variable language_">this</span>.<span class="property">marker</span>.<span class="title function_">setPosition</span>(lnglat);</span></span><br><span class="line"><span class="language-javascript">          <span class="variable language_">this</span>.<span class="property">geocoder</span>.<span class="title function_">getAddress</span>(lnglat, <span class="function">(<span class="params">status, result</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">if</span> (status === <span class="string">&quot;complete&quot;</span> &amp;&amp; result.<span class="property">regeocode</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">              <span class="keyword">const</span> res = result.<span class="property">regeocode</span>;</span></span><br><span class="line"><span class="language-javascript">              <span class="keyword">const</span> data = &#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="comment">// 地址名称</span></span></span><br><span class="line"><span class="language-javascript">                <span class="attr">adress</span>: res.<span class="property">formattedAddress</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="comment">// 纬度lat</span></span></span><br><span class="line"><span class="language-javascript">                <span class="attr">lat</span>: lnglat[<span class="number">1</span>],</span></span><br><span class="line"><span class="language-javascript">                <span class="comment">// 经度lng</span></span></span><br><span class="line"><span class="language-javascript">                <span class="attr">lng</span>: lnglat[<span class="number">0</span>]</span></span><br><span class="line"><span class="language-javascript">              &#125;;</span></span><br><span class="line"><span class="language-javascript">              <span class="variable language_">this</span>.<span class="property">formattedAddress</span> = res.<span class="property">formattedAddress</span>;</span></span><br><span class="line"><span class="language-javascript">              <span class="variable language_">this</span>.<span class="property">position</span> = data;</span></span><br><span class="line"><span class="language-javascript">            &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="language-javascript">              <span class="title function_">alert</span>(<span class="title class_">JSON</span>.<span class="title function_">stringify</span>(result));</span></span><br><span class="line"><span class="language-javascript">            &#125;</span></span><br><span class="line"><span class="language-javascript">          &#125;);</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 添加自动定位</span></span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">addAMapGeolocation</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">map</span>.<span class="title function_">plugin</span>(<span class="string">&quot;AMap.Geolocation&quot;</span>, <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="keyword">const</span> geolocation = <span class="keyword">new</span> <span class="title class_">AMap</span>.<span class="title class_">Geolocation</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="comment">// 是否使用高精度定位，默认：true</span></span></span><br><span class="line"><span class="language-javascript">            <span class="attr">enableHighAccuracy</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="comment">// 设置定位超时时间，默认：无穷大</span></span></span><br><span class="line"><span class="language-javascript">            <span class="attr">timeout</span>: <span class="number">10000</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="comment">// 定位按钮的停靠位置的偏移量，默认：Pixel(10, 20)</span></span></span><br><span class="line"><span class="language-javascript">            <span class="attr">buttonOffset</span>: <span class="keyword">new</span> <span class="title class_">AMap</span>.<span class="title class_">Pixel</span>(<span class="number">200</span>, <span class="number">200</span>),</span></span><br><span class="line"><span class="language-javascript">            <span class="comment">//  定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false</span></span></span><br><span class="line"><span class="language-javascript">            <span class="attr">zoomToAccuracy</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="comment">//  定位按钮的排放位置,  RB表示右下</span></span></span><br><span class="line"><span class="language-javascript">            <span class="attr">buttonPosition</span>: <span class="string">&quot;RB&quot;</span></span></span><br><span class="line"><span class="language-javascript">          &#125;);</span></span><br><span class="line"><span class="language-javascript">          <span class="comment">// 获取当前位置</span></span></span><br><span class="line"><span class="language-javascript">          geolocation.<span class="title function_">getCurrentPosition</span>();</span></span><br><span class="line"><span class="language-javascript">          <span class="comment">// 添加定位当前城市成功监听</span></span></span><br><span class="line"><span class="language-javascript">          <span class="title class_">AMap</span>.<span class="property">event</span>.<span class="title function_">addListener</span>(</span></span><br><span class="line"><span class="language-javascript">            geolocation,</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&quot;complete&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">this</span>.<span class="property">onCurrentPositionComplete</span></span></span><br><span class="line"><span class="language-javascript">          );</span></span><br><span class="line"><span class="language-javascript">          <span class="comment">// 添加定位当前城市发生错误监听</span></span></span><br><span class="line"><span class="language-javascript">          <span class="title class_">AMap</span>.<span class="property">event</span>.<span class="title function_">addListener</span>(</span></span><br><span class="line"><span class="language-javascript">            geolocation,</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&quot;error&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">this</span>.<span class="property">onCurrentPositionError</span></span></span><br><span class="line"><span class="language-javascript">          );</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 添加检索提示检索</span></span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">addAMapAutocompletePlaceSearch</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 自动提示</span></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">map</span>.<span class="title function_">plugin</span>(<span class="string">&quot;AMap.Autocomplete&quot;</span>, <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="keyword">const</span> auto = <span class="keyword">new</span> <span class="title class_">AMap</span>.<span class="title class_">Autocomplete</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">city</span>: <span class="variable language_">this</span>.<span class="property">defaultCity</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">input</span>: <span class="string">&quot;search-input&quot;</span></span></span><br><span class="line"><span class="language-javascript">          &#125;);</span></span><br><span class="line"><span class="language-javascript">          <span class="comment">// 添加检索监听</span></span></span><br><span class="line"><span class="language-javascript">          <span class="title class_">AMap</span>.<span class="property">event</span>.<span class="title function_">addListener</span>(auto, <span class="string">&quot;select&quot;</span>, <span class="variable language_">this</span>.<span class="property">onSelectAutocomplete</span>);</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 检索服务</span></span></span><br><span class="line"><span class="language-javascript">        <span class="title class_">AMap</span>.<span class="title function_">service</span>([<span class="string">&quot;AMap.PlaceSearch&quot;</span>], <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="comment">// 构造地点查询类</span></span></span><br><span class="line"><span class="language-javascript">          <span class="variable language_">this</span>.<span class="property">placeSearch</span> = <span class="keyword">new</span> <span class="title class_">AMap</span>.<span class="title class_">PlaceSearch</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">type</span>: <span class="string">&quot;&quot;</span>, <span class="comment">// 兴趣点类别</span></span></span><br><span class="line"><span class="language-javascript">            <span class="attr">pageSize</span>: <span class="number">5</span>, <span class="comment">// 单页显示结果条数</span></span></span><br><span class="line"><span class="language-javascript">            <span class="attr">pageIndex</span>: <span class="number">1</span>, <span class="comment">// 页码</span></span></span><br><span class="line"><span class="language-javascript">            <span class="attr">city</span>: <span class="variable language_">this</span>.<span class="property">defaultCity</span>, <span class="comment">// 兴趣点城市</span></span></span><br><span class="line"><span class="language-javascript">            <span class="attr">citylimit</span>: <span class="literal">false</span>, <span class="comment">// 是否强制限制在设置的城市内搜索</span></span></span><br><span class="line"><span class="language-javascript">            <span class="attr">map</span>: <span class="variable language_">this</span>.<span class="property">map</span>, <span class="comment">// 展现结果的地图实例</span></span></span><br><span class="line"><span class="language-javascript">            <span class="attr">panel</span>: <span class="string">&quot;searchResultPanel&quot;</span>, <span class="comment">// 结果列表将在此容器中进行展示。</span></span></span><br><span class="line"><span class="language-javascript">            <span class="attr">autoFitView</span>: <span class="literal">true</span> <span class="comment">// 是否自动调整地图视野使绘制的 Marker点都处于视口的可见范围</span></span></span><br><span class="line"><span class="language-javascript">          &#125;);</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 添加检索监听</span></span></span><br><span class="line"><span class="language-javascript">        <span class="title class_">AMap</span>.<span class="property">event</span>.<span class="title function_">addListener</span>(</span></span><br><span class="line"><span class="language-javascript">          <span class="variable language_">this</span>.<span class="property">placeSearch</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="string">&quot;listElementClick&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="variable language_">this</span>.<span class="property">onSelectSearch</span></span></span><br><span class="line"><span class="language-javascript">        );</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 定位当前城市成功回调</span></span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">onCurrentPositionComplete</span>(<span class="params">res</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 添加maker</span></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="title function_">setMaker</span>();</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">const</span> lnglat = [res.<span class="property">position</span>.<span class="property">lng</span>, res.<span class="property">position</span>.<span class="property">lat</span>];</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">marker</span>.<span class="title function_">setPosition</span>(lnglat);</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(res, <span class="string">&quot;res&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">formattedAddress</span> = res.<span class="property">formattedAddress</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">position</span> = res.<span class="property">position</span>;</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 定位当前城市发生错误回调</span></span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">onCurrentPositionError</span>(<span class="params">err</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(err);</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 按钮触发检索</span></span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">handelSearch</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">placeSearch</span>.<span class="title function_">search</span>(<span class="variable language_">this</span>.<span class="property">searchValue</span>, <span class="function">(<span class="params">status, info</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="variable language_">this</span>.<span class="property">searchInfoList</span> = info.<span class="property">poiList</span>.<span class="property">pois</span>;</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 选择自动提示数据事件回调</span></span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">onSelectAutocomplete</span>(<span class="params">e</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">searchValue</span> = e.<span class="property">poi</span>.<span class="property">name</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="title function_">handelSearch</span>();</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 选择检索数据结果事件回调</span></span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">onSelectSearch</span>(<span class="params">e</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">const</span> res = e.<span class="property">data</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">formattedAddress</span> = res.<span class="property">cityname</span> + res.<span class="property">adname</span> + res.<span class="property">address</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">name</span> = res.<span class="property">name</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">position</span> = res.<span class="property">location</span>;</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 清除input里的值，清除搜索结果，再次初始化map</span></span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">handelclearInput</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;#searchResultPanel&quot;</span>).<span class="property">innerHTML</span> = <span class="string">&quot;&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 保存当前选择的地址,分发事件</span></span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">handelSave</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">searchValue</span> = <span class="variable language_">this</span>.<span class="property">formattedAddress</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">const</span> &#123; lat, lng &#125; = <span class="variable language_">this</span>.<span class="property">position</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">const</span> data = &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">name</span>: <span class="variable language_">this</span>.<span class="property">name</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="comment">// 地址名称</span></span></span><br><span class="line"><span class="language-javascript">          <span class="attr">address</span>: <span class="variable language_">this</span>.<span class="property">formattedAddress</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="comment">// 纬度lat</span></span></span><br><span class="line"><span class="language-javascript">          lat,</span></span><br><span class="line"><span class="language-javascript">          <span class="comment">// 经度lng</span></span></span><br><span class="line"><span class="language-javascript">          lng</span></span><br><span class="line"><span class="language-javascript">        &#125;;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.$emit(<span class="string">&quot;getPosition&quot;</span>, data);</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">&quot;scss&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-id">#amap-container</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.el-input__clear</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">line-height</span>: <span class="number">34px</span>;</span></span><br><span class="line"><span class="language-css">      // <span class="attribute">top</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="selector-id">#custom-amap</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">height</span>: <span class="number">60vh</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">margin-top</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.input-with</span> &#123;</span></span><br><span class="line"><span class="language-css">      // <span class="attribute">position</span>: fixed;</span></span><br><span class="line"><span class="language-css">      // <span class="attribute">top</span>: <span class="number">40px</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">z-index</span>: <span class="number">1</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">width</span>: <span class="number">580px</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.address</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">color</span>: <span class="number">#373737</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.amap-sug-result</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">z-index</span>: <span class="number">99999</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>4.使用</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">amap</span> <span class="attr">:default-value</span>=<span class="string">&quot;postForm.detailedAddress&quot;</span> @<span class="attr">getPosition</span>=<span class="string">&quot;getPosition&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">import</span> <span class="title class_">Amap</span> <span class="keyword">from</span> <span class="string">&quot;@/components/Amap&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">components</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="title class_">Amap</span></span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">postForm</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">detailedAddress</span>: <span class="string">&quot;&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">longitude</span>: <span class="string">&quot;&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">latitude</span>: <span class="string">&quot;&quot;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 获取地址信息</span></span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">getPosition</span>(<span class="params">&#123; address, lat, lng, name &#125;</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">postForm</span>.<span class="property">detailedAddress</span> = address;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">postForm</span>.<span class="property">longitude</span> = <span class="title class_">String</span>(lng);</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">postForm</span>.<span class="property">latitude</span> = <span class="title class_">String</span>(lat);</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/vue/">#vue</a> <a class="fw3 ph1 dib" href="/tags/element-ui/">#element-ui</a> <a class="fw3 ph1 dib" href="/tags/amap/">#amap</a> <a class="fw3 ph1 dib" href="/tags/高德地图组件/">#高德地图组件</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+  <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+    <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+      <img src="/images/my.jpeg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="xiaofei">
+    </div>
+    <div class="dtc db-l v-mid lh-copy measure center f6 black-80 tj">
+      你好，我的名字叫xiaofei，这是我的博客。<br> 我是一名前端开发者 + linux 爱好者。热衷于前端开发技术，熟悉ES6+，typescript，css3，vue2/3，react，uni-app，weapp，webpack，vite，babel，node，linux，nginx 等。<br> 我目前在西安生活和工作，如果你需要和我交流，请联系我（网站下面有联系方式）。
+    </div>
+  </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p class="recent-item">
+            <a href="/2024/10/16/threejs/lattice/">threejs 晶格实现</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/05/31/js/monorepo/">Monorepo 自动release的思考</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/03/20/gis/icon/">openlayers 绘制图标并定位到图标</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/01/28/canvas/post/">使用 auto-drawing 绘制商城分销海报</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2022/12/27/canvas/room/">使用 auto-drawing 画一个户型图</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- TODO:AD -->
+<!-- <a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/cD2mxeH7"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/全球购_1040 100.jpg" alt="" />
+  </div>
+</a> -->
+
+<div class="bg-1 ph2 ph5-ns pv5">
+  <div class="mv8">
+    <div class="center tc">
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://github.com/l-x-f"
+          title="github"
+          target="_blank"
+        >
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="qq"
+          target="_blank"
+        >
+          <i class="fa fa-qq"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="email"
+          target="_blank"
+        >
+          <i class="fa fa-envelope"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://blog.csdn.net/qq_39953537"
+          title="csdn"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconcsdn"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://l-x-f.gitee.io"
+          title="gitee"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconmayun1"></i>
+        </a>
+      </div>
+      
+    </div>
+    <div class="f6 f5-ns center tc white pt5 fw3">
+      MIT Licensed | Copyright © 2016-present xiaofei <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn" class="fake-link black-70 ph1"> 陕ICP备2021003270号</a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- After Footer -->
+    <!-- Disqus Comments -->
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

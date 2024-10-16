@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <!-- Head tag -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="baidu_union_verify" content="a413507676ae2c1dae7063ec877d0674" />
+
+  <!--Description-->
+  
+  <meta name="description" content="xiaofei的个人博客" />
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="xiaofei" />
+  
+
+  <!--Open Graph Title-->
+  
+  <meta property="og:title" content="Vue 搭建移动端h5项目步骤" />
+  
+
+  <!--Open Graph Description-->
+  
+  <meta property="og:description" content="xiaofei的个人博客" />
+  
+
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="飞的日志" />
+
+  <!--Type page-->
+  
+  <meta property="og:type" content="article" />
+  
+
+  <!--Page Cover-->
+  
+
+  <meta name="twitter:card" content="summary" />
+  
+
+  <!-- Title -->
+  
+  <title>Vue 搭建移动端h5项目步骤 - 飞的日志</title>
+
+  <!-- Tachyons Core CSS -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css"> -->
+  <link
+    href="https://cdn.bootcss.com/tachyons/4.11.1/tachyons.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Fonts -->
+  <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css>" -->
+  <link
+    href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Custom CSS -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  <!-- Google Analytics -->
+  
+
+
+  <!-- add favicon.ico -->
+  <link rel="icon" href="/images/logo.png" />
+
+  
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+
+  <script src="/js/hm.js"></script>
+  <script src="/js/top.js"></script>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5957060091098291"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    window.onload = function () {
+      new Top()
+    }
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+  <body>
+    <!-- Main Content -->
+    <!-- Banner -->
+<!-- Banner -->
+
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+  <nav class="db dt-l w-100 mw8 center border-box pv4">
+    <!-- <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="https://l-x-f.github.io" title="飞的日志">
+            <span src="/images/my.jpeg" class="dib h3 avatar" alt="飞的日志">
+        </a> -->
+    <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/"
+        title="首页"
+      >
+        首页
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/archives"
+        title="博客"
+      >
+        博客
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/tags"
+        title="标签"
+      >
+        标签
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/about"
+        title="关于"
+      >
+        关于
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="https://l-x-f.github.io/coding-standard/"
+        title="Web前端代码规范"
+      >
+        Web前端代码规范
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39953537"
+        title="关联的CSDN"
+      >
+        关联的CSDN
+      </a>
+      
+    </div>
+  </nav>
+
+  <!-- Title -->
+  <div class="w-100 mw8 center dt">
+    <div class="dtc v-mid white">
+      <h1 class="f1-l f2-m tc tc-m tl-ns">Vue 搭建移动端h5项目步骤</h1>
+      <p style="padding-bottom: 40px" class="f4 fw3 tc tc-m tl-ns">
+        2020-08-04 14:03
+      </p>
+    </div>
+  </div>
+
+  <!-- Icon -->
+  <div class="relative w-100 mw8 center white dn dn-m db-ns">
+    <i class="header-icon fa fa-file-text-o"></i>
+  </div>
+</div>
+
+<!-- TODO:AD -->
+<!-- 
+<a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/bdyBVja9"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/618.jpg" alt="" />
+  </div>
+</a> -->
+
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/vue/">#vue</a> <a class="fw3 ph1 dib" href="/tags/vue-cli/">#vue-cli</a> <a class="fw3 ph1 dib" href="/tags/移动端适配/">#移动端适配</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="Vue-搭建移动端-h5-项目步骤"><a href="#Vue-搭建移动端-h5-项目步骤" class="headerlink" title="Vue 搭建移动端 h5 项目步骤"></a>Vue 搭建移动端 h5 项目步骤</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>最近团队里的其他前端小伙伴需要自己搭建移动端 h5 项目，没有整体的思路，于是我就写了这个步骤。</p>
+<p><font color="red" size="5">提示：(2022-10-28 更新)</font></p>
+<p><strong><code>vue-cli</code> 和<code>vuex</code>官方已经不再更新。</strong><br><strong><code>vue-cli</code>建议用<code> create-vue</code> 即<code> npm init vue</code> 替代，或者直接使用<code>vite</code> 创建项目。</strong><br><strong><code>vuex</code>建议用<code>pinia</code>替代。</strong></p>
+<p><a target="_blank" rel="noopener" href="https://cn.vuejs.org/guide/quick-start.html#creating-a-vue-application">create-vue 链接</a><br><a target="_blank" rel="noopener" href="https://pinia.vuejs.org/">pinia 链接</a><br><a target="_blank" rel="noopener" href="https://cn.vitejs.dev/">vite 链接</a></p>
+<h3 id="已经搭建好的模板-github-地址"><a href="#已经搭建好的模板-github-地址" class="headerlink" title="已经搭建好的模板 github 地址"></a><a target="_blank" rel="noopener" href="https://github.com/l-x-f/vite-vue-h5-app">已经搭建好的模板 github 地址</a></h3><p>新版用<code>vite</code> + <code>vue3</code> +<code> vue-router 4</code> + <code>pinia</code> + <code>ts</code> +<code>vant</code> 搭建的</p>
+<h2 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h2><ol>
+<li><p>确定项目 <code>ui</code> 框架</p>
+<p>现阶段比较好的 Vue 移动端 <code>ui</code> 框架：<code>vant</code> ， <code>vux</code>， <code>cube-ui</code>，<code>Mint-UI</code>，<code>Muse UI</code>，<code>NutUI</code> 等。</p>
+</li>
+<li><p>选择<code>css</code>预处理样式语言，（<code>vue-cli</code> 里选择）</p>
+<p><code>less</code>，<code>sass</code>，<code>stylus</code>都可以，<code>vue-cli 3</code> 后的版本对应的<code>webpack</code> 的<code>loader</code>都是配置好的，只需下载对应的包就好了。使用建议：一般选择的<code>css</code>预处理语言和 ui 框架的预处理语言一致为好，类如<code>vant</code>使用的是<code>less</code>，则项目中优先使用<code>less</code>。</p>
+</li>
+<li><p>是否需要集成 <code>eslint</code>，<code>stylelint</code>，<code>prettier</code>，<code>git hooks</code>，<code>lint-staged</code>，一般建议<code>eslint</code>是必要的，其他不做强制要求，这些都是后面可以自己手动添加的。</p>
+</li>
+<li><p>使用 <code>Vue-cli</code> 生成的项目，集成 <code>vuex</code> ， <code>vue-router</code>，<code>css预处理语言</code>，<code>eslint</code>等。</p>
+<p><strong>项目目录</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">├── babel.config.js</span><br><span class="line">├── package.json</span><br><span class="line">├── public</span><br><span class="line">│   ├── favicon.ico</span><br><span class="line">│   └── index.html</span><br><span class="line">└── src</span><br><span class="line">    ├── App.vue</span><br><span class="line">    ├── assets</span><br><span class="line">    ├── components</span><br><span class="line">    ├── main.js</span><br><span class="line">    ├── router</span><br><span class="line">    ├── store</span><br><span class="line">    └── views</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="样式和适配"><a href="#样式和适配" class="headerlink" title="样式和适配"></a>样式和适配</h2><ol>
+<li><p>重置样式</p>
+<p>一般是需要加载<a target="_blank" rel="noopener" href="https://meyerweb.com/eric/tools/css/reset/">reset.css</a> 或者<a target="_blank" rel="noopener" href="https://github.com/necolas/normalize.css">normalize.css</a>，用来重置和保护各大浏览器的样式。一般建议使用<code>normalize.css</code>。</p>
+</li>
+<li><p>安装并导入准备阶段选择好的 ui 框架</p>
+</li>
+<li><p>选择移动端适配方案</p>
+<p>现在主流的适配方案是<code>rem</code>和<code>vw</code>，老项目用的<code>rem</code>比较多，随着时间的推移，<code>vw</code>的适配方案会占优势。一般建议新项目直接上<code>vw</code>适配方案。</p>
+<p>适配方案链接：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/amfe/lib-flexible">rem 实现移动端适配</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/1f1b23f8348f">vw 实现移动端适配</a></p>
+</li>
+<li><p>全局样式定义。全局样式变量定义：颜色，字号，宽度等</p>
+</li>
+</ol>
+<h2 id="工具插件的添加"><a href="#工具插件的添加" class="headerlink" title="工具插件的添加"></a>工具插件的添加</h2><ol>
+<li><p>请求工具的添加（配合环境变量 .env 配置设置 baseUrl，后文有提到）</p>
+<p>主流的请求库：</p>
+<p><code>axios</code>（支持 React Native，Node，浏览器）</p>
+<p><code>fly.js</code>（支持 Node.js 、微信小程序 、Weex 、React Native 、Quick App 和浏览器）。</p>
+<p>一般需要自己根据项目封装，常见的需要封装请求拦截器和响应拦截器。</p>
+</li>
+<li><p><code>vuex</code>全局状态的添加，涉及到登陆，全局 ui 状态管理等。</p>
+</li>
+<li><p><code>Vue</code>插件的添加，过滤器，混入，钩子等。</p>
+</li>
+<li><p>添加<code>vue-router</code> 的导航守卫。 <strong>可选</strong></p>
+</li>
+<li><p><code>fastclick</code> 解决移动端 300 毫秒延迟问题</p>
+</li>
+<li><p><code>vconsole</code> 方便移动端 debug</p>
+</li>
+<li><p>其他工具的添加，时间处理，深拷贝，函数节流防抖等。</p>
+</li>
+</ol>
+<h2 id="项目-eslint，stylelint-，prettier-的配置"><a href="#项目-eslint，stylelint-，prettier-的配置" class="headerlink" title="项目 eslint，stylelint ，prettier 的配置"></a>项目 eslint，stylelint ，prettier 的配置</h2><ol>
+<li><p>配置<code>.eslintrc.js</code></p>
+<p>一般继承<code>@vue/eslint-config-standard</code>这个插件的，具体的规则需要在<code>rules</code>字段定义</p>
+</li>
+<li><p>配置<code>.stylelintrc</code>， <strong>可选</strong></p>
+<p>一般继承<code>stylelint-config-standard</code>这个插件的，具体的规则需要在<code>rules</code>字段定义</p>
+</li>
+<li><p>配置<code>.prettierrc.js</code></p>
+<p>一般配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">trailingComma</span>: <span class="string">&#x27;none&#x27;</span>,</span><br><span class="line">  <span class="attr">tabWidth</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">semi</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">singleQuote</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">jsxSingleQuote</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">bracketSpacing</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">arrowParens</span>: <span class="string">&#x27;avoid&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="项目命令和环境变量配置"><a href="#项目命令和环境变量配置" class="headerlink" title="项目命令和环境变量配置"></a>项目命令和环境变量配置</h2><ol>
+<li><p>根据 webpack 的模式定义环境变量文件，模式可以自己定义</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.env.dev  <span class="comment">#测试环境变量文件，不打包的话不用配置</span></span><br><span class="line">.env.development <span class="comment">#开发环境变量文件</span></span><br><span class="line">.env.production <span class="comment">#生产环境变量文件</span></span><br></pre></td></tr></table></figure>
+
+<p>Vue 项目环境变量以<code>VUE_APP</code>开头，特殊项目变量除外。例如：</p>
+<p><code>.env.development</code>文件</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NODE_ENV=development</span><br><span class="line">VUE_APP_BASE_API=https://api.ex.com</span><br><span class="line">VUE_CLI_BABEL_TRANSPILE_MODULES=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>根据上面定义的模式配置 npm 脚本</p>
+<p><code>package.json</code> 文件</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;serve&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-cli-service serve&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;dev&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-cli-service serve&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-cli-service lint&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;build:prod&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-cli-service build --mode production&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;build:dev&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-cli-service build --mode dev&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>gitHooks</code> <code>lint-staged</code> 的配置， <strong>可选</strong></p>
+</li>
+</ol>
+<h2 id="vue-config-js（webpack）-的配置"><a href="#vue-config-js（webpack）-的配置" class="headerlink" title="vue.config.js（webpack） 的配置"></a>vue.config.js（webpack） 的配置</h2><ol>
+<li><p><code>deServer</code> 的配置,</p>
+<p>常见的端口，代理，是否打开浏览器等。</p>
+</li>
+<li><p><code>webpack</code> 的配置</p>
+<p>一般需要配置<code>gzip</code>和<code>drop_console</code>等。</p>
+</li>
+<li><p>alias 的配置，项目一般会默认设置， <strong>可选</strong></p>
+<p>一般需要配置<code>@</code>:<code>src</code></p>
+</li>
+<li><p>其余的常见配置，<strong>可选</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">publicPath<span class="punctuation">:</span> &#x27;./&#x27;<span class="punctuation">,</span></span><br><span class="line">outputDir<span class="punctuation">:</span> &#x27;dist&#x27;<span class="punctuation">,</span></span><br><span class="line">assetsDir<span class="punctuation">:</span> &#x27;static&#x27;<span class="punctuation">,</span></span><br><span class="line">productionSourceMap<span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">lintOnSave<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></table></figure></li>
+</ol>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/vue/">#vue</a> <a class="fw3 ph1 dib" href="/tags/vue-cli/">#vue-cli</a> <a class="fw3 ph1 dib" href="/tags/移动端适配/">#移动端适配</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+  <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+    <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+      <img src="/images/my.jpeg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="xiaofei">
+    </div>
+    <div class="dtc db-l v-mid lh-copy measure center f6 black-80 tj">
+      你好，我的名字叫xiaofei，这是我的博客。<br> 我是一名前端开发者 + linux 爱好者。热衷于前端开发技术，熟悉ES6+，typescript，css3，vue2/3，react，uni-app，weapp，webpack，vite，babel，node，linux，nginx 等。<br> 我目前在西安生活和工作，如果你需要和我交流，请联系我（网站下面有联系方式）。
+    </div>
+  </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p class="recent-item">
+            <a href="/2024/10/16/threejs/lattice/">threejs 晶格实现</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/05/31/js/monorepo/">Monorepo 自动release的思考</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/03/20/gis/icon/">openlayers 绘制图标并定位到图标</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/01/28/canvas/post/">使用 auto-drawing 绘制商城分销海报</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2022/12/27/canvas/room/">使用 auto-drawing 画一个户型图</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- TODO:AD -->
+<!-- <a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/cD2mxeH7"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/全球购_1040 100.jpg" alt="" />
+  </div>
+</a> -->
+
+<div class="bg-1 ph2 ph5-ns pv5">
+  <div class="mv8">
+    <div class="center tc">
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://github.com/l-x-f"
+          title="github"
+          target="_blank"
+        >
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="qq"
+          target="_blank"
+        >
+          <i class="fa fa-qq"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="email"
+          target="_blank"
+        >
+          <i class="fa fa-envelope"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://blog.csdn.net/qq_39953537"
+          title="csdn"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconcsdn"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://l-x-f.gitee.io"
+          title="gitee"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconmayun1"></i>
+        </a>
+      </div>
+      
+    </div>
+    <div class="f6 f5-ns center tc white pt5 fw3">
+      MIT Licensed | Copyright © 2016-present xiaofei <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn" class="fake-link black-70 ph1"> 陕ICP备2021003270号</a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- After Footer -->
+    <!-- Disqus Comments -->
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

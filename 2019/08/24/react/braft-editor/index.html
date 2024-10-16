@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <!-- Head tag -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="baidu_union_verify" content="a413507676ae2c1dae7063ec877d0674" />
+
+  <!--Description-->
+  
+  <meta name="description" content="xiaofei的个人博客" />
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="xiaofei" />
+  
+
+  <!--Open Graph Title-->
+  
+  <meta property="og:title" content="react项目结合braft-editor实现精致的富文本组件" />
+  
+
+  <!--Open Graph Description-->
+  
+  <meta property="og:description" content="xiaofei的个人博客" />
+  
+
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="飞的日志" />
+
+  <!--Type page-->
+  
+  <meta property="og:type" content="article" />
+  
+
+  <!--Page Cover-->
+  
+
+  <meta name="twitter:card" content="summary" />
+  
+
+  <!-- Title -->
+  
+  <title>react项目结合braft-editor实现精致的富文本组件 - 飞的日志</title>
+
+  <!-- Tachyons Core CSS -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css"> -->
+  <link
+    href="https://cdn.bootcss.com/tachyons/4.11.1/tachyons.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Fonts -->
+  <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css>" -->
+  <link
+    href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Custom CSS -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  <!-- Google Analytics -->
+  
+
+
+  <!-- add favicon.ico -->
+  <link rel="icon" href="/images/logo.png" />
+
+  
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+
+  <script src="/js/hm.js"></script>
+  <script src="/js/top.js"></script>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5957060091098291"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    window.onload = function () {
+      new Top()
+    }
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+  <body>
+    <!-- Main Content -->
+    <!-- Banner -->
+<!-- Banner -->
+
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+  <nav class="db dt-l w-100 mw8 center border-box pv4">
+    <!-- <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="https://l-x-f.github.io" title="飞的日志">
+            <span src="/images/my.jpeg" class="dib h3 avatar" alt="飞的日志">
+        </a> -->
+    <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/"
+        title="首页"
+      >
+        首页
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/archives"
+        title="博客"
+      >
+        博客
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/tags"
+        title="标签"
+      >
+        标签
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/about"
+        title="关于"
+      >
+        关于
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="https://l-x-f.github.io/coding-standard/"
+        title="Web前端代码规范"
+      >
+        Web前端代码规范
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39953537"
+        title="关联的CSDN"
+      >
+        关联的CSDN
+      </a>
+      
+    </div>
+  </nav>
+
+  <!-- Title -->
+  <div class="w-100 mw8 center dt">
+    <div class="dtc v-mid white">
+      <h1 class="f1-l f2-m tc tc-m tl-ns">react项目结合braft-editor实现精致的富文本组件</h1>
+      <p style="padding-bottom: 40px" class="f4 fw3 tc tc-m tl-ns">
+        2019-08-24 11:52
+      </p>
+    </div>
+  </div>
+
+  <!-- Icon -->
+  <div class="relative w-100 mw8 center white dn dn-m db-ns">
+    <i class="header-icon fa fa-file-text-o"></i>
+  </div>
+</div>
+
+<!-- TODO:AD -->
+<!-- 
+<a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/bdyBVja9"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/618.jpg" alt="" />
+  </div>
+</a> -->
+
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/react/">#react</a> <a class="fw3 ph1 dib" href="/tags/antd/">#antd</a> <a class="fw3 ph1 dib" href="/tags/braft-editor/">#braft-editor</a> <a class="fw3 ph1 dib" href="/tags/富文本/">#富文本</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="react-项目结合-braft-editor-实现精致的富文本组件"><a href="#react-项目结合-braft-editor-实现精致的富文本组件" class="headerlink" title="react 项目结合 braft-editor 实现精致的富文本组件"></a>react 项目结合 braft-editor 实现精致的富文本组件</h1><p>简介： 基于 react 的富文本组件本来就不多，braft-editor 是 react 里人气相当高的富文本，这里基于他打造一个精致的富文本。</p>
+<p>项目主要依赖：（先安装，步骤略）</p>
+<p>create-react-app：3.0.0</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;react&quot;</span><span class="punctuation">:</span> <span class="string">&quot;16.8.6&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;react-router-dom&quot;</span><span class="punctuation">:</span> <span class="string">&quot;5.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;antd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.19.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;axios&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.19.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;braft-editor&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.3.6&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;braft-polyfill&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.0.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;prop-types&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^15.7.2&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>1.组件</p>
+<p>文件目录</p>
+<p><img src="https://img-blog.csdnimg.cn/20190824115125822.jpg" alt="在这里插入图片描述"></p>
+<p>src&#x2F;components&#x2F;AppEditor&#x2F;index.jsx</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; <span class="title class_">Component</span> &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="comment">// 添加ie10支持</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;braft-polyfill&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">BraftEditor</span> <span class="keyword">from</span> <span class="string">&quot;braft-editor&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;braft-editor/dist/index.css&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">PropTypes</span> <span class="keyword">from</span> <span class="string">&quot;prop-types&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&quot;axios&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; message &#125; <span class="keyword">from</span> <span class="string">&quot;antd&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;./style.less&quot;</span>; <span class="comment">// 见下文</span></span><br><span class="line"><span class="keyword">import</span> config <span class="keyword">from</span> <span class="string">&quot;./config&quot;</span>; <span class="comment">// 见下文</span></span><br><span class="line"><span class="keyword">import</span> mediaBaseconfig <span class="keyword">from</span> <span class="string">&quot;./media&quot;</span>; <span class="comment">// 见下文</span></span><br><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">  uploadHtml,</span><br><span class="line">  uploadImage,</span><br><span class="line">  maxFileSize,</span><br><span class="line">  isImageFile</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">&quot;@/utils/upload&quot;</span>; <span class="comment">// 见下文 uploadHtml和uploadImage是定义的上传文件到后端的接口，根据自己的项目更换</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">AppEditor</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Component</span> &#123;</span><br><span class="line">  state = &#123;</span><br><span class="line">    <span class="comment">// 创建一个空的editorState作为初始值</span></span><br><span class="line">    <span class="attr">editorState</span>: <span class="title class_">BraftEditor</span>.<span class="title function_">createEditorState</span>(<span class="literal">null</span>)</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> propTypes = &#123;</span><br><span class="line">    <span class="comment">// 富文本初始内容</span></span><br><span class="line">    <span class="attr">html</span>: <span class="title class_">PropTypes</span>.<span class="property">string</span>,</span><br><span class="line">    <span class="comment">//  限制图片文件大小</span></span><br><span class="line">    <span class="attr">fileMaxSize</span>: <span class="title class_">PropTypes</span>.<span class="property">number</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 默认的props</span></span><br><span class="line">  <span class="keyword">static</span> defaultProps = &#123;</span><br><span class="line">    <span class="attr">fileMaxSize</span>: <span class="number">2</span> <span class="comment">// 单位默认是Mb,</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">componentWillUnmount</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">setState</span> = <span class="function">(<span class="params">state, callback</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 初始化编辑器内容</span></span><br><span class="line">  <span class="keyword">async</span> <span class="title function_">componentWillReceiveProps</span>(<span class="params">props</span>) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> &#123; html &#125; = props;</span><br><span class="line">      <span class="keyword">const</span> &#123; data &#125; = <span class="keyword">await</span> axios.<span class="title function_">get</span>(html);</span><br><span class="line">      <span class="variable language_">this</span>.<span class="title function_">setState</span>(&#123;</span><br><span class="line">        <span class="attr">editorState</span>: <span class="title class_">BraftEditor</span>.<span class="title function_">createEditorState</span>(data)</span><br><span class="line">      &#125;);</span><br><span class="line">      <span class="keyword">return</span> data;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(error);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 子组件上传方法（供父组件调用）</span></span><br><span class="line">  handleSubmitContent = <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> htmlContent = <span class="variable language_">this</span>.<span class="property">state</span>.<span class="property">editorState</span>.<span class="title function_">toHTML</span>();</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> url = <span class="keyword">await</span> <span class="title function_">uploadHtml</span>(htmlContent);</span><br><span class="line">      <span class="keyword">return</span> url;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(error);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 监听编辑器内容变化同步内容到state</span></span><br><span class="line">  handleEditorChange = <span class="function"><span class="params">editorState</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">setState</span>(&#123; editorState &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 媒体上传校验</span></span><br><span class="line">  mediaValidate = <span class="function"><span class="params">file</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; fileMaxSize &#125; = <span class="variable language_">this</span>.<span class="property">props</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 类型限制</span></span><br><span class="line">    <span class="keyword">if</span> (!<span class="title function_">isImageFile</span>(file)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 大小限制</span></span><br><span class="line">    <span class="keyword">if</span> (fileMaxSize &amp;&amp; !<span class="title function_">maxFileSize</span>(file, fileMaxSize)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 媒体上传</span></span><br><span class="line">  mediaUpload = <span class="keyword">async</span> (&#123; file, success, error &#125;) =&gt; &#123;</span><br><span class="line">    message.<span class="title function_">destroy</span>();</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> url = <span class="keyword">await</span> <span class="title function_">uploadImage</span>(file);</span><br><span class="line">      <span class="title function_">success</span>(&#123; url &#125;);</span><br><span class="line">      message.<span class="title function_">success</span>(<span class="string">&quot;上传成功&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">      <span class="title function_">error</span>(err);</span><br><span class="line">      message.<span class="title function_">error</span>(err.<span class="property">message</span> || <span class="string">&quot;上传失败&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; editorState &#125; = <span class="variable language_">this</span>.<span class="property">state</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 媒体配置</span></span><br><span class="line">    <span class="keyword">const</span> media = &#123;</span><br><span class="line">      <span class="comment">// 上传校验</span></span><br><span class="line">      <span class="attr">validateFn</span>: <span class="variable language_">this</span>.<span class="property">mediaValidate</span>,</span><br><span class="line">      <span class="comment">// 上传</span></span><br><span class="line">      <span class="attr">uploadFn</span>: <span class="variable language_">this</span>.<span class="property">mediaUpload</span>,</span><br><span class="line">      <span class="comment">// 基本配置</span></span><br><span class="line">      ...mediaBaseconfig</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">div</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">className</span>=<span class="string">&quot;custom-editor&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">style</span>=<span class="string">&#123;&#123;</span> <span class="attr">marginTop:</span> <span class="attr">20</span>, <span class="attr">...this.props.style</span> &#125;&#125;</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      &gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">BraftEditor</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">style</span>=<span class="string">&#123;&#123;</span> <span class="attr">height:</span> <span class="attr">600</span>, <span class="attr">overflow:</span> &quot;<span class="attr">hidden</span>&quot; &#125;&#125;</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          &#123;<span class="attr">...config</span>&#125;</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">media</span>=<span class="string">&#123;media&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">value</span>=<span class="string">&#123;editorState&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">onChange</span>=<span class="string">&#123;this.handleEditorChange&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">AppEditor</span>;</span><br></pre></td></tr></table></figure>
+
+<p>src&#x2F;components&#x2F;AppEditor&#x2F;config.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  <span class="attr">placeholder</span>: <span class="string">&quot;请输入内容&quot;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 编辑器工具栏的控件列表</span></span><br><span class="line">  <span class="attr">controls</span>: [</span><br><span class="line">    <span class="string">&quot;headings&quot;</span>,</span><br><span class="line">    <span class="string">&quot;font-size&quot;</span>,</span><br><span class="line">    <span class="string">&quot;letter-spacing&quot;</span>,</span><br><span class="line">    <span class="string">&quot;separator&quot;</span>, <span class="comment">// 分割线</span></span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;text-color&quot;</span>,</span><br><span class="line">    <span class="string">&quot;bold&quot;</span>,</span><br><span class="line">    <span class="string">&quot;italic&quot;</span>,</span><br><span class="line">    <span class="string">&quot;underline&quot;</span>,</span><br><span class="line">    <span class="string">&quot;strike-through&quot;</span>,</span><br><span class="line">    <span class="string">&quot;remove-styles&quot;</span>,</span><br><span class="line">    <span class="string">&quot;separator&quot;</span>,</span><br><span class="line">    <span class="string">&quot;text-align&quot;</span>,</span><br><span class="line">    <span class="string">&quot;separator&quot;</span>,</span><br><span class="line">    <span class="string">&quot;emoji&quot;</span>,</span><br><span class="line">    <span class="string">&quot;media&quot;</span></span><br><span class="line">  ],</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 字号配置</span></span><br><span class="line">  <span class="attr">fontSizes</span>: [<span class="number">12</span>, <span class="number">14</span>, <span class="number">16</span>, <span class="number">18</span>, <span class="number">20</span>, <span class="number">24</span>, <span class="number">28</span>, <span class="number">30</span>, <span class="number">32</span>, <span class="number">36</span>],</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 图片工具栏的可用控件</span></span><br><span class="line">  <span class="attr">imageControls</span>: [</span><br><span class="line">    <span class="string">&quot;float-left&quot;</span>, <span class="comment">// 设置图片左浮动</span></span><br><span class="line">    <span class="string">&quot;float-right&quot;</span>, <span class="comment">// 设置图片右浮动</span></span><br><span class="line">    <span class="string">&quot;align-left&quot;</span>, <span class="comment">// 设置图片居左</span></span><br><span class="line">    <span class="string">&quot;align-center&quot;</span>, <span class="comment">// 设置图片居中</span></span><br><span class="line">    <span class="string">&quot;align-right&quot;</span>, <span class="comment">// 设置图片居右</span></span><br><span class="line">    <span class="string">&quot;link&quot;</span>, <span class="comment">// 设置图片超链接</span></span><br><span class="line">    <span class="string">&quot;size&quot;</span>, <span class="comment">// 设置图片尺寸</span></span><br><span class="line">    <span class="string">&quot;remove&quot;</span> <span class="comment">// 删除图片</span></span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> config;</span><br></pre></td></tr></table></figure>
+
+<p>src&#x2F;components&#x2F;AppEditor&#x2F;media.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mediaBaseconfig = &#123;</span><br><span class="line">  <span class="comment">// 文件限制</span></span><br><span class="line">  <span class="attr">accepts</span>: &#123;</span><br><span class="line">    <span class="attr">image</span>: <span class="string">&quot;image/png,image/jpeg,image/gif,image/webp,image/apng,image/svg&quot;</span>,</span><br><span class="line">    <span class="attr">video</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">audio</span>: <span class="literal">false</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">//   允许插入的外部媒体的类型</span></span><br><span class="line">  <span class="attr">externals</span>: &#123;</span><br><span class="line">    <span class="comment">// 是否允许插入外部图片，</span></span><br><span class="line">    <span class="attr">image</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="comment">//    是否允许插入外部视频，</span></span><br><span class="line">    <span class="attr">video</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="comment">//    是否允许插入外部视频，</span></span><br><span class="line">    <span class="attr">audio</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="comment">//    是否允许插入嵌入式媒体，例如embed和iframe标签等，</span></span><br><span class="line">    <span class="attr">embed</span>: <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> mediaBaseconfig;</span><br></pre></td></tr></table></figure>
+
+<p>src&#x2F;components&#x2F;AppEditor&#x2F;style.less</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">:<span class="built_in">global</span>(.custom-editor .bf-controlbar) &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">:<span class="built_in">global</span>(.custom-editor .bf-container) &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#c5c5c5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">:<span class="built_in">global</span>(.custom-editor .bf-content) &#123;</span><br><span class="line">  <span class="attribute">min-height</span>: <span class="number">600px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>src&#x2F;utils&#x2F;upload.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; message &#125; <span class="keyword">from</span> <span class="string">&quot;antd&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">file</span>&#125; file 源文件</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span> 限制为图片文件</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@retutn</span> 是图片文件返回true否则返回false</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">isImageFile</span> = (<span class="params">file, fileTypes</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> types = fileTypes || [</span><br><span class="line">    <span class="string">&quot;image/png&quot;</span>,</span><br><span class="line">    <span class="string">&quot;image/gif&quot;</span>,</span><br><span class="line">    <span class="string">&quot;image/jpeg&quot;</span>,</span><br><span class="line">    <span class="string">&quot;image/jpg&quot;</span>,</span><br><span class="line">    <span class="string">&quot;image/bmp&quot;</span>,</span><br><span class="line">    <span class="string">&quot;image/x-icon&quot;</span>,</span><br><span class="line">    <span class="string">&quot;image/webp&quot;</span>,</span><br><span class="line">    <span class="string">&quot;image/apng&quot;</span>,</span><br><span class="line">    <span class="string">&quot;image/svg&quot;</span></span><br><span class="line">  ];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> isImage = types.<span class="title function_">includes</span>(file.<span class="property">type</span>);</span><br><span class="line">  <span class="keyword">if</span> (!isImage) &#123;</span><br><span class="line">    message.<span class="title function_">error</span>(<span class="string">&quot;上传文件非图片格式!&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">file</span>&#125; file 源文件</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; fileMaxSize  图片限制大小单位（MB）</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span> 限制为文件上传大小</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@retutn</span> 在限制内返回true否则返回false</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">maxFileSize</span> = (<span class="params">file, fileMaxSize = <span class="number">2</span></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> isMaxSize = file.<span class="property">size</span> / <span class="number">1024</span> / <span class="number">1024</span> &lt; fileMaxSize;</span><br><span class="line">  <span class="keyword">if</span> (!isMaxSize) &#123;</span><br><span class="line">    message.<span class="title function_">error</span>(<span class="string">&quot;上传头像图片大小不能超过 &quot;</span> + fileMaxSize + <span class="string">&quot;MB!&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">file</span>&#125; file 源文件</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span> 读取图片文件为base64文件格式</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@retutn</span> 返回base64文件</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">// 读取文件</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">readFile</span> = file =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> reader = <span class="keyword">new</span> <span class="title class_">FileReader</span>();</span><br><span class="line">    reader.<span class="property">onload</span> = <span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> data = e.<span class="property">target</span>.<span class="property">result</span>;</span><br><span class="line">      <span class="title function_">resolve</span>(data);</span><br><span class="line">    &#125;;</span><br><span class="line">    reader.<span class="property">onerror</span> = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> err = <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&quot;读取图片失败&quot;</span>);</span><br><span class="line">      <span class="title function_">reject</span>(err.<span class="property">message</span>);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    reader.<span class="title function_">readAsDataURL</span>(file);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; src  图片地址</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span> 加载真实图片</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> 读取成功返回图片真实宽高对象 ag: &#123;width:100,height:100&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">loadImage</span> = src =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> image = <span class="keyword">new</span> <span class="title class_">Image</span>();</span><br><span class="line">    image.<span class="property">src</span> = src;</span><br><span class="line">    image.<span class="property">onload</span> = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> data = &#123;</span><br><span class="line">        <span class="attr">width</span>: image.<span class="property">width</span>,</span><br><span class="line">        <span class="attr">height</span>: image.<span class="property">height</span></span><br><span class="line">      &#125;;</span><br><span class="line">      <span class="title function_">resolve</span>(data);</span><br><span class="line">    &#125;;</span><br><span class="line">    image.<span class="property">onerror</span> = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> err = <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&quot;加载图片失败&quot;</span>);</span><br><span class="line">      <span class="title function_">reject</span>(err);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">file</span>&#125; file 源文件</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">object</span>&#125; props   文件分辨率的宽和高   ag: props=&#123;width:100, height :100&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span>  判断图片文件的分辨率是否在限定范围之内</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throw</span>  分辨率不在限定范围之内则抛出异常</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">isAppropriateResolution</span> = <span class="keyword">async</span> (<span class="params">file, props</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; width, height &#125; = props;</span><br><span class="line">    <span class="keyword">const</span> base64 = <span class="keyword">await</span> <span class="title function_">readFile</span>(file);</span><br><span class="line">    <span class="keyword">const</span> image = <span class="keyword">await</span> <span class="title function_">loadImage</span>(base64);</span><br><span class="line">    <span class="keyword">if</span> (image.<span class="property">width</span> !== width || image.<span class="property">height</span> !== height) &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&quot;上传图片的分辨率必须为&quot;</span> + width + <span class="string">&quot;*&quot;</span> + height);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">    <span class="keyword">throw</span> error;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 上传图片 根据自己项目更换</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">uploadImage</span> = file =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;&#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 上传html  根据自己项目更换</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">uploadHtml</span> = editorContent =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;&#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>2.使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">AppEditor</span> <span class="keyword">from</span> <span class="string">&quot;@/components/AppEditor&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; <span class="title class_">Component</span> &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> <span class="title class_">HotelSetting</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Component</span> &#123;</span><br><span class="line">  state = &#123;</span><br><span class="line">    <span class="attr">html</span>: <span class="string">&quot;&quot;</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">componentDidMount</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">setState</span>(&#123;</span><br><span class="line">      <span class="attr">html</span>:</span><br><span class="line">        <span class="string">&quot;https://hotel-1259479103.cos.ap-chengdu.myqcloud.com/admin/html/r2yyo8dyjrla71bn8qm5g-2019-07-11-10-34-19.html&quot;</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleSubmit = <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> res = <span class="keyword">await</span> <span class="variable language_">this</span>.<span class="property">editor</span>.<span class="title function_">handleSubmitContent</span>();</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(error);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; html &#125; = <span class="variable language_">this</span>.<span class="property">state</span>;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">AppEditor</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">html</span>=<span class="string">&#123;html&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">style</span>=<span class="string">&#123;&#123;</span> <span class="attr">marginLeft:</span> <span class="attr">100</span> &#125;&#125;</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">ref</span>=<span class="string">&#123;e</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-xml">          this.editor = e;</span></span><br><span class="line"><span class="language-xml">        &#125;&#125;</span></span><br><span class="line"><span class="language-xml">      /&gt;</span></span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.使用效果</p>
+<p><img src="https://img-blog.csdnimg.cn/20190824115148404.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5OTUzNTM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20190824115158797.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5OTUzNTM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/react/">#react</a> <a class="fw3 ph1 dib" href="/tags/antd/">#antd</a> <a class="fw3 ph1 dib" href="/tags/braft-editor/">#braft-editor</a> <a class="fw3 ph1 dib" href="/tags/富文本/">#富文本</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+  <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+    <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+      <img src="/images/my.jpeg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="xiaofei">
+    </div>
+    <div class="dtc db-l v-mid lh-copy measure center f6 black-80 tj">
+      你好，我的名字叫xiaofei，这是我的博客。<br> 我是一名前端开发者 + linux 爱好者。热衷于前端开发技术，熟悉ES6+，typescript，css3，vue2/3，react，uni-app，weapp，webpack，vite，babel，node，linux，nginx 等。<br> 我目前在西安生活和工作，如果你需要和我交流，请联系我（网站下面有联系方式）。
+    </div>
+  </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p class="recent-item">
+            <a href="/2024/10/16/threejs/lattice/">threejs 晶格实现</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/05/31/js/monorepo/">Monorepo 自动release的思考</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/03/20/gis/icon/">openlayers 绘制图标并定位到图标</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/01/28/canvas/post/">使用 auto-drawing 绘制商城分销海报</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2022/12/27/canvas/room/">使用 auto-drawing 画一个户型图</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- TODO:AD -->
+<!-- <a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/cD2mxeH7"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/全球购_1040 100.jpg" alt="" />
+  </div>
+</a> -->
+
+<div class="bg-1 ph2 ph5-ns pv5">
+  <div class="mv8">
+    <div class="center tc">
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://github.com/l-x-f"
+          title="github"
+          target="_blank"
+        >
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="qq"
+          target="_blank"
+        >
+          <i class="fa fa-qq"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="email"
+          target="_blank"
+        >
+          <i class="fa fa-envelope"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://blog.csdn.net/qq_39953537"
+          title="csdn"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconcsdn"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://l-x-f.gitee.io"
+          title="gitee"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconmayun1"></i>
+        </a>
+      </div>
+      
+    </div>
+    <div class="f6 f5-ns center tc white pt5 fw3">
+      MIT Licensed | Copyright © 2016-present xiaofei <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn" class="fake-link black-70 ph1"> 陕ICP备2021003270号</a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- After Footer -->
+    <!-- Disqus Comments -->
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

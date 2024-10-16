@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <!-- Head tag -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="baidu_union_verify" content="a413507676ae2c1dae7063ec877d0674" />
+
+  <!--Description-->
+  
+  <meta name="description" content="xiaofei的个人博客" />
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="xiaofei" />
+  
+
+  <!--Open Graph Title-->
+  
+  <meta property="og:title" content="前端项目工程化之 vue 项目中添加 git hooks （优雅的 git commit 以及 eslint和stylelint 自动修复代码样式）" />
+  
+
+  <!--Open Graph Description-->
+  
+  <meta property="og:description" content="xiaofei的个人博客" />
+  
+
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="飞的日志" />
+
+  <!--Type page-->
+  
+  <meta property="og:type" content="article" />
+  
+
+  <!--Page Cover-->
+  
+
+  <meta name="twitter:card" content="summary" />
+  
+
+  <!-- Title -->
+  
+  <title>前端项目工程化之 vue 项目中添加 git hooks （优雅的 git commit 以及 eslint和stylelint 自动修复代码样式） - 飞的日志</title>
+
+  <!-- Tachyons Core CSS -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css"> -->
+  <link
+    href="https://cdn.bootcss.com/tachyons/4.11.1/tachyons.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Fonts -->
+  <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css>" -->
+  <link
+    href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Custom CSS -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  <!-- Google Analytics -->
+  
+
+
+  <!-- add favicon.ico -->
+  <link rel="icon" href="/images/logo.png" />
+
+  
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+
+  <script src="/js/hm.js"></script>
+  <script src="/js/top.js"></script>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5957060091098291"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    window.onload = function () {
+      new Top()
+    }
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+  <body>
+    <!-- Main Content -->
+    <!-- Banner -->
+<!-- Banner -->
+
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+  <nav class="db dt-l w-100 mw8 center border-box pv4">
+    <!-- <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="https://l-x-f.github.io" title="飞的日志">
+            <span src="/images/my.jpeg" class="dib h3 avatar" alt="飞的日志">
+        </a> -->
+    <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/"
+        title="首页"
+      >
+        首页
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/archives"
+        title="博客"
+      >
+        博客
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/tags"
+        title="标签"
+      >
+        标签
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/about"
+        title="关于"
+      >
+        关于
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="https://l-x-f.github.io/coding-standard/"
+        title="Web前端代码规范"
+      >
+        Web前端代码规范
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39953537"
+        title="关联的CSDN"
+      >
+        关联的CSDN
+      </a>
+      
+    </div>
+  </nav>
+
+  <!-- Title -->
+  <div class="w-100 mw8 center dt">
+    <div class="dtc v-mid white">
+      <h1 class="f1-l f2-m tc tc-m tl-ns">前端项目工程化之 vue 项目中添加 git hooks （优雅的 git commit 以及 eslint和stylelint 自动修复代码样式）</h1>
+      <p style="padding-bottom: 40px" class="f4 fw3 tc tc-m tl-ns">
+        2019-07-16 17:26
+      </p>
+    </div>
+  </div>
+
+  <!-- Icon -->
+  <div class="relative w-100 mw8 center white dn dn-m db-ns">
+    <i class="header-icon fa fa-file-text-o"></i>
+  </div>
+</div>
+
+<!-- TODO:AD -->
+<!-- 
+<a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/bdyBVja9"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/618.jpg" alt="" />
+  </div>
+</a> -->
+
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/vue/">#vue</a> <a class="fw3 ph1 dib" href="/tags/vue-cli/">#vue-cli</a> <a class="fw3 ph1 dib" href="/tags/git-hooks/">#git hooks</a> <a class="fw3 ph1 dib" href="/tags/eslint/">#eslint</a> <a class="fw3 ph1 dib" href="/tags/stylelint/">#stylelint</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="前端项目工程化之-vue-项目中添加-git-hooks-（优雅的-git-commit-以及-eslint-和-stylelint-自动修复代码样式）"><a href="#前端项目工程化之-vue-项目中添加-git-hooks-（优雅的-git-commit-以及-eslint-和-stylelint-自动修复代码样式）" class="headerlink" title="前端项目工程化之 vue 项目中添加 git hooks （优雅的 git commit 以及 eslint 和 stylelint 自动修复代码样式）"></a>前端项目工程化之 vue 项目中添加 git hooks （优雅的 git commit 以及 eslint 和 stylelint 自动修复代码样式）</h1><p>项目基本依赖：”vue-cli”:”3.5.3” “core-js”: “^2.6.5” “vue”: “^2.6.10” “babel-eslint”: “^10.0.1”<br>“eslint”: “^5.16.0”<br>“eslint-plugin-vue”: “^5.0.0”<br>编辑器：vscode</p>
+<h1 id="使用效果"><a href="#使用效果" class="headerlink" title="使用效果"></a>使用效果</h1><p><img src="https://img-blog.csdnimg.cn/20190716171932806.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5OTUzNTM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190716171943506.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5OTUzNTM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20190716171953563.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5OTUzNTM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190716172003488.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5OTUzNTM3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h1><p><font color="#f00" size="5">注意：使用前确保 vue.config.js 里的 lintOnSave 已设置为 true</font></p>
+<p>1.安装以下依赖</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D @commitlint/cli@8.1.0 @commitlint/config-conventional@8.1.0 commitizen@4.0.3 cz-conventional-changelog@3.0.2 cz-customizable@6.2.0 husky@3.0.2 lint-staged@8.1.5</span><br></pre></td></tr></table></figure>
+
+<p>2.package.json 文件中添加以下配置</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;serve&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-cli-service serve&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-cli-service build&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;lint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-cli-service lint&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;commit&quot;</span><span class="punctuation">:</span> <span class="string">&quot;git-cz&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;husky&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;hooks&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;pre-commit&quot;</span><span class="punctuation">:</span> <span class="string">&quot;lint-staged&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;commit-msg&quot;</span><span class="punctuation">:</span> <span class="string">&quot;commitlint -E HUSKY_GIT_PARAMS&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;config&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;commitizen&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node_modules/cz-customizable&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;lint-staged&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;src/**/*.&#123;js,vue&#125;&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;vue-cli-service lint&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;git add&quot;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>上面 package.json 配置说明（不要复制下面 json，json 不支持注释）</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;serve&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-cli-service serve&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-cli-service build&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;lint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-cli-service lint&quot;</span><span class="punctuation">,</span><span class="comment">// vue-cli 自带的lint检查</span></span><br><span class="line">  <span class="attr">&quot;commit&quot;</span><span class="punctuation">:</span> <span class="string">&quot;git-cz&quot;</span>  <span class="comment">// 提交命令</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;husky&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;hooks&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;pre-commit&quot;</span><span class="punctuation">:</span> <span class="string">&quot;lint-staged&quot;</span><span class="punctuation">,</span> <span class="comment">//git commit 执行这个命令，这个命令再调起 lint-staged</span></span><br><span class="line">    <span class="attr">&quot;commit-msg&quot;</span><span class="punctuation">:</span> <span class="string">&quot;commitlint -E HUSKY_GIT_PARAMS&quot;</span> <span class="comment">//提交检查</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;config&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;commitizen&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node_modules/cz-customizable&quot;</span>  <span class="comment">//定制项目的提交说明</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;lint-staged&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="comment">// 检查文件</span></span><br><span class="line">  <span class="attr">&quot;src/**/*.&#123;js,vue&#125;&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;vue-cli-service lint&quot;</span><span class="punctuation">,</span><span class="comment">// 提交之前检查并修复代码</span></span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;git add&quot;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>3.在项目根目录下新建 commitlint.config.js 文件配置如下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">extends</span>: [<span class="string">&quot;@commitlint/config-conventional&quot;</span>],</span><br><span class="line">  <span class="attr">rules</span>: &#123;</span><br><span class="line">    <span class="comment">// 提交主题类型</span></span><br><span class="line">    <span class="string">&quot;type-enum&quot;</span>: [</span><br><span class="line">      <span class="number">2</span>,</span><br><span class="line">      <span class="string">&quot;always&quot;</span>,</span><br><span class="line">      [</span><br><span class="line">        <span class="string">&quot;feat&quot;</span>,</span><br><span class="line">        <span class="string">&quot;perf&quot;</span>,</span><br><span class="line">        <span class="string">&quot;fix&quot;</span>,</span><br><span class="line">        <span class="string">&quot;docs&quot;</span>,</span><br><span class="line">        <span class="string">&quot;style&quot;</span>,</span><br><span class="line">        <span class="string">&quot;refactor&quot;</span>,</span><br><span class="line">        <span class="string">&quot;test&quot;</span>,</span><br><span class="line">        <span class="string">&quot;chore&quot;</span>,</span><br><span class="line">        <span class="string">&quot;revert&quot;</span>,</span><br><span class="line">        <span class="string">&quot;build&quot;</span>,</span><br><span class="line">        <span class="string">&quot;ci&quot;</span></span><br><span class="line">      ] <span class="comment">// 主题含义见 /.cz-config.js</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;subject-full-stop&quot;</span>: [<span class="number">0</span>, <span class="string">&quot;never&quot;</span>], <span class="comment">// 主题句号</span></span><br><span class="line">    <span class="string">&quot;subject-case&quot;</span>: [<span class="number">0</span>, <span class="string">&quot;never&quot;</span>] <span class="comment">// 主题案例</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>4.在项目根目录下新建 .cz-config.js 文件配置如下（注意：不要省略文件名前的点 “ . “）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="comment">// 修改主题选择</span></span><br><span class="line">  <span class="attr">types</span>: [</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&quot;build&quot;</span>, <span class="attr">name</span>: <span class="string">&quot;build:  构建打包&quot;</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&quot;feat&quot;</span>, <span class="attr">name</span>: <span class="string">&quot;feat:  添加新功能&quot;</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&quot;fix&quot;</span>, <span class="attr">name</span>: <span class="string">&quot;fix:  Bug修复&quot;</span> &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">value</span>: <span class="string">&quot;docs&quot;</span>,</span><br><span class="line">      <span class="attr">name</span>: <span class="string">&quot;docs:  变更的只有文档，比如README.md等&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">value</span>: <span class="string">&quot;style&quot;</span>,</span><br><span class="line">      <span class="attr">name</span>: <span class="string">&quot;style:  空格, 分号等格式修复（注意不是 css 修改）&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&quot;ci&quot;</span>, <span class="attr">name</span>: <span class="string">&quot;ci   ci配置，脚本文件等更新&quot;</span> &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">value</span>: <span class="string">&quot;refactor&quot;</span>,</span><br><span class="line">      <span class="attr">name</span>: <span class="string">&quot;refactor:  代码重构（即不是新增功能，也不是修改bug的代码变动）&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&quot;test&quot;</span>, <span class="attr">name</span>: <span class="string">&quot;test:  添加一个测试，包括单元测试、集成测试等&quot;</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&quot;perf&quot;</span>, <span class="attr">name</span>: <span class="string">&quot;perf:  优化相关，比如提升性能、体验&quot;</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&quot;chore&quot;</span>, <span class="attr">name</span>: <span class="string">&quot;chore:  改变构建流程、或者增加依赖库、工具等&quot;</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&quot;revert&quot;</span>, <span class="attr">name</span>: <span class="string">&quot;revert:  代码回退&quot;</span> &#125;</span><br><span class="line">  ],</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 修改文件范围选择</span></span><br><span class="line">  <span class="comment">// scopes: [</span></span><br><span class="line">  <span class="comment">//   &#123; name: &#x27;components&#x27; &#125;,</span></span><br><span class="line">  <span class="comment">//   &#123; name: &#x27;assets&#x27; &#125;,</span></span><br><span class="line">  <span class="comment">//   &#123; name: &#x27;views&#x27; &#125;,</span></span><br><span class="line">  <span class="comment">//   &#123; name: &#x27;api&#x27; &#125;,</span></span><br><span class="line">  <span class="comment">//   &#123; name: &#x27;utils&#x27; &#125;,</span></span><br><span class="line">  <span class="comment">//   &#123; name: &#x27;other&#x27; &#125;,</span></span><br><span class="line">  <span class="comment">// ],</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 选择对应的主题后的选择</span></span><br><span class="line">  <span class="comment">// scopeOverrides: &#123;</span></span><br><span class="line">  <span class="comment">//   fix: [</span></span><br><span class="line">  <span class="comment">//     &#123; name: &#x27;merge&#x27; &#125;,</span></span><br><span class="line">  <span class="comment">//     &#123; name: &#x27;style&#x27; &#125;,</span></span><br><span class="line">  <span class="comment">//     &#123; name: &#x27;e2eTest&#x27; &#125;,</span></span><br><span class="line">  <span class="comment">//     &#123; name: &#x27;unitTest&#x27; &#125;</span></span><br><span class="line">  <span class="comment">//   ]</span></span><br><span class="line">  <span class="comment">// &#125;,</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 构建对话</span></span><br><span class="line">  <span class="attr">messages</span>: &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&quot;选择一种你的提交类型(必选):&quot;</span>,</span><br><span class="line">    <span class="attr">scope</span>: <span class="string">&quot;选择一个更改范围(可选):&quot;</span>,</span><br><span class="line">    <span class="comment">// used if allowCustomScopes is true</span></span><br><span class="line">    <span class="attr">customScope</span>: <span class="string">&quot;自定义更改范围(可选):&quot;</span>,</span><br><span class="line">    <span class="attr">subject</span>: <span class="string">&quot;短说明(必填):\n&quot;</span>,</span><br><span class="line">    <span class="attr">body</span>: <span class="string">&#x27;长说明，使用&quot;|&quot;换行(可选)：\n&#x27;</span>,</span><br><span class="line">    <span class="attr">breaking</span>: <span class="string">&quot;非兼容性说明 (可选):\n&quot;</span>,</span><br><span class="line">    <span class="attr">footer</span>: <span class="string">&quot;关联关闭的issue，例如：#31, #34(可选):\n&quot;</span>,</span><br><span class="line">    <span class="attr">confirmCommit</span>: <span class="string">&quot;确定提交说明?&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 是否允许自定义更改范围</span></span><br><span class="line">  <span class="attr">allowCustomScopes</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 允许中断的改变</span></span><br><span class="line">  <span class="attr">allowBreakingChanges</span>: [<span class="string">&quot;feat&quot;</span>, <span class="string">&quot;fix&quot;</span>],</span><br><span class="line">  <span class="comment">// 修改主题描述字数限制</span></span><br><span class="line">  <span class="attr">subjectLimit</span>: <span class="number">100</span>,</span><br><span class="line">  <span class="comment">// 选择跳过的步骤(不用填，不用选，直接跳过)</span></span><br><span class="line">  <span class="attr">skipQuestions</span>: [<span class="string">&quot;body&quot;</span>, <span class="string">&quot;breaking&quot;</span>, <span class="string">&quot;footer&quot;</span>]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>5.在项目根目录下新建 .eslintrc.js 文件配置如下(自己可以参考官网修改)</p>
+<p>eslint 中文网 <a target="_blank" rel="noopener" href="http://eslint.cn/docs/rules/">http://eslint.cn/docs/rules/</a></p>
+<p>eslint-config-vue 配置 <a target="_blank" rel="noopener" href="https://github.com/vuejs/eslint-config-vue/blob/master/index.js">https://github.com/vuejs/eslint-config-vue/blob/master/index.js</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">root</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">parserOptions</span>: &#123;</span><br><span class="line">    <span class="attr">parser</span>: <span class="string">&quot;babel-eslint&quot;</span>,</span><br><span class="line">    <span class="attr">sourceType</span>: <span class="string">&quot;module&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">env</span>: &#123;</span><br><span class="line">    <span class="attr">browser</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">node</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">es6</span>: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">extends</span>: [<span class="string">&quot;plugin:vue/recommended&quot;</span>, <span class="string">&quot;eslint:recommended&quot;</span>],</span><br><span class="line"></span><br><span class="line">  <span class="comment">// add your custom rules here</span></span><br><span class="line">  <span class="comment">//it is base on https://github.com/vuejs/eslint-config-vue</span></span><br><span class="line">  <span class="attr">rules</span>: &#123;</span><br><span class="line">    <span class="string">&quot;vue/max-attributes-per-line&quot;</span>: [</span><br><span class="line">      <span class="number">2</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">singleline</span>: <span class="number">10</span>,</span><br><span class="line">        <span class="attr">multiline</span>: &#123;</span><br><span class="line">          <span class="attr">max</span>: <span class="number">1</span>,</span><br><span class="line">          <span class="attr">allowFirstLine</span>: <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;vue/singleline-html-element-content-newline&quot;</span>: <span class="string">&quot;off&quot;</span>,</span><br><span class="line">    <span class="string">&quot;vue/multiline-html-element-content-newline&quot;</span>: <span class="string">&quot;off&quot;</span>,</span><br><span class="line">    <span class="string">&quot;vue/name-property-casing&quot;</span>: [<span class="string">&quot;error&quot;</span>, <span class="string">&quot;PascalCase&quot;</span>],</span><br><span class="line">    <span class="string">&quot;vue/no-v-html&quot;</span>: <span class="string">&quot;off&quot;</span>,</span><br><span class="line">    <span class="string">&quot;accessor-pairs&quot;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="string">&quot;vue/html-self-closing&quot;</span>: <span class="string">&quot;off&quot;</span>,</span><br><span class="line">    <span class="string">&quot;arrow-spacing&quot;</span>: [</span><br><span class="line">      <span class="number">2</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">before</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">after</span>: <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;block-spacing&quot;</span>: [<span class="number">2</span>, <span class="string">&quot;always&quot;</span>],</span><br><span class="line">    <span class="string">&quot;brace-style&quot;</span>: [</span><br><span class="line">      <span class="number">2</span>,</span><br><span class="line">      <span class="string">&quot;1tbs&quot;</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">allowSingleLine</span>: <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">camelcase</span>: [</span><br><span class="line">      <span class="number">0</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">properties</span>: <span class="string">&quot;always&quot;</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;no-undef&quot;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="string">&quot;no-undef-init&quot;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="string">&quot;no-unreachable&quot;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="string">&quot;no-unsafe-finally&quot;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="string">&quot;no-unused-vars&quot;</span>: [</span><br><span class="line">      <span class="number">2</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">vars</span>: <span class="string">&quot;all&quot;</span>,</span><br><span class="line">        <span class="attr">args</span>: <span class="string">&quot;none&quot;</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">quotes</span>: [</span><br><span class="line">      <span class="number">2</span>,</span><br><span class="line">      <span class="string">&quot;single&quot;</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">avoidEscape</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">allowTemplateLiterals</span>: <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">semi</span>: [<span class="number">2</span>, <span class="string">&quot;never&quot;</span>],</span><br><span class="line">    <span class="string">&quot;semi-spacing&quot;</span>: [</span><br><span class="line">      <span class="number">2</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">before</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">after</span>: <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;space-before-blocks&quot;</span>: [<span class="number">2</span>, <span class="string">&quot;always&quot;</span>],</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;spaced-comment&quot;</span>: [</span><br><span class="line">      <span class="number">2</span>,</span><br><span class="line">      <span class="string">&quot;always&quot;</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">markers</span>: [</span><br><span class="line">          <span class="string">&quot;global&quot;</span>,</span><br><span class="line">          <span class="string">&quot;globals&quot;</span>,</span><br><span class="line">          <span class="string">&quot;eslint&quot;</span>,</span><br><span class="line">          <span class="string">&quot;eslint-disable&quot;</span>,</span><br><span class="line">          <span class="string">&quot;*package&quot;</span>,</span><br><span class="line">          <span class="string">&quot;!&quot;</span>,</span><br><span class="line">          <span class="string">&quot;,&quot;</span></span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;template-curly-spacing&quot;</span>: [<span class="number">2</span>, <span class="string">&quot;never&quot;</span>],</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;no-debugger&quot;</span>: process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&quot;production&quot;</span> ? <span class="number">2</span> : <span class="number">0</span>,</span><br><span class="line">    <span class="string">&quot;object-curly-spacing&quot;</span>: [</span><br><span class="line">      <span class="number">2</span>,</span><br><span class="line">      <span class="string">&quot;always&quot;</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">objectsInObjects</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;array-bracket-spacing&quot;</span>: [<span class="number">2</span>, <span class="string">&quot;never&quot;</span>]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>6.在项目根目录下新建 update.sh 文件配置如下</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"></span><br><span class="line">success=<span class="string">&quot;更新成功&quot;</span></span><br><span class="line">fail=<span class="string">&quot;更新失败&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 确保脚本抛出遇到的错误</span></span><br><span class="line"><span class="built_in">set</span> -e</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数检验</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$#</span> -gt 0 ] ; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> fail: <span class="variable">$fail</span>;</span><br><span class="line">    <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">git add .</span><br><span class="line">npm  run commit</span><br><span class="line"><span class="comment"># 捕获异常</span></span><br><span class="line"><span class="keyword">if</span>  [ $? = 0 ] ; <span class="keyword">then</span></span><br><span class="line">    git  push       <span class="comment"># 确保执行过默认分支操作 git push -u origin master 或者 git push -u origin dev 等</span></span><br><span class="line">    <span class="built_in">echo</span> success:<span class="variable">$success</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="built_in">echo</span> fail: <span class="variable">$fail</span>;</span><br><span class="line">    <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+<p>6.使用</p>
+<p>项目根目录下启动 git-bash （vscode 默认 bash 改成 git-bash）<br>运行以下命令,<br>对于可选的项目直接按 enter 键跳过</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./update.sh</span><br></pre></td></tr></table></figure>
+
+<p>7.项目添加配置 Stylelint</p>
+<p>公司项目使用的 scss ，下面以 scss 为例</p>
+<p>a.安装以下包</p>
+<p>stylelint： 必须安装</p>
+<p>stylelint-config-standard： 是官方推荐的插件</p>
+<p>stylelint-order： 是规范样式的顺序的</p>
+<p>stylelint-scss：stylelint 的 SCSS 特定 linting 规则的集合</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i stylelint stylelint-config-standard stylelint-order stylelint-scss -D</span><br></pre></td></tr></table></figure>
+
+<p>b. 在项目根目录下新建.stylelintrc 文件（或其他支持的文件格式）</p>
+<p><a target="_blank" rel="noopener" href="https://stylelint.io/">更多配置请查看官网</a></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;defaultSeverity&quot;</span><span class="punctuation">:</span> <span class="string">&quot;error&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;extends&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;stylelint-config-standard&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;plugins&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;stylelint-scss&quot;</span><span class="punctuation">,</span> <span class="string">&quot;stylelint-order&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;rules&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;order/order&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="string">&quot;declarations&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;custom-properties&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;dollar-variables&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;rules&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;at-rules&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;order/properties-order&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="string">&quot;position&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;top&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;right&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;bottom&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;left&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;float&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;media-feature-name-no-vendor-prefix&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;at-rule-no-vendor-prefix&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;selector-no-vendor-prefix&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;property-no-vendor-prefix&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;value-no-vendor-prefix&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;rule-empty-line-before&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;no-missing-end-of-source-newline&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;selector-pseudo-class-no-unknown&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;font-family-no-missing-generic-family-keyword&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;no-descending-specificity&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;declaration-empty-line-before&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;declaration-block-trailing-semicolon&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;selector-combinator-space-before&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;selector-combinator-space-after&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;block-closing-brace-newline-before&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;at-rule-no-unknown&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;property-case&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;property-no-unknown&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>c. 在项目根目录下新建.stylelintignore 文件 (默认忽略 node_modules 文件夹)</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">*.min.css</span><br><span class="line"></span><br><span class="line"># 其他类型文件</span><br><span class="line">*.js</span><br><span class="line">*.jpg</span><br><span class="line">*.woff</span><br><span class="line"></span><br><span class="line"># 测试和打包目录</span><br><span class="line">/test/</span><br><span class="line">/dist/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>d.配置 package.json</p>
+<p>“scripts” 字段下添加 stylelint 命令</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;serve&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-cli-service serve&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-cli-service build&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;dev&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-cli-service serve&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;build:prod&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-cli-service build --mode production&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;build:dev&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-cli-service build --mode dev&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;changelog&quot;</span><span class="punctuation">:</span> <span class="string">&quot;conventional-changelog -p angular -i CHANGELOG.md -w -r 0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-cli-service lint&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;stylelint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;stylelint **/*.&#123;html,vue,css,sass,scss&#125; --fix&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;commit&quot;</span><span class="punctuation">:</span> <span class="string">&quot;git-cz&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>“lint-staged” 字段改为如下</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;lint-staged&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;src/**/*.&#123;js,vue&#125;&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;npm run lint&quot;</span><span class="punctuation">,</span> <span class="string">&quot;git add&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;**/*.&#123;html,vue,css,sass,scss&#125;&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;npm run stylelint&quot;</span><span class="punctuation">,</span> <span class="string">&quot;git add&quot;</span><span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>e.使用，同上</p>
+<p>运行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./update.sh</span><br></pre></td></tr></table></figure>
+
+<p>参考链接</p>
+<p>1.<a target="_blank" rel="noopener" href="https://github.com/okonet/lint-staged">https://github.com/okonet/lint-staged</a></p>
+<p>2.<a target="_blank" rel="noopener" href="https://github.com/typicode/husky">https://github.com/typicode/husky</a></p>
+<p>3.<a target="_blank" rel="noopener" href="https://github.com/conventional-changelog/commitlint">https://github.com/conventional-changelog/commitlint</a></p>
+<p>4.<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_33890526/article/details/91393527">https://blog.csdn.net/weixin_33890526&#x2F;article&#x2F;details&#x2F;91393527</a></p>
+<p>5.<a target="_blank" rel="noopener" href="https://juejin.im/post/5afc5242f265da0b7f44bee4#heading-9">https://juejin.im/post/5afc5242f265da0b7f44bee4#heading-9</a></p>
+<p>6.<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000009546913">https://segmentfault.com/a/1190000009546913</a></p>
+<p>7.<a target="_blank" rel="noopener" href="https://juejin.im/post/5c31c9a16fb9a049f8197000">https://juejin.im/post/5c31c9a16fb9a049f8197000</a></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/vue/">#vue</a> <a class="fw3 ph1 dib" href="/tags/vue-cli/">#vue-cli</a> <a class="fw3 ph1 dib" href="/tags/git-hooks/">#git hooks</a> <a class="fw3 ph1 dib" href="/tags/eslint/">#eslint</a> <a class="fw3 ph1 dib" href="/tags/stylelint/">#stylelint</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+  <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+    <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+      <img src="/images/my.jpeg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="xiaofei">
+    </div>
+    <div class="dtc db-l v-mid lh-copy measure center f6 black-80 tj">
+      你好，我的名字叫xiaofei，这是我的博客。<br> 我是一名前端开发者 + linux 爱好者。热衷于前端开发技术，熟悉ES6+，typescript，css3，vue2/3，react，uni-app，weapp，webpack，vite，babel，node，linux，nginx 等。<br> 我目前在西安生活和工作，如果你需要和我交流，请联系我（网站下面有联系方式）。
+    </div>
+  </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p class="recent-item">
+            <a href="/2024/10/16/threejs/lattice/">threejs 晶格实现</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/05/31/js/monorepo/">Monorepo 自动release的思考</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/03/20/gis/icon/">openlayers 绘制图标并定位到图标</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/01/28/canvas/post/">使用 auto-drawing 绘制商城分销海报</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2022/12/27/canvas/room/">使用 auto-drawing 画一个户型图</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- TODO:AD -->
+<!-- <a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/cD2mxeH7"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/全球购_1040 100.jpg" alt="" />
+  </div>
+</a> -->
+
+<div class="bg-1 ph2 ph5-ns pv5">
+  <div class="mv8">
+    <div class="center tc">
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://github.com/l-x-f"
+          title="github"
+          target="_blank"
+        >
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="qq"
+          target="_blank"
+        >
+          <i class="fa fa-qq"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="email"
+          target="_blank"
+        >
+          <i class="fa fa-envelope"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://blog.csdn.net/qq_39953537"
+          title="csdn"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconcsdn"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://l-x-f.gitee.io"
+          title="gitee"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconmayun1"></i>
+        </a>
+      </div>
+      
+    </div>
+    <div class="f6 f5-ns center tc white pt5 fw3">
+      MIT Licensed | Copyright © 2016-present xiaofei <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn" class="fake-link black-70 ph1"> 陕ICP备2021003270号</a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- After Footer -->
+    <!-- Disqus Comments -->
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

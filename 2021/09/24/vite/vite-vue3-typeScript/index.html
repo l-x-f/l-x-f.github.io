@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <!-- Head tag -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="baidu_union_verify" content="a413507676ae2c1dae7063ec877d0674" />
+
+  <!--Description-->
+  
+  <meta name="description" content="xiaofei的个人博客" />
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="xiaofei" />
+  
+
+  <!--Open Graph Title-->
+  
+  <meta property="og:title" content="vite vue3 TypeScript 项目工程化配置" />
+  
+
+  <!--Open Graph Description-->
+  
+  <meta property="og:description" content="xiaofei的个人博客" />
+  
+
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="飞的日志" />
+
+  <!--Type page-->
+  
+  <meta property="og:type" content="article" />
+  
+
+  <!--Page Cover-->
+  
+
+  <meta name="twitter:card" content="summary" />
+  
+
+  <!-- Title -->
+  
+  <title>vite vue3 TypeScript 项目工程化配置 - 飞的日志</title>
+
+  <!-- Tachyons Core CSS -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css"> -->
+  <link
+    href="https://cdn.bootcss.com/tachyons/4.11.1/tachyons.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Fonts -->
+  <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css>" -->
+  <link
+    href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Custom CSS -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  <!-- Google Analytics -->
+  
+
+
+  <!-- add favicon.ico -->
+  <link rel="icon" href="/images/logo.png" />
+
+  
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+
+  <script src="/js/hm.js"></script>
+  <script src="/js/top.js"></script>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5957060091098291"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    window.onload = function () {
+      new Top()
+    }
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+  <body>
+    <!-- Main Content -->
+    <!-- Banner -->
+<!-- Banner -->
+
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+  <nav class="db dt-l w-100 mw8 center border-box pv4">
+    <!-- <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="https://l-x-f.github.io" title="飞的日志">
+            <span src="/images/my.jpeg" class="dib h3 avatar" alt="飞的日志">
+        </a> -->
+    <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/"
+        title="首页"
+      >
+        首页
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/archives"
+        title="博客"
+      >
+        博客
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/tags"
+        title="标签"
+      >
+        标签
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/about"
+        title="关于"
+      >
+        关于
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="https://l-x-f.github.io/coding-standard/"
+        title="Web前端代码规范"
+      >
+        Web前端代码规范
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39953537"
+        title="关联的CSDN"
+      >
+        关联的CSDN
+      </a>
+      
+    </div>
+  </nav>
+
+  <!-- Title -->
+  <div class="w-100 mw8 center dt">
+    <div class="dtc v-mid white">
+      <h1 class="f1-l f2-m tc tc-m tl-ns">vite vue3 TypeScript 项目工程化配置</h1>
+      <p style="padding-bottom: 40px" class="f4 fw3 tc tc-m tl-ns">
+        2021-09-24 11:45
+      </p>
+    </div>
+  </div>
+
+  <!-- Icon -->
+  <div class="relative w-100 mw8 center white dn dn-m db-ns">
+    <i class="header-icon fa fa-file-text-o"></i>
+  </div>
+</div>
+
+<!-- TODO:AD -->
+<!-- 
+<a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/bdyBVja9"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/618.jpg" alt="" />
+  </div>
+</a> -->
+
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/vue3/">#vue3</a> <a class="fw3 ph1 dib" href="/tags/typescript/">#typescript</a> <a class="fw3 ph1 dib" href="/tags/vite/">#vite</a> <a class="fw3 ph1 dib" href="/tags/vite-2/">#vite-2</a> <a class="fw3 ph1 dib" href="/tags/ts/">#ts</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="vite-vue3-TypeScript-项目工程化配置"><a href="#vite-vue3-TypeScript-项目工程化配置" class="headerlink" title="vite vue3 TypeScript 项目工程化配置"></a>vite vue3 TypeScript 项目工程化配置</h1><h2 id="1-ESLint"><a href="#1-ESLint" class="headerlink" title="1.ESLint"></a>1.ESLint</h2><p>安装 ESLint</p>
+<p><a target="_blank" rel="noopener" href="https://eslint.bootcss.com/docs/user-guide/getting-started">ESLint 文档</a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add  eslint -D</span><br></pre></td></tr></table></figure>
+
+<p>初始化 ESLint</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx eslint --init</span><br></pre></td></tr></table></figure>
+
+<p>以下选择仅供参考</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">√ How would you like to use ESLint? · style</span><br><span class="line">√ What <span class="built_in">type</span> of modules does your project use? · none</span><br><span class="line">√ Which framework does your project use? · vue</span><br><span class="line">√ Does your project use TypeScript? · No / Yes</span><br><span class="line">√ Where does your code run? · browser, node</span><br><span class="line">√ How would you like to define a style <span class="keyword">for</span> your project? · guide</span><br><span class="line">√ Which style guide <span class="keyword">do</span> you want to follow? · standard</span><br><span class="line">√ What format <span class="keyword">do</span> you want your config file to be <span class="keyword">in</span>? · JavaScript</span><br><span class="line">Checking peerDependencies of eslint-config-standard@latest</span><br><span class="line">The config that you<span class="string">&#x27;ve selected requires the following dependencies:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">eslint-plugin-vue@latest @typescript-eslint/eslint-plugin@latest eslint-config-standard@latest eslint@^7.12.1 eslint-plugin-import@^2.22.1 eslint-plugin-node@^11.1.0 eslint-plugin-promise@^4.2.1 || ^5.0.0 @typescript-eslint/parser@latest</span></span><br><span class="line"><span class="string">√ Would you like to install them now with npm? · No / Yes</span></span><br></pre></td></tr></table></figure>
+
+<p>配置 .eslintrc.js</p>
+<p><a target="_blank" rel="noopener" href="https://eslint.vuejs.org/user-guide/#installation">eslint-plugin-vue 配置文档</a></p>
+<p>实战项目配置</p>
+<p>需安装</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add  eslint-define-config vue-eslint-parser -D</span><br></pre></td></tr></table></figure>
+
+<p><code>eslint-define-config</code> 用来提供配置提示</p>
+<p>.eslintrc.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* eslint-disable @typescript-eslint/no-var-requires */</span></span><br><span class="line"><span class="comment">// @ts-check</span></span><br><span class="line"><span class="keyword">const</span> &#123; defineConfig &#125; = <span class="built_in">require</span>(<span class="string">&#x27;eslint-define-config&#x27;</span>)</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">parser</span>: <span class="string">&#x27;vue-eslint-parser&#x27;</span>,</span><br><span class="line">  <span class="attr">env</span>: &#123;</span><br><span class="line">    <span class="attr">browser</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">es2021</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">node</span>: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">extends</span>: [</span><br><span class="line">    <span class="string">&#x27;eslint:recommended&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;plugin:vue/vue3-recommended&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;plugin:@typescript-eslint/recommended&#x27;</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">parserOptions</span>: &#123;</span><br><span class="line">    <span class="attr">ecmaVersion</span>: <span class="number">12</span>,</span><br><span class="line">    <span class="attr">parser</span>: <span class="string">&#x27;@typescript-eslint/parser&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">plugins</span>: [<span class="string">&#x27;vue&#x27;</span>, <span class="string">&#x27;@typescript-eslint&#x27;</span>, <span class="string">&#x27;import&#x27;</span>],</span><br><span class="line">  <span class="attr">rules</span>: &#123;</span><br><span class="line">    <span class="comment">// vue base</span></span><br><span class="line">    <span class="string">&#x27;vue/no-unused-vars&#x27;</span>: [</span><br><span class="line">      <span class="string">&#x27;error&#x27;</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">ignorePattern</span>: <span class="string">&#x27;^_&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&#x27;vue/singleline-html-element-content-newline&#x27;</span>: <span class="string">&#x27;off&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;vue/multiline-html-element-content-newline&#x27;</span>: <span class="string">&#x27;off&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;vue/name-property-casing&#x27;</span>: [<span class="string">&#x27;error&#x27;</span>, <span class="string">&#x27;PascalCase&#x27;</span>],</span><br><span class="line">    <span class="string">&#x27;vue/no-v-html&#x27;</span>: <span class="string">&#x27;off&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;vue/html-closing-bracket-newline&#x27;</span>: <span class="string">&#x27;off&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;vue/html-indent&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;vue/html-self-closing&#x27;</span>: <span class="string">&#x27;off&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;vue/max-attributes-per-line&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;vue/custom-event-name-casing&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;vue/eqeqeq&#x27;</span>: [<span class="number">2</span>, <span class="string">&#x27;always&#x27;</span>, &#123; <span class="attr">null</span>: <span class="string">&#x27;ignore&#x27;</span> &#125;],</span><br><span class="line">    <span class="comment">// common</span></span><br><span class="line">    <span class="string">&#x27;no-unused-vars&#x27;</span>: [<span class="string">&#x27;error&#x27;</span>, &#123; <span class="attr">args</span>: <span class="string">&#x27;none&#x27;</span> &#125;],</span><br><span class="line">    <span class="string">&#x27;no-console&#x27;</span>: process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&#x27;production&#x27;</span> ? <span class="string">&#x27;warn&#x27;</span> : <span class="string">&#x27;off&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;no-debugger&#x27;</span>: process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&#x27;production&#x27;</span> ? <span class="string">&#x27;warn&#x27;</span> : <span class="string">&#x27;off&#x27;</span>,</span><br><span class="line">    <span class="attr">semi</span>: [<span class="number">2</span>, <span class="string">&#x27;never&#x27;</span>],</span><br><span class="line">    <span class="string">&#x27;semi-spacing&#x27;</span>: [</span><br><span class="line">      <span class="number">2</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">before</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">after</span>: <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">quotes</span>: [</span><br><span class="line">      <span class="number">2</span>,</span><br><span class="line">      <span class="string">&#x27;single&#x27;</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">avoidEscape</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">allowTemplateLiterals</span>: <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&#x27;comma-dangle&#x27;</span>: [<span class="number">2</span>, <span class="string">&#x27;never&#x27;</span>],</span><br><span class="line">    <span class="string">&#x27;comma-spacing&#x27;</span>: [</span><br><span class="line">      <span class="number">2</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">before</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">after</span>: <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&#x27;comma-style&#x27;</span>: [<span class="number">2</span>, <span class="string">&#x27;last&#x27;</span>],</span><br><span class="line">    <span class="string">&#x27;arrow-parens&#x27;</span>: [<span class="number">2</span>, <span class="string">&#x27;as-needed&#x27;</span>],</span><br><span class="line">    <span class="string">&#x27;arrow-spacing&#x27;</span>: [</span><br><span class="line">      <span class="number">2</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">before</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">after</span>: <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&#x27;jsx-quotes&#x27;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="string">&#x27;no-async-promise-executor&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;space-before-function-paren&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;no-empty&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;spaced-comment&#x27;</span>: [<span class="string">&#x27;error&#x27;</span>, <span class="string">&#x27;always&#x27;</span>],</span><br><span class="line">    <span class="string">&#x27;no-undef&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="comment">// import</span></span><br><span class="line">    <span class="string">&#x27;import/order&#x27;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="string">&#x27;import/first&#x27;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="comment">// typescript</span></span><br><span class="line">    <span class="string">&#x27;@typescript-eslint/no-explicit-any&#x27;</span>: <span class="number">0</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>package.json <code>scripts</code> 中添加</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;lint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;eslint ./src --ext .js,.jsx,.ts,.tsx --fix&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>添加<code>.eslintignore</code> 文件</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">build</span><br><span class="line">src/assets</span><br><span class="line">public</span><br><span class="line">dist</span><br><span class="line">tests/</span><br><span class="line">types</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-prettier"><a href="#2-prettier" class="headerlink" title="2.prettier"></a>2.prettier</h2><p><a target="_blank" rel="noopener" href="https://prettier.io/">prettier 文档</a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add prettier -D</span><br></pre></td></tr></table></figure>
+
+<p>添加<code>.prettierrc.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">trailingComma</span>: <span class="string">&#x27;none&#x27;</span>,</span><br><span class="line">  <span class="attr">tabWidth</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">semi</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">printWidth</span>: <span class="number">100</span>,</span><br><span class="line">  <span class="attr">singleQuote</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">jsxSingleQuote</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">bracketSpacing</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">arrowParens</span>: <span class="string">&#x27;avoid&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>添加<code>.prettierignore</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">node_modules</span><br><span class="line">dist</span><br><span class="line">build</span><br><span class="line"><span class="keyword">static</span></span><br><span class="line">public</span><br></pre></td></tr></table></figure>
+
+<p>package.json <code>scripts</code> 中添加</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;prettier&quot;</span><span class="punctuation">:</span> <span class="string">&quot;prettier . --write&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-stylelint"><a href="#3-stylelint" class="headerlink" title="3.stylelint"></a>3.stylelint</h2><p><a target="_blank" rel="noopener" href="http://stylelint.docschina.org/">stylelint 文档</a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn add stylelint stylelint-config-standard stylelint-order</span><br><span class="line">stylelint-scss -D</span><br></pre></td></tr></table></figure>
+
+<p>添加<code>.stylelintrc.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">defaultSeverity</span>: <span class="string">&#x27;error&#x27;</span>,</span><br><span class="line">  <span class="attr">ignoreFiles</span>: [</span><br><span class="line">    <span class="string">&#x27;node_modules/**&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;dist/**&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;*.min.css&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;tests/**&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;coverage/**&#x27;</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">extends</span>: [<span class="string">&#x27;stylelint-config-standard&#x27;</span>],</span><br><span class="line">  <span class="attr">plugins</span>: [<span class="string">&#x27;stylelint-scss&#x27;</span>, <span class="string">&#x27;stylelint-order&#x27;</span>],</span><br><span class="line">  <span class="attr">rules</span>: &#123;</span><br><span class="line">    <span class="string">&#x27;order/order&#x27;</span>: [</span><br><span class="line">      <span class="string">&#x27;declarations&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;custom-properties&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;dollar-variables&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;rules&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;at-rules&#x27;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&#x27;order/properties-order&#x27;</span>: [</span><br><span class="line">      <span class="string">&#x27;position&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;top&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;right&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;bottom&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;left&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;float&#x27;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&#x27;media-feature-name-no-vendor-prefix&#x27;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">&#x27;selector-no-vendor-prefix&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;property-no-vendor-prefix&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;rule-empty-line-before&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;no-missing-end-of-source-newline&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;selector-pseudo-class-no-unknown&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;font-family-no-missing-generic-family-keyword&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;no-descending-specificity&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;declaration-empty-line-before&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;declaration-block-trailing-semicolon&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;selector-combinator-space-before&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;selector-combinator-space-after&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;block-closing-brace-newline-before&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;at-rule-no-unknown&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;property-case&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;property-no-unknown&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;declaration-block-single-line-max-declarations&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;value-no-vendor-prefix&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;no-empty-source&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;at-rule-no-vendor-prefix&#x27;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;selector-pseudo-element-no-unknown&#x27;</span>: [</span><br><span class="line">      <span class="literal">true</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">ignorePseudoElements</span>: [<span class="string">&#x27;v-deep&#x27;</span>]</span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&#x27;function-calc-no-unspaced-operator&#x27;</span>: <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>package.json <code>scripts</code> 中添加</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;stylelint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;stylelint  ./src/**/*.&#123;scss,css,less,vue&#125; --fix&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-git-hooks-的添加"><a href="#4-git-hooks-的添加" class="headerlink" title="4.git hooks 的添加"></a>4.git hooks 的添加</h2><p><a target="_blank" rel="noopener" href="https://typicode.github.io/husky/#/?id=automatic-recommended">husky 文档</a></p>
+<p><a target="_blank" rel="noopener" href="https://commitlint.js.org/#/">commitlint 文档</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/commitizen/cz-cli">commitizen&#x2F;cz-cli 文档</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/leoforfree/cz-customizable">cz-customizable 文档</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/commitizen/cz-conventional-changelog">cz-conventional-changelog 文档</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/okonet/lint-staged#readme">lint-staged 文档</a></p>
+<p>安装依赖</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add husky @commitlint/cli @commitlint/config-conventional commitizen cz-conventional-changelog cz-customizable  lint-staged  -D</span><br></pre></td></tr></table></figure>
+
+<p>执行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx  husky install</span><br></pre></td></tr></table></figure>
+
+<p>添加提交信息校验 git hooks</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx husky add .husky/commit-msg  <span class="string">&#x27;npx  commitlint  --edit $1&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>添加提交前校验 git hooks</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx husky add .husky/pre-commit  <span class="string">&#x27;npx  lint-staged&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>添加文件 <code>commitlint.config.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">extends</span>: [<span class="string">&#x27;@commitlint/config-conventional&#x27;</span>],</span><br><span class="line">  <span class="attr">rules</span>: &#123;</span><br><span class="line">    <span class="comment">// 提交主题类型</span></span><br><span class="line">    <span class="string">&#x27;type-enum&#x27;</span>: [</span><br><span class="line">      <span class="number">2</span>,</span><br><span class="line">      <span class="string">&#x27;always&#x27;</span>,</span><br><span class="line">      [</span><br><span class="line">        <span class="string">&#x27;feat&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;fix&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;delete&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;docs&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;test&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;style&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;ci&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;refactor&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;perf&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;chore&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;revert&#x27;</span></span><br><span class="line">      ]</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&#x27;subject-full-stop&#x27;</span>: [<span class="number">0</span>, <span class="string">&#x27;never&#x27;</span>], <span class="comment">// 主题句号</span></span><br><span class="line">    <span class="string">&#x27;subject-case&#x27;</span>: [<span class="number">0</span>, <span class="string">&#x27;never&#x27;</span>] <span class="comment">// 主题案例</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>添加文件 <code>.cz-config.js</code> 按项目配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="comment">// 修改主题选择</span></span><br><span class="line">  <span class="attr">types</span>: [</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;feat&#x27;</span>, <span class="attr">name</span>: <span class="string">&#x27;feat:添加新功能&#x27;</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;fix&#x27;</span>, <span class="attr">name</span>: <span class="string">&#x27;fix:Bug修复&#x27;</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;delete&#x27;</span>, <span class="attr">name</span>: <span class="string">&#x27;delete:删除代码，接口&#x27;</span> &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">value</span>: <span class="string">&#x27;docs&#x27;</span>,</span><br><span class="line">      <span class="attr">name</span>: <span class="string">&#x27;docs:  变更的只有文档，比如README.md等&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;test&#x27;</span>, <span class="attr">name</span>: <span class="string">&#x27;test:添加一个测试，包括单元测试、集成测试等&#x27;</span> &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">value</span>: <span class="string">&#x27;style&#x27;</span>,</span><br><span class="line">      <span class="attr">name</span>: <span class="string">&#x27;style:  空格, 分号等格式修复（注意不是 css 修改）&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;ci&#x27;</span>, <span class="attr">name</span>: <span class="string">&#x27;ci:ci配置，脚本文件等更新&#x27;</span> &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">value</span>: <span class="string">&#x27;refactor&#x27;</span>,</span><br><span class="line">      <span class="attr">name</span>: <span class="string">&#x27;refactor:代码重构（即不是新增功能，也不是修改bug的代码变动）&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;perf&#x27;</span>, <span class="attr">name</span>: <span class="string">&#x27;perf:优化相关，比如提升性能、体验&#x27;</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;chore&#x27;</span>, <span class="attr">name</span>: <span class="string">&#x27;chore:改变构建流程、或者增加依赖库、工具等&#x27;</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;revert&#x27;</span>, <span class="attr">name</span>: <span class="string">&#x27;revert:代码回退&#x27;</span> &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="comment">// 构建对话</span></span><br><span class="line">  <span class="attr">messages</span>: &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&#x27;选择一种你的提交类型(必选):&#x27;</span>,</span><br><span class="line">    <span class="attr">scope</span>: <span class="string">&#x27;选择一个更改范围(可选):&#x27;</span>,</span><br><span class="line">    <span class="comment">// used if allowCustomScopes is true</span></span><br><span class="line">    <span class="attr">customScope</span>: <span class="string">&#x27;自定义更改范围(可选):&#x27;</span>,</span><br><span class="line">    <span class="attr">subject</span>: <span class="string">&#x27;提交说明(必填):\n&#x27;</span>,</span><br><span class="line">    <span class="attr">body</span>: <span class="string">&#x27;长说明，使用&quot;|&quot;换行(可选)：\n&#x27;</span>,</span><br><span class="line">    <span class="attr">breaking</span>: <span class="string">&#x27;非兼容性说明 (可选):\n&#x27;</span>,</span><br><span class="line">    <span class="attr">footer</span>: <span class="string">&#x27;关联关闭的issue，例如：#31, #34(可选):\n&#x27;</span>,</span><br><span class="line">    <span class="attr">confirmCommit</span>: <span class="string">&#x27;确定提交说明?&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 是否允许自定义更改范围</span></span><br><span class="line">  <span class="attr">allowCustomScopes</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 允许中断的改变</span></span><br><span class="line">  <span class="attr">allowBreakingChanges</span>: [<span class="string">&#x27;feat&#x27;</span>, <span class="string">&#x27;fix&#x27;</span>],</span><br><span class="line">  <span class="comment">// 修改主题描述字数限制</span></span><br><span class="line">  <span class="attr">subjectLimit</span>: <span class="number">100</span>,</span><br><span class="line">  <span class="comment">// 选择跳过的步骤</span></span><br><span class="line">  <span class="attr">skipQuestions</span>: [<span class="string">&#x27;scope&#x27;</span>, <span class="string">&#x27;customScope&#x27;</span>, <span class="string">&#x27;body&#x27;</span>, <span class="string">&#x27;breaking&#x27;</span>, <span class="string">&#x27;footer&#x27;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>package.json scripts 中添加</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;prepare&quot;</span><span class="punctuation">:</span> <span class="string">&quot;husky install&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;commit&quot;</span><span class="punctuation">:</span> <span class="string">&quot;git-cz&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>package.json 中添加</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;config&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;commitizen&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node_modules/cz-customizable&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;husky&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;hooks&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;pre-commit&quot;</span><span class="punctuation">:</span> <span class="string">&quot;lint-staged&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;commit-msg&quot;</span><span class="punctuation">:</span> <span class="string">&quot;commitlint -E HUSKY_GIT_PARAMS&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;lint-staged&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;src/**/*.&#123;js,jsx,ts,tsx,vue&#125;&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;npm run lint&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;src/**/*.&#123;html,vue,css,sass,scss&#125;&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;npm run stylelint&quot;</span><span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>添加文件 update.sh</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line">success=<span class="string">&quot;更新成功&quot;</span></span><br><span class="line"><span class="built_in">set</span> -e</span><br><span class="line">git add .</span><br><span class="line">npm  run commit</span><br><span class="line">git  pull</span><br><span class="line">git  push</span><br><span class="line"><span class="built_in">echo</span>  -e <span class="string">&quot;\n\033[32m<span class="variable">$success</span>\033[0m&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>项目代码提交 使用</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./update.sh</span><br></pre></td></tr></table></figure>
+
+<p>package.json 完整配置</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vite-vue3-element-plus-admin&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;license&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ISC&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;author&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xiaofei&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="string">&quot;src/main.ts&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;dev&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vite --host&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;tsc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vue-tsc --noEmit&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;build:prod&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vite build  --mode production&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;report&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cross-env REPORT=true yarn build:prod&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;dev:staging&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vite --host  --mode staging&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;build:staging&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vite build  --mode staging&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;serve&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vite preview&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;prepare&quot;</span><span class="punctuation">:</span> <span class="string">&quot;husky install&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;commit&quot;</span><span class="punctuation">:</span> <span class="string">&quot;git-cz&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;eslint ./src --ext .js,.jsx,.ts,.tsx,.vue --fix&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;stylelint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;stylelint  ./src/**/*.&#123;scss,css,less,vue&#125; --fix&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;prettier&quot;</span><span class="punctuation">:</span> <span class="string">&quot;prettier . --write&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;test:unit&quot;</span><span class="punctuation">:</span> <span class="string">&quot;jest  --coverage&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;accounting&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.4.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;auto-drawing&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.0.31&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;axios&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.21.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;crypto-js&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.1.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;dayjs&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.10.4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;echarts&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^5.1.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;element-plus&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.1.0-beta.7&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;file-saver&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;good-storage&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.1.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;js-cookie&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.2.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;js-md5&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.7.3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;jsencrypt&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lodash-es&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.17.21&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;normalize.css&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^8.0.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;nprogress&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;numeral&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.6&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;qs&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^6.10.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;uuid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^8.3.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;vue&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.2.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;vue-cropperjs&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^5.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;vue-i18n&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^9.1.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;vue-router&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.0.11&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;vuex&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.0.2&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;devDependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;@babel/plugin-syntax-jsx&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^7.14.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@babel/preset-env&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^7.14.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@babel/preset-react&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^7.14.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@commitlint/cli&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^13.1.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@commitlint/config-conventional&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^13.1.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@rollup/plugin-eslint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^8.0.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@testing-library/jest-dom&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^5.12.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/accounting&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.4.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/crypto-js&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.0.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/file-saver&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/good-storage&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.1.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/jest&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^26.0.23&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/js-cookie&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.2.6&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/js-md5&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.4.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/lodash-es&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.17.4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/node&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^14.14.37&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/nprogress&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/numeral&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/qs&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^6.9.6&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/uuid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^8.3.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/vue-cropperjs&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.1.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@typescript-eslint/eslint-plugin&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.21.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@typescript-eslint/parser&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.21.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@vitejs/plugin-legacy&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.3.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@vitejs/plugin-vue&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.2.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@vitejs/plugin-vue-jsx&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.1.4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@vue/compiler-sfc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;3.0.11&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@vue/eslint-config-typescript&quot;</span><span class="punctuation">:</span> <span class="string">&quot;7.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@vue/test-utils&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.0-rc.6&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;autoprefixer&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^8.6.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;babel-plugin-transform-import-meta&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;babel-preset-vite&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.0.4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;chalk&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.1.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;commitizen&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.2.4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cross-env&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^7.0.3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cz-conventional-changelog&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.3.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cz-customizable&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^6.3.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;eslint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^7.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;eslint-config-standard&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^16.0.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;eslint-define-config&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.0.9&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;eslint-plugin-import&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.22.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;eslint-plugin-jest&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^24.3.6&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;eslint-plugin-node&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^11.1.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;eslint-plugin-promise&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.3.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;eslint-plugin-vue&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^7.8.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;husky&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^7.0.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;jest&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^26.6.3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;jest-transform-stub&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lint-staged&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^11.1.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;mockjs&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.1.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;postcss&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^7.0.35&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;postcss-import&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^14.0.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;postcss-px-to-viewport&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.1.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;prettier&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.3.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;rollup-plugin-visualizer&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^5.5.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;sass&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.37.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;stylelint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^13.12.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;stylelint-config-standard&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^21.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;stylelint-order&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.1.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;stylelint-scss&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.19.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;ts-jest&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^26.5.6&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;typescript&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.3.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;vite&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.5.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;vite-plugin-compression&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.2.4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;vite-plugin-element-plus&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.0.12&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;vite-plugin-html&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.6&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;vite-plugin-imagemin&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.4.3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;vite-plugin-mock&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.5.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;vite-plugin-svg-icons&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.4.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;vue-eslint-parser&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^7.6.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;vue-jest&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^5.0.0-alpha.7&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;vue-tsc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.0.15&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;xml2js&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.4.23&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;config&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;commitizen&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node_modules/cz-customizable&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;husky&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;hooks&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;pre-commit&quot;</span><span class="punctuation">:</span> <span class="string">&quot;lint-staged&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;commit-msg&quot;</span><span class="punctuation">:</span> <span class="string">&quot;commitlint -E HUSKY_GIT_PARAMS&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;lint-staged&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;src/**/*.&#123;js,jsx,ts,tsx,vue&#125;&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;npm run lint&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;src/**/*.&#123;html,vue,css,sass,scss&#125;&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;npm run stylelint&quot;</span><span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;resolutions&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;bin-wrapper&quot;</span><span class="punctuation">:</span> <span class="string">&quot;npm:bin-wrapper-china&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/vue3/">#vue3</a> <a class="fw3 ph1 dib" href="/tags/typescript/">#typescript</a> <a class="fw3 ph1 dib" href="/tags/vite/">#vite</a> <a class="fw3 ph1 dib" href="/tags/vite-2/">#vite-2</a> <a class="fw3 ph1 dib" href="/tags/ts/">#ts</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+  <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+    <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+      <img src="/images/my.jpeg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="xiaofei">
+    </div>
+    <div class="dtc db-l v-mid lh-copy measure center f6 black-80 tj">
+      你好，我的名字叫xiaofei，这是我的博客。<br> 我是一名前端开发者 + linux 爱好者。热衷于前端开发技术，熟悉ES6+，typescript，css3，vue2/3，react，uni-app，weapp，webpack，vite，babel，node，linux，nginx 等。<br> 我目前在西安生活和工作，如果你需要和我交流，请联系我（网站下面有联系方式）。
+    </div>
+  </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p class="recent-item">
+            <a href="/2024/10/16/threejs/lattice/">threejs 晶格实现</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/05/31/js/monorepo/">Monorepo 自动release的思考</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/03/20/gis/icon/">openlayers 绘制图标并定位到图标</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/01/28/canvas/post/">使用 auto-drawing 绘制商城分销海报</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2022/12/27/canvas/room/">使用 auto-drawing 画一个户型图</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- TODO:AD -->
+<!-- <a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/cD2mxeH7"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/全球购_1040 100.jpg" alt="" />
+  </div>
+</a> -->
+
+<div class="bg-1 ph2 ph5-ns pv5">
+  <div class="mv8">
+    <div class="center tc">
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://github.com/l-x-f"
+          title="github"
+          target="_blank"
+        >
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="qq"
+          target="_blank"
+        >
+          <i class="fa fa-qq"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="email"
+          target="_blank"
+        >
+          <i class="fa fa-envelope"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://blog.csdn.net/qq_39953537"
+          title="csdn"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconcsdn"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://l-x-f.gitee.io"
+          title="gitee"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconmayun1"></i>
+        </a>
+      </div>
+      
+    </div>
+    <div class="f6 f5-ns center tc white pt5 fw3">
+      MIT Licensed | Copyright © 2016-present xiaofei <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn" class="fake-link black-70 ph1"> 陕ICP备2021003270号</a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- After Footer -->
+    <!-- Disqus Comments -->
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

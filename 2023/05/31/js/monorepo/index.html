@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <!-- Head tag -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="baidu_union_verify" content="a413507676ae2c1dae7063ec877d0674" />
+
+  <!--Description-->
+  
+  <meta name="description" content="xiaofei的个人博客" />
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="xiaofei" />
+  
+
+  <!--Open Graph Title-->
+  
+  <meta property="og:title" content="Monorepo 自动release的思考" />
+  
+
+  <!--Open Graph Description-->
+  
+  <meta property="og:description" content="xiaofei的个人博客" />
+  
+
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="飞的日志" />
+
+  <!--Type page-->
+  
+  <meta property="og:type" content="article" />
+  
+
+  <!--Page Cover-->
+  
+
+  <meta name="twitter:card" content="summary" />
+  
+
+  <!-- Title -->
+  
+  <title>Monorepo 自动release的思考 - 飞的日志</title>
+
+  <!-- Tachyons Core CSS -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css"> -->
+  <link
+    href="https://cdn.bootcss.com/tachyons/4.11.1/tachyons.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Fonts -->
+  <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css>" -->
+  <link
+    href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Custom CSS -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  <!-- Google Analytics -->
+  
+
+
+  <!-- add favicon.ico -->
+  <link rel="icon" href="/images/logo.png" />
+
+  
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+
+  <script src="/js/hm.js"></script>
+  <script src="/js/top.js"></script>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5957060091098291"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    window.onload = function () {
+      new Top()
+    }
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+  <body>
+    <!-- Main Content -->
+    <!-- Banner -->
+<!-- Banner -->
+
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+  <nav class="db dt-l w-100 mw8 center border-box pv4">
+    <!-- <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="https://l-x-f.github.io" title="飞的日志">
+            <span src="/images/my.jpeg" class="dib h3 avatar" alt="飞的日志">
+        </a> -->
+    <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/"
+        title="首页"
+      >
+        首页
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/archives"
+        title="博客"
+      >
+        博客
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/tags"
+        title="标签"
+      >
+        标签
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="/about"
+        title="关于"
+      >
+        关于
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        href="https://l-x-f.github.io/coding-standard/"
+        title="Web前端代码规范"
+      >
+        Web前端代码规范
+      </a>
+      
+      <a
+        class="link dim f6 f5-l dib mr3 mr4-l white"
+        target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39953537"
+        title="关联的CSDN"
+      >
+        关联的CSDN
+      </a>
+      
+    </div>
+  </nav>
+
+  <!-- Title -->
+  <div class="w-100 mw8 center dt">
+    <div class="dtc v-mid white">
+      <h1 class="f1-l f2-m tc tc-m tl-ns">Monorepo 自动release的思考</h1>
+      <p style="padding-bottom: 40px" class="f4 fw3 tc tc-m tl-ns">
+        2023-05-31 12:28
+      </p>
+    </div>
+  </div>
+
+  <!-- Icon -->
+  <div class="relative w-100 mw8 center white dn dn-m db-ns">
+    <i class="header-icon fa fa-file-text-o"></i>
+  </div>
+</div>
+
+<!-- TODO:AD -->
+<!-- 
+<a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/bdyBVja9"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/618.jpg" alt="" />
+  </div>
+</a> -->
+
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/js/">#js</a> <a class="fw3 ph1 dib" href="/tags/Monorepo/">#Monorepo</a> <a class="fw3 ph1 dib" href="/tags/release/">#release</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="Monorepo-自动-release-的思考"><a href="#Monorepo-自动-release-的思考" class="headerlink" title="Monorepo 自动 release 的思考"></a>Monorepo 自动 release 的思考</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>最近在 Monorepo 模式下开发开源软件 <a target="_blank" rel="noopener" href="https://github.com/plus-pro-components/plus-pro-components">plus-pro-components</a> 时遇到自动 release 的问题，调研了 <a target="_blank" rel="noopener" href="https://github.com/changesets/changesets">Changesets</a>，实际使用发现它发包灵活度太低而且过程繁琐，果断弃用。调研了 <a target="_blank" rel="noopener" href="https://rushjs.io/zh-cn/">rushjs</a>，发现 rush 很规范，但是对于团队来说，上手成本太高，也弃用。于是查看 vue 源码，发现它是自己写的，高度契合项目，对我来说这种解决方案非常完美，于是自己写了一个自动 release 的工具。</p>
+<h2 id="实现的效果"><a href="#实现的效果" class="headerlink" title="实现的效果"></a>实现的效果</h2><ol>
+<li>自动查询子包</li>
+<li>按需更新子包(符合 semver 规范 )的版本</li>
+<li>自动生成 changelog</li>
+<li>自动 commitLint (符合 angular 提交规范 )</li>
+<li>自动代码 lint</li>
+<li>自动打 tag</li>
+<li>自动提交代码</li>
+</ol>
+<h2 id="核心源码"><a href="#核心源码" class="headerlink" title="核心源码"></a><a target="_blank" rel="noopener" href="https://github.com/plus-pro-components/plus-pro-components/blob/dev/scripts/release/index.ts">核心源码</a></h2><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">&#x27;path&#x27;</span></span><br><span class="line"><span class="keyword">import</span> fs <span class="keyword">from</span> <span class="string">&#x27;fs&#x27;</span></span><br><span class="line"><span class="keyword">import</span> semver <span class="keyword">from</span> <span class="string">&#x27;semver&#x27;</span></span><br><span class="line"><span class="keyword">import</span> consola <span class="keyword">from</span> <span class="string">&#x27;consola&#x27;</span></span><br><span class="line"><span class="keyword">import</span> execa <span class="keyword">from</span> <span class="string">&#x27;execa&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; checkbox, select, input &#125; <span class="keyword">from</span> <span class="string">&#x27;@inquirer/prompts&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; findWorkspacePackages &#125; <span class="keyword">from</span> <span class="string">&#x27;@pnpm/find-workspace-packages&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; projRoot, pcPackage, projPackage &#125; <span class="keyword">from</span> <span class="string">&#x27;../build/paths&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="variable constant_">PKG_NAME</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;../build/utils&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">SemverRow</span> = &#123;</span><br><span class="line">  <span class="attr">release</span>: semver.<span class="property">ReleaseType</span></span><br><span class="line">  optionsOrLoose?: <span class="built_in">boolean</span> | semver.<span class="property">Options</span> | <span class="built_in">string</span></span><br><span class="line">  identifier?: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 打印</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">echo</span> = (<span class="params">msg: <span class="built_in">string</span></span>) =&gt; consola.<span class="title function_">success</span>(msg)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 运行脚本</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">run</span> = (<span class="params">bin: <span class="built_in">string</span>, args: <span class="built_in">string</span>[], opts = &#123;&#125;</span>) =&gt;</span><br><span class="line">  <span class="title function_">execa</span>(bin, args, &#123; <span class="attr">stdio</span>: <span class="string">&#x27;inherit&#x27;</span>, ...opts &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//  版本列表</span></span><br><span class="line"><span class="keyword">const</span> <span class="attr">versionIncrements</span>: <span class="title class_">SemverRow</span>[] = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">release</span>: <span class="string">&#x27;patch&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">release</span>: <span class="string">&#x27;minor&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">release</span>: <span class="string">&#x27;major&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">release</span>: <span class="string">&#x27;prepatch&#x27;</span>,</span><br><span class="line">    <span class="attr">optionsOrLoose</span>: <span class="string">&#x27;rc&#x27;</span>,</span><br><span class="line">    <span class="attr">identifier</span>: <span class="string">&#x27;1&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">release</span>: <span class="string">&#x27;preminor&#x27;</span>,</span><br><span class="line">    <span class="attr">optionsOrLoose</span>: <span class="string">&#x27;rc&#x27;</span>,</span><br><span class="line">    <span class="attr">identifier</span>: <span class="string">&#x27;1&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">release</span>: <span class="string">&#x27;premajor&#x27;</span>,</span><br><span class="line">    <span class="attr">optionsOrLoose</span>: <span class="string">&#x27;rc&#x27;</span>,</span><br><span class="line">    <span class="attr">identifier</span>: <span class="string">&#x27;1&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">release</span>: <span class="string">&#x27;prerelease&#x27;</span>,</span><br><span class="line">    <span class="attr">optionsOrLoose</span>: <span class="string">&#x27;alpha&#x27;</span>,</span><br><span class="line">    <span class="attr">identifier</span>: <span class="string">&#x27;1&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">release</span>: <span class="string">&#x27;prerelease&#x27;</span>,</span><br><span class="line">    <span class="attr">optionsOrLoose</span>: <span class="string">&#x27;beta&#x27;</span>,</span><br><span class="line">    <span class="attr">identifier</span>: <span class="string">&#x27;1&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取工作空间包</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">getWorkspaceList</span> = <span class="keyword">async</span> (<span class="params">dir = projRoot</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> pkgs = <span class="keyword">await</span> <span class="title function_">findWorkspacePackages</span>(projRoot)</span><br><span class="line">  <span class="keyword">return</span> pkgs</span><br><span class="line">    .<span class="title function_">filter</span>(<span class="function"><span class="params">pkg</span> =&gt;</span> pkg.<span class="property">dir</span>.<span class="title function_">startsWith</span>(dir))</span><br><span class="line">    .<span class="title function_">filter</span>(<span class="function"><span class="params">pkg</span> =&gt;</span> pkg.<span class="property">manifest</span>.<span class="property">private</span> !== <span class="literal">true</span> &amp;&amp; pkg.<span class="property">manifest</span>.<span class="property">name</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 更新版本号</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">version</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">updatePackage</span> = (<span class="params">version: <span class="built_in">string</span>, pkgPath: <span class="built_in">string</span></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> pkg = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(fs.<span class="title function_">readFileSync</span>(pkgPath, <span class="string">&#x27;utf-8&#x27;</span>))</span><br><span class="line">  pkg.<span class="property">version</span> = version</span><br><span class="line">  fs.<span class="title function_">writeFileSync</span>(pkgPath, <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(pkg, <span class="literal">null</span>, <span class="number">2</span>) + <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取版本</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">getVersion</span> = <span class="keyword">async</span> (<span class="params">currentVersion: <span class="built_in">string</span></span>) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 发布版本</span></span><br><span class="line">  <span class="keyword">let</span> <span class="attr">version</span>: <span class="built_in">string</span> | <span class="literal">null</span></span><br><span class="line">  <span class="keyword">const</span> selectChoices = versionIncrements</span><br><span class="line">    .<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> value = semver.<span class="title function_">inc</span>(</span><br><span class="line">        currentVersion,</span><br><span class="line">        item.<span class="property">release</span>,</span><br><span class="line">        item.<span class="property">optionsOrLoose</span> <span class="keyword">as</span> <span class="built_in">any</span>,</span><br><span class="line">        item.<span class="property">identifier</span></span><br><span class="line">      )</span><br><span class="line">      <span class="keyword">const</span> name = <span class="string">`<span class="subst">$&#123;item.release&#125;</span> (<span class="subst">$&#123;value&#125;</span>&#125;)`</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        name,</span><br><span class="line">        value</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="title function_">concat</span>(&#123; <span class="attr">name</span>: <span class="string">&#x27;custom&#x27;</span>, <span class="attr">value</span>: <span class="string">&#x27;custom&#x27;</span> &#125;)</span><br><span class="line"></span><br><span class="line">  version = <span class="keyword">await</span> <span class="title function_">select</span>(&#123;</span><br><span class="line">    <span class="attr">message</span>: <span class="string">&#x27;Select release type&#x27;</span>,</span><br><span class="line">    <span class="attr">choices</span>: selectChoices</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 自定义版本</span></span><br><span class="line">  <span class="keyword">if</span> (version === <span class="string">&#x27;custom&#x27;</span>) &#123;</span><br><span class="line">    version = <span class="keyword">await</span> <span class="title function_">input</span>(&#123; <span class="attr">message</span>: <span class="string">&#x27;Enter custom version&#x27;</span> &#125;)</span><br><span class="line">    <span class="comment">// 校验版本</span></span><br><span class="line">    <span class="keyword">if</span> (!semver.<span class="title function_">valid</span>(version)) &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">`Illegal version: <span class="subst">$&#123;version&#125;</span>`</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> version</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 提交</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">commit</span>(<span class="params">version?: <span class="built_in">string</span></span>) &#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// 生成changelog</span></span><br><span class="line">    <span class="keyword">if</span> (version) &#123;</span><br><span class="line">      <span class="keyword">await</span> <span class="title function_">run</span>(<span class="string">&#x27;npm&#x27;</span>, [<span class="string">&#x27;run&#x27;</span>, <span class="string">&#x27;--name&#x27;</span>, <span class="string">&#x27;changelog&#x27;</span>])</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">await</span> <span class="title function_">run</span>(<span class="string">&#x27;git&#x27;</span>, [<span class="string">&#x27;add&#x27;</span>, <span class="string">&#x27;-A&#x27;</span>])</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 打tag</span></span><br><span class="line">    <span class="keyword">if</span> (version) &#123;</span><br><span class="line">      <span class="keyword">await</span> <span class="title function_">run</span>(<span class="string">&#x27;git&#x27;</span>, [<span class="string">&#x27;tag&#x27;</span>, <span class="string">&#x27;-a&#x27;</span>, version, <span class="string">&#x27;-m&#x27;</span>, <span class="string">`v<span class="subst">$&#123;version&#125;</span>`</span>])</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 规范化提交</span></span><br><span class="line">    <span class="keyword">await</span> <span class="title function_">run</span>(<span class="string">&#x27;npm&#x27;</span>, [<span class="string">&#x27;run&#x27;</span>, <span class="string">&#x27;--name&#x27;</span>, <span class="string">&#x27;gitcz&#x27;</span>])</span><br><span class="line">    <span class="keyword">await</span> <span class="title function_">run</span>(<span class="string">&#x27;git&#x27;</span>, [<span class="string">&#x27;pull&#x27;</span>])</span><br><span class="line"></span><br><span class="line">    <span class="comment">// push tag</span></span><br><span class="line">    <span class="keyword">if</span> (version) &#123;</span><br><span class="line">      <span class="keyword">await</span> <span class="title function_">run</span>(<span class="string">&#x27;git&#x27;</span>, [<span class="string">&#x27;push&#x27;</span>, <span class="string">&#x27;--tags&#x27;</span>])</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">await</span> <span class="title function_">run</span>(<span class="string">&#x27;git&#x27;</span>, [<span class="string">&#x27;push&#x27;</span>])</span><br><span class="line">    <span class="title function_">echo</span>(<span class="string">`\ncommit success <span class="subst">$&#123;version&#125;</span>`</span>)</span><br><span class="line">  &#125; <span class="keyword">catch</span> (<span class="attr">error</span>: <span class="built_in">any</span>) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(error)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">main</span> = <span class="keyword">async</span> (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> workspaceList = <span class="keyword">await</span> <span class="title function_">getWorkspaceList</span>()</span><br><span class="line">  <span class="keyword">const</span> workspaceNames = workspaceList.<span class="title function_">map</span>(</span><br><span class="line">    <span class="function"><span class="params">item</span> =&gt;</span> item.<span class="property">manifest</span>.<span class="property">name</span></span><br><span class="line">  ) <span class="keyword">as</span> <span class="built_in">string</span>[]</span><br><span class="line">  <span class="keyword">const</span> workspaceMaps = workspaceList.<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> (&#123;</span><br><span class="line">    <span class="attr">dir</span>: item.<span class="property">dir</span>,</span><br><span class="line">    <span class="attr">name</span>: item.<span class="property">manifest</span>.<span class="property">name</span>,</span><br><span class="line">    <span class="attr">version</span>: item.<span class="property">manifest</span>.<span class="property">version</span>,</span><br><span class="line">    <span class="attr">pkg</span>: path.<span class="title function_">resolve</span>(item.<span class="property">dir</span>, <span class="string">&#x27;package.json&#x27;</span>)</span><br><span class="line">  &#125;))</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 选择需要更新的包</span></span><br><span class="line">  <span class="keyword">let</span> <span class="attr">selectPackages</span>: <span class="built_in">string</span>[] = []</span><br><span class="line">  <span class="keyword">const</span> checkboxChoices = workspaceNames.<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> (&#123;</span><br><span class="line">    <span class="attr">name</span>: item,</span><br><span class="line">    <span class="attr">value</span>: item</span><br><span class="line">  &#125;))</span><br><span class="line">  <span class="keyword">const</span> packages = <span class="keyword">await</span> <span class="title function_">checkbox</span>(&#123;</span><br><span class="line">    <span class="attr">message</span>: <span class="string">&#x27;Which packages would you like to include?&#x27;</span>,</span><br><span class="line">    <span class="attr">choices</span>: [&#123; <span class="attr">name</span>: <span class="string">&#x27;all&#x27;</span>, <span class="attr">value</span>: <span class="string">&#x27;all&#x27;</span> &#125;, ...checkboxChoices]</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (!packages.<span class="property">length</span>) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;Please select one or more packages!&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (packages.<span class="title function_">includes</span>(<span class="string">&#x27;all&#x27;</span>)) &#123;</span><br><span class="line">    selectPackages = workspaceNames</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    selectPackages = [...packages]</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 更新版本号</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> index = <span class="number">0</span>; index &lt; selectPackages.<span class="property">length</span>; index++) &#123;</span><br><span class="line">    <span class="keyword">const</span> name = selectPackages[index]</span><br><span class="line">    <span class="keyword">const</span> packageInfo = workspaceMaps.<span class="title function_">find</span>(<span class="function"><span class="params">i</span> =&gt;</span> i.<span class="property">name</span> === name)</span><br><span class="line">    <span class="keyword">const</span> version = <span class="keyword">await</span> <span class="title function_">getVersion</span>(packageInfo?.<span class="property">version</span> <span class="keyword">as</span> <span class="built_in">string</span>)</span><br><span class="line">    <span class="title function_">updatePackage</span>(version <span class="keyword">as</span> <span class="built_in">string</span>, packageInfo?.<span class="property">pkg</span> <span class="keyword">as</span> <span class="built_in">string</span>)</span><br><span class="line">    consola.<span class="title function_">success</span>(<span class="string">`Successfully updated version <span class="subst">$&#123;name&#125;</span>!`</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (selectPackages.<span class="title function_">includes</span>(<span class="variable constant_">PKG_NAME</span>)) &#123;</span><br><span class="line">    <span class="comment">// 主包更新</span></span><br><span class="line">    <span class="keyword">const</span> mainPkg = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(fs.<span class="title function_">readFileSync</span>(pcPackage, <span class="string">&#x27;utf-8&#x27;</span>))</span><br><span class="line">    <span class="title function_">updatePackage</span>(mainPkg.<span class="property">version</span> <span class="keyword">as</span> <span class="built_in">string</span>, projPackage)</span><br><span class="line">    <span class="title function_">commit</span>(mainPkg.<span class="property">version</span>)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="title function_">commit</span>()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">main</span>()</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;success&#x27;</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(err)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="运行效果"><a href="#运行效果" class="headerlink" title="运行效果"></a>运行效果</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ yarn release</span><br><span class="line">yarn run v1.22.19</span><br><span class="line">$ tsx scripts/release/index.ts</span><br><span class="line">? Which packages would you like to include? (Press &lt;space&gt; to select, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection, and &lt;enter&gt; to proceed)</span><br><span class="line">&gt;( ) all</span><br><span class="line"> ( ) @plus-pro-components/echarts</span><br><span class="line"> ( ) @plus-pro-components/eslint-config</span><br><span class="line"> ( ) plus-pro-components</span><br><span class="line"> ( ) @plus-pro-components/utils</span><br><span class="line"></span><br><span class="line">? Which packages would you like to include? plus-pro-components</span><br><span class="line">? Select release <span class="built_in">type</span> (Use arrow keys)</span><br><span class="line">&gt; patch (0.0.1&#125;)</span><br><span class="line">  minor (0.1.0&#125;)</span><br><span class="line">  major (1.0.0&#125;)</span><br><span class="line">  prepatch (0.0.2-rc.1&#125;)</span><br><span class="line">  preminor (0.1.0-rc.1&#125;)</span><br><span class="line">  premajor (1.0.0-rc.1&#125;)</span><br><span class="line">  prerelease (0.0.1-alpha.4&#125;)</span><br><span class="line">(Move up and down to reveal more choices)</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h2 id="源码地址"><a href="#源码地址" class="headerlink" title="源码地址"></a>源码地址</h2><p><a target="_blank" rel="noopener" href="https://github.com/plus-pro-components/plus-pro-components/blob/dev/scripts/release/index.ts">源码地址</a></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/js/">#js</a> <a class="fw3 ph1 dib" href="/tags/Monorepo/">#Monorepo</a> <a class="fw3 ph1 dib" href="/tags/release/">#release</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+  <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+    <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+      <img src="/images/my.jpeg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="xiaofei">
+    </div>
+    <div class="dtc db-l v-mid lh-copy measure center f6 black-80 tj">
+      你好，我的名字叫xiaofei，这是我的博客。<br> 我是一名前端开发者 + linux 爱好者。热衷于前端开发技术，熟悉ES6+，typescript，css3，vue2/3，react，uni-app，weapp，webpack，vite，babel，node，linux，nginx 等。<br> 我目前在西安生活和工作，如果你需要和我交流，请联系我（网站下面有联系方式）。
+    </div>
+  </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p class="recent-item">
+            <a href="/2024/10/16/threejs/lattice/">threejs 晶格实现</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/05/31/js/monorepo/">Monorepo 自动release的思考</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/03/20/gis/icon/">openlayers 绘制图标并定位到图标</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2023/01/28/canvas/post/">使用 auto-drawing 绘制商城分销海报</a>
+        </p>
+    
+        <p class="recent-item">
+            <a href="/2022/12/27/canvas/room/">使用 auto-drawing 画一个户型图</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- TODO:AD -->
+<!-- <a
+  class="tencent-ad"
+  title="图片来源于腾讯云"
+  target="_blank" rel="noopener" href="https://curl.qcloud.com/cD2mxeH7"
+>
+  <div class="img-warp">
+    <img title="图片来源于腾讯云" src="/ad/全球购_1040 100.jpg" alt="" />
+  </div>
+</a> -->
+
+<div class="bg-1 ph2 ph5-ns pv5">
+  <div class="mv8">
+    <div class="center tc">
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://github.com/l-x-f"
+          title="github"
+          target="_blank"
+        >
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="qq"
+          target="_blank"
+        >
+          <i class="fa fa-qq"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="mailto:1446628111@qq.com"
+          title="email"
+          target="_blank"
+        >
+          <i class="fa fa-envelope"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://blog.csdn.net/qq_39953537"
+          title="csdn"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconcsdn"></i>
+        </a>
+      </div>
+      
+      <div class="dib mh3">
+        <a
+          class="f3 f2-ns white dim"
+          href="https://l-x-f.gitee.io"
+          title="gitee"
+          target="_blank"
+        >
+          <i class="fa fa iconfont iconmayun1"></i>
+        </a>
+      </div>
+      
+    </div>
+    <div class="f6 f5-ns center tc white pt5 fw3">
+      MIT Licensed | Copyright © 2016-present xiaofei <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn" class="fake-link black-70 ph1"> 陕ICP备2021003270号</a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- After Footer -->
+    <!-- Disqus Comments -->
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
